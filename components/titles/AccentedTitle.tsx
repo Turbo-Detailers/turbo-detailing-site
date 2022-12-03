@@ -5,11 +5,11 @@ import Props from "../../interfaces/Props";
 import FadeUp from "../motion/fadeUp";
 
 const listItemLeft = {
-  hidden: { marginRight: "15px" },
+  hidden: { marginRight: "0.75rem" },
   show: { marginRight: "0px" },
 };
 const listItemRight = {
-  hidden: { marginLeft: "15px" },
+  hidden: { marginLeft: "0.75rem" },
   show: { marginLeft: "0px" },
 };
 

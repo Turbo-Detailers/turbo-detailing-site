@@ -20,3 +20,9 @@
 .title .title-accent {
   color: #e93f33;
 }
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 4rem;
+  }
+}
