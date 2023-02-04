@@ -6,6 +6,7 @@ import AccentedTitle from "../components/titles/AccentedTitle";
 import sectionTwoStyles from "../styles/components/Home/SectionTwo.module.css";
 import { Fonts } from "../bin/fonts";
 import Subtitle from "../components/titles/Subtitle";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -37,9 +38,17 @@ export default function Home() {
             of experts personalize their approach to fit the specific make and
             model of your car, from leather and upholstery care to tire shining.
             Experience the Turbo difference.
+            {/* <Image
+              src={"/images/tires.tiff"}
+              alt="cleaning tires"
+              fill={true}
+              style={{ objectFit: "cover" }}
+            ></Image> */}
           </div>
           <div className={`${sectionTwoStyles.actionButton} ${Fonts.title}`}>
-            Schedule your appointment today.
+            <Link href={"https://calendly.com/turbodetailers/complete"}>
+              Schedule your appointment today.
+            </Link>
           </div>
         </div>
       </div>
