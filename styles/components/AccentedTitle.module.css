@@ -15,6 +15,7 @@
   font-size: 6rem;
   font-weight: 700;
   color: var(--title-color);
+  z-index: 100;
 }
 
 .title .title-accent {

@@ -12,7 +12,18 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <AccentedTitle>Turbo</AccentedTitle>
+        <div>
+          <AccentedTitle>Turbo</AccentedTitle>
+
+          <div className={"bg-img"}>
+            <Image
+              src={"/images/am.png"}
+              alt={"Aston Martin"}
+              fill={true}
+              style={{ objectFit: "cover" }}
+            ></Image>
+          </div>
+        </div>
       </main>
 
       <footer className={styles.footer}>

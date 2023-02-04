@@ -5,4 +5,8 @@ const josefin_sans: NextFont = Josefin_Sans({
   subsets: ["latin"],
 });
 
-export { josefin_sans };
+const Fonts = {
+  title: josefin_sans.className,
+};
+
+export { josefin_sans as TitleFont, Fonts };

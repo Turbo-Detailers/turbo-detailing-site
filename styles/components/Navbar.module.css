@@ -1,0 +1,30 @@
+.navbar_main {
+  /* So the navbar is on top */
+  z-index: 100;
+
+  /* Navbar Background color -- not fully opaque */
+  background-color: rgba(255, 255, 255, 0.041);
+
+  /* Blur effect, across platforms */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  /* stays on top */
+  position: fixed;
+
+  /* Fills the width of the screen */
+  width: 100%;
+
+  /* FLEXBOX >>>>> | set up to make everything look nice */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  /* just padding its really self explanatory */
+  padding: 0 1rem;
+  height: 3.75rem;
+
+  /* Colors of the text that is in the navbar, 
+  overridden if those have their own class style */
+  color: white;
+}
