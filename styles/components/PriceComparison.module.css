@@ -1,0 +1,31 @@
+.div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.sideComparison {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33%;
+  height: 500px;
+  background-color: white;
+}
+.centerComparison {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 33%;
+  height: 500px;
+  background-color: gray;
+}
+
+.titleText {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 10px;
+  text-decoration: underline;
+  text-decoration-thickness: 0.2em;
+  text-underline-position: under;
+}

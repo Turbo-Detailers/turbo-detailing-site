@@ -7,6 +7,8 @@ import sectionTwoStyles from "../styles/components/Home/SectionTwo.module.css";
 import { Fonts } from "../bin/fonts";
 import Subtitle from "../components/titles/Subtitle";
 import Link from "next/link";
+import AccentedText from "../components/text/AccentedText";
+import PriceComparison from "../components/PriceComparison";
 
 export default function Home() {
   return (
@@ -30,14 +32,17 @@ export default function Home() {
       {/* visual */}
       <div className={sectionTwoStyles.sectionTwo}>
         <div className={sectionTwoStyles.wrapper}>
-          <div className={`${Fonts.subtitle} ${sectionTwoStyles.paragraph}`}>
-            Welcome to Turbo Luxury Auto Detailing, where we tailor our services
-            to meet the unique needs of your vehicle. Our full interior and
-            exterior detailing services use only the best products and
-            techniques to leave your car looking and feeling like new. Our team
-            of experts personalize their approach to fit the specific make and
-            model of your car, from leather and upholstery care to tire shining.
-            Experience the Turbo difference.
+          <div className={` ${sectionTwoStyles.paragraph}`}>
+            Welcome to <AccentedText>Turbo Luxury Auto Detailing</AccentedText>,
+            where we tailor our services to meet the unique needs of your
+            vehicle. Our full <AccentedText>interior and exterior</AccentedText>{" "}
+            detailing services use only the best products and techniques to
+            leave your car looking and feeling like new. Our team of experts
+            personalize their approach to fit the specific make and model of
+            your car, from leather and upholstery care to tire shining.{" "}
+            <AccentedText>
+              <strong> Experience the Turbo difference.</strong>
+            </AccentedText>
             {/* <Image
               src={"/images/tires.tiff"}
               alt="cleaning tires"
@@ -45,12 +50,11 @@ export default function Home() {
               style={{ objectFit: "cover" }}
             ></Image> */}
           </div>
-          <div className={`${sectionTwoStyles.actionButton} ${Fonts.title}`}>
-            <Link href={"https://calendly.com/turbodetailers/complete"}>
-              Schedule your appointment today.
-            </Link>
-          </div>
         </div>
+      </div>
+
+      <div>
+        <PriceComparison></PriceComparison>
       </div>
       <footer className={styles.footer}>
         &copy; 2023 Turbo Detailing. All rights reserved.

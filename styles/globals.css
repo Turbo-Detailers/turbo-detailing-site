@@ -3,6 +3,10 @@
   --title-color: #ffff;
 }
 
+footer p {
+  font-size: 0.2rem;
+}
+
 html,
 body {
   background-color: var(--page-background-color);
