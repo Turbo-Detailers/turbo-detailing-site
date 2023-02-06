@@ -18,10 +18,13 @@
   justify-content: space-between;
   width: 33%;
   height: 500px;
-  background-color: gray;
+  background-color: rgb(211, 211, 211);
 }
 
 .titleText {
+  width: 100%;
+  text-align: center;
+  color: black;
   font-size: 20px;
   font-weight: bold;
   margin: 10px;
