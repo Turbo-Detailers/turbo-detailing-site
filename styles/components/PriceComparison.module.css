@@ -10,7 +10,7 @@
   justify-content: space-between;
   width: 33%;
   height: 500px;
-  background-color: white;
+  background-color: rgb(34, 34, 34);
 }
 .centerComparison {
   display: flex;
@@ -18,17 +18,28 @@
   justify-content: space-between;
   width: 33%;
   height: 500px;
-  background-color: rgb(211, 211, 211);
+  background-color: rgb(48, 48, 48);
 }
 
 .titleText {
   width: 100%;
   text-align: center;
-  color: black;
+  color: white;
   font-size: 20px;
   font-weight: bold;
   margin: 10px;
   text-decoration: underline;
   text-decoration-thickness: 0.2em;
   text-underline-position: under;
+  text-decoration-color: var(--text-accent-color);
+}
+
+@media (max-width: 600px) {
+  .div {
+    flex-direction: column;
+  }
+  .sideComparison,
+  .centerComparison {
+    width: 100%;
+  }
 }
