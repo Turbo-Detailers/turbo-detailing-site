@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   width: 100%;
+  align-items: center;
 }
 
 .sideComparison {
@@ -17,17 +18,26 @@
   flex-direction: column;
   justify-content: space-between;
   width: 33%;
-  height: 500px;
+  height: 600px;
   background-color: rgb(48, 48, 48);
 }
 
-.titleText {
+.titleText,
+.sideTitleText {
   width: 100%;
   text-align: center;
   color: white;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 1.5rem;
+  // font-weight: bold;
   margin: 10px;
+}
+
+.sideComparison,
+.centerComparison {
+  // border-radius: 10px;
+}
+
+.titleText {
   text-decoration: underline;
   text-decoration-thickness: 0.2em;
   text-underline-position: under;
