@@ -6,7 +6,8 @@ const variants = {
       y: "0px",
       transition: {
         delayChildren: 0.5,
-        delay: 0.5,
+        delay: 0.25,
+        type: "spring",
       },
     },
   },
@@ -16,6 +17,7 @@ const variants = {
       opacity: 1,
       transition: {
         delayChildren: 0.5,
+        type: "spring",
       },
     },
   },

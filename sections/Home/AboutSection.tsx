@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Fonts } from "../../bin/fonts";
+import variants from "../../bin/variants";
 import AccentedText from "../../components/text/AccentedText";
 import sectionTwoStyles from "../../styles/components/Home/SectionTwo.module.scss";
 
@@ -7,8 +8,10 @@ function AboutSection() {
   return (
     <div className={sectionTwoStyles.sectionTwo}>
       <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
+        variants={variants.fadeInUp}
+        initial={"hidden"}
+        whileInView={"show"}
+        viewport={{ once: true }}
         className={sectionTwoStyles.wrapper}
       >
         <div className={`${sectionTwoStyles.paragraph} ${Fonts.body}`}>

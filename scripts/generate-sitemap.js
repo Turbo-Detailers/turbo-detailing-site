@@ -10,7 +10,7 @@ function addPage(page) {
     .replace(".ts", "");
   const route = path === "/index" ? "/" : path;
 
-  return `  <url>
+  return `<url>
     <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
     <changefreq>hourly</changefreq>
     <lastmod>2023-02-08</lastmod>
