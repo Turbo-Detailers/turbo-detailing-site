@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import variants from "../../bin/variants";
 import PriceComparison from "../../components/PriceComparison";
-import sectionThreeStyles from "../../styles/components/Home/sectionThree.module.scss";
+import sectionThreeStyles from "../../styles/components/Home/SectionThree.module.scss";
 
 function PricingSection() {
   return (
