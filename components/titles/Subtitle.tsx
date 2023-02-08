@@ -1,6 +1,6 @@
 import { Fonts } from "../../bin/fonts";
 import Props from "../../interfaces/Props";
-import subtitleStyles from "../../styles/components/Subtitle.module.css";
+import subtitleStyles from "../../styles/components/Subtitle.module.scss";
 
 export default function Subtitle({ children }: Props) {
   return (

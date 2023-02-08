@@ -1,6 +1,6 @@
 import { Fonts } from "../../bin/fonts";
 import { motion } from "framer-motion";
-import styles from "../../styles/components/AccentedTitle.module.css";
+import styles from "../../styles/components/AccentedTitle.module.scss";
 import Props from "../../interfaces/Props";
 import FadeIn from "../motion/FadeIn";
 

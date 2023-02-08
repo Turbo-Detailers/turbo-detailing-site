@@ -1,6 +1,13 @@
 * {
   --page-background-color: #060606;
   --title-color: #ffff;
+  --text-accent-color: #e93f33;
+
+  $mobile-screen-width: 676px;
+}
+
+footer p {
+  font-size: 0.2rem;
 }
 
 html,

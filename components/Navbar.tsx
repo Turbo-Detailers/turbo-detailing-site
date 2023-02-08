@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import styles from "../styles/components/Navbar.module.css";
+import styles from "../styles/components/Navbar.module.scss";
 
 function Navbar() {
   return (

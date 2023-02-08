@@ -1,0 +1,11 @@
+.text {
+  /* color: #e93f33; */
+  text-decoration: underline;
+  text-decoration-color: #e93f33;
+  text-decoration-thickness: 0.2em;
+  text-underline-position: under;
+  -moz-text-decoration: underline;
+  -moz-text-decoration-color: #e93f33;
+  -moz-text-decoration-thickness: 0.2em;
+  -moz-text-underline-position: under;
+}
