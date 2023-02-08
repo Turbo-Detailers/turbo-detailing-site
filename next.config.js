@@ -4,11 +4,11 @@ const nextConfig = {
   swcMinify: true,
   webpack: (config, { isServer }) => {
     if (isServer) {
-      require('./scripts/generate-sitemap')
+      require("./scripts/generate-sitemap.js");
     }
 
-    return config
+    return config;
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
