@@ -1,12 +1,11 @@
 import Head from "next/head";
-import Image from "next/image";
-import styles from "../styles/Home.module.css";
+
+import styles from "../styles/Home.module.scss";
 import AccentedTitle from "../components/titles/AccentedTitle";
 
-import sectionTwoStyles from "../styles/components/Home/SectionTwo.module.css";
-import { Fonts } from "../bin/fonts";
+import sectionTwoStyles from "../styles/components/Home/SectionTwo.module.scss";
+import sectionThreeStyles from "../styles/components/Home/SectionThree.module.scss";
 import Subtitle from "../components/titles/Subtitle";
-import Link from "next/link";
 import AccentedText from "../components/text/AccentedText";
 import PriceComparison from "../components/PriceComparison";
 
@@ -43,18 +42,15 @@ export default function Home() {
             <AccentedText>
               <strong> Experience the Turbo difference.</strong>
             </AccentedText>
-            {/* <Image
-              src={"/images/tires.tiff"}
-              alt="cleaning tires"
-              fill={true}
-              style={{ objectFit: "cover" }}
-            ></Image> */}
           </div>
         </div>
       </div>
 
-      <div>
-        <PriceComparison></PriceComparison>
+      <div className={sectionThreeStyles.container}>
+        <strong>
+          Pick <AccentedText>Your </AccentedText> Plan
+        </strong>
+        <PriceComparison />
       </div>
       <footer className={styles.footer}>
         &copy; 2023 Turbo Detailing. All rights reserved.

@@ -1,4 +1,3 @@
-import { Fonts } from "../../bin/fonts";
 import styles from "../../styles/components/Text/AccentedText.module.css";
 import Props from "../../interfaces/Props";
 

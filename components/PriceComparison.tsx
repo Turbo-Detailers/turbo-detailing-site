@@ -1,4 +1,4 @@
-import styles from "../styles/components/PriceComparison.module.css";
+import styles from "../styles/components/PriceComparison.module.scss";
 
 function PriceComparison() {
   return (
