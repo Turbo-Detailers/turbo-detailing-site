@@ -3,25 +3,54 @@
     "price": 150,
     "name": "Interior",
     "description": "Leave your car's interior feeling brand new",
-    "benefits": ["Vacuum", "Wipe down all surfaces", "Clean windows"]
+    "benefits": [
+      "Thorough vacuuming",
+      "Shampooing of all fabrics and carpets",
+      "Cleaning and conditioning of leather",
+      "Detailed cleaning of hard surfaces",
+      "Deep cleaning of air vents & crevices",
+      "Odor elimination",
+      "Protectant applied to plastic surfaces",
+      "Hand washing of windows & mirrors",
+      "Detailed cleaning of gauges & buttons",
+      "Optional: Leather protection"
+    ]
   },
   "exterior": {
     "price": 150,
     "name": "Exterior",
     "description": "Leave your car's exterior feeling brand new",
-    "benefits": ["Wash", "Wax", "Clean wheels"]
+    "benefits": [
+      "Scratch-free wash",
+      "Cleaning of rims, tires, and wheel wells",
+      "Exterior wash with premium products",
+      "Spray wax/sealant application",
+      "Tar and bug removal",
+      "Paint decontamination",
+      "Precision wax application",
+      "Drying with warm air and microfiber",
+      "Tire dressing application",
+      "Specialized touch-up and detail sprays",
+      "Final inspection and touch-ups"
+    ]
   },
   "full": {
     "price": 250,
     "name": "Turbo",
     "description": "Leave your car feeling brand new",
+    "note": "Most Popular",
     "benefits": [
-      "Vacuum",
-      "Wipe down all surfaces",
-      "Clean windows",
-      "Wash",
-      "Wax",
-      "Clean wheels"
+      "High-pressure wash",
+      "Surface degreasing",
+      "Tar and bug removal",
+      "Iron decontamination",
+      "Sealant or wax application",
+      "Cleaning of rims, tires, and wheel wells",
+      "Vacuuming of interior",
+      "Interior surface cleaning",
+      "Fabric and upholstery cleaning",
+      "Cleaning of windows and mirrors",
+      "Leather cleaning and conditioning"
     ]
   }
 }

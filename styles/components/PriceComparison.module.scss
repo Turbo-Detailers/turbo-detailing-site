@@ -10,7 +10,8 @@
   flex-direction: column;
   justify-content: space-between;
   width: 33%;
-  height: 500px;
+  min-height: 400px;
+  max-height: 550px;
   background-color: rgb(34, 34, 34);
   align-items: center;
 }
@@ -19,7 +20,7 @@
   flex-direction: column;
   justify-content: space-between;
   width: 33%;
-  height: 600px;
+  min-height: 600px;
   background-color: rgb(48, 48, 48);
   align-items: center;
   border-top: 6px solid var(--text-accent-color);
@@ -85,5 +86,10 @@
   .sideComparison,
   .centerComparison {
     width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .div {
+    margin: 0;
   }
 }
