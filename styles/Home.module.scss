@@ -11,17 +11,21 @@
 .scrollSign {
   position: absolute;
   bottom: 6rem;
+  font-size: 1rem;
   left: 10%;
   transform: translateX(-50%);
   width: 100%;
-  height: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   animation: scroll 2s infinite;
   writing-mode: vertical-rl;
-  text-orientation: mixed;
-  color: rgb(136, 136, 136);
+  text-orientation: sideways;
+  color: rgb(255, 255, 255);
+}
+
+.scrollSignBar {
+  margin-top: 0.75rem;
 }
 
 .main {
@@ -116,6 +120,10 @@
 
   .container {
     padding: 0;
+  }
+
+  .scrollSign {
+    font-size: 0.85rem;
   }
 }
 
