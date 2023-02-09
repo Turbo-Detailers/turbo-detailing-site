@@ -1,0 +1,27 @@
+{
+  "interior": {
+    "price": 150,
+    "name": "Interior",
+    "description": "Leave your car's interior feeling brand new",
+    "benefits": ["Vacuum", "Wipe down all surfaces", "Clean windows"]
+  },
+  "exterior": {
+    "price": 150,
+    "name": "Exterior",
+    "description": "Leave your car's exterior feeling brand new",
+    "benefits": ["Wash", "Wax", "Clean wheels"]
+  },
+  "full": {
+    "price": 250,
+    "name": "Turbo",
+    "description": "Leave your car feeling brand new",
+    "benefits": [
+      "Vacuum",
+      "Wipe down all surfaces",
+      "Clean windows",
+      "Wash",
+      "Wax",
+      "Clean wheels"
+    ]
+  }
+}

@@ -12,6 +12,7 @@
   width: 33%;
   height: 500px;
   background-color: rgb(34, 34, 34);
+  align-items: center;
 }
 .centerComparison {
   display: flex;
@@ -20,8 +21,41 @@
   width: 33%;
   height: 600px;
   background-color: rgb(48, 48, 48);
+  align-items: center;
+  border-top: 6px solid var(--text-accent-color);
 }
 
+.benefits {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 400px;
+  align-items: center;
+  text-align: center;
+}
+
+.price {
+  font-size: 3rem;
+  margin-bottom: 3%;
+  text-align: left;
+  width: 75%;
+
+  p {
+    font-size: 0.9rem;
+    margin-top: -1%;
+  }
+
+  .accent {
+    color: var(--text-accent-color);
+  }
+}
+
+.benefit {
+  border-bottom: rgb(143, 143, 143) 1px solid;
+  width: 80%;
+  text-align: left;
+}
 .titleText,
 .sideTitleText {
   width: 100%;
@@ -37,12 +71,12 @@
   // border-radius: 10px;
 }
 
-.titleText {
-  text-decoration: underline;
-  text-decoration-thickness: 0.2em;
-  text-underline-position: under;
-  text-decoration-color: var(--text-accent-color);
-}
+// .titleText {
+//   text-decoration: underline;
+//   text-decoration-thickness: 0.2em;
+//   text-underline-position: under;
+//   text-decoration-color: var(--text-accent-color);
+// }
 
 @media (max-width: 600px) {
   .div {
