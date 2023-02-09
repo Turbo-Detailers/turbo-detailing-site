@@ -8,6 +8,7 @@ function Top() {
       <div>
         <AccentedTitle>Turbo</AccentedTitle>
         <Subtitle>Luxury Detailing</Subtitle>
+        <p className={styles.scrollSign}>Scroll</p>
       </div>
     </main>
   );
