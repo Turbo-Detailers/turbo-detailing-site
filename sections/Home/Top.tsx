@@ -6,6 +6,7 @@ import styles from "../../styles/Home.module.scss";
 function Top() {
   const { scrollYProgress } = useScroll();
 
+  console.log(scrollYProgress);
   return (
     <main className={styles.main}>
       <div>
@@ -13,7 +14,7 @@ function Top() {
         <Subtitle>Luxury Detailing</Subtitle>
         <motion.p
           className={styles.scrollSign}
-          style={{ opacity: 1 / scrollYProgress }}
+          // style={{ opacity: 1 - 0.01 * Number(scrollYProgress) }}
         >
           SCROLL <p className={styles.scrollSignBar}>━━━</p>
         </motion.p>
