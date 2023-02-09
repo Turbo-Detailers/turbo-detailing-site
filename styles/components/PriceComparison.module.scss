@@ -11,7 +11,8 @@
   justify-content: space-between;
   width: 33%;
   min-height: 400px;
-  max-height: 550px;
+  max-height: 80%;
+  margin-top: 2%;
   background-color: rgb(34, 34, 34);
   align-items: center;
 }
@@ -24,6 +25,7 @@
   background-color: rgb(48, 48, 48);
   align-items: center;
   border-top: 6px solid var(--text-accent-color);
+  height:100%;
 }
 
 .benefits {
