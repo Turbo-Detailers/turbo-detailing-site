@@ -26,6 +26,9 @@ function PriceComparison() {
 
       <div className={styles.centerComparison}>
         <div className={styles.titleText}>{pricingData.full.name}</div>
+        <div className={styles.subtitleText}>
+          {pricingData.full.description}
+        </div>
         <div className={styles.benefits}>
           {pricingData.full.benefits.map((item) => (
             <div key={item} className={styles.benefit}>

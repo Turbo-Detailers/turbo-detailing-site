@@ -23,9 +23,6 @@ export default function Home() {
       <AboutSection />
       <SectionBreak>Our Pricing</SectionBreak>
       <PricingSection />
-      <footer className={styles.footer}>
-        &copy; 2023 Turbo Detailing. All rights reserved.
-      </footer>
     </div>
   );
 }
