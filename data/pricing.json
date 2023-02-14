@@ -3,6 +3,7 @@
     "price": 150,
     "name": "Interior",
     "description": "Leave your car's interior feeling brand new",
+    "note": "",
     "benefits": [
       "Thorough vacuuming",
       "Shampooing of all fabrics and carpets",
@@ -19,7 +20,8 @@
   "exterior": {
     "price": 150,
     "name": "Exterior",
-    "description": "Leave your car's exterior feeling brand new",
+    "description": "Stand out with a fresh exterior finish.",
+    "note": "",
     "benefits": [
       "Scratch-free wash",
       "Cleaning of rims, tires, and wheel wells",
@@ -37,8 +39,8 @@
   "full": {
     "price": 250,
     "name": "Turbo",
-    "description": "Leave your car feeling brand new",
-    "note": "Most Popular",
+    "description": "The best of both worlds.",
+    "note": "Most Value",
     "benefits": [
       "High-pressure wash",
       "Surface degreasing",

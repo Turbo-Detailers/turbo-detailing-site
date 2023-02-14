@@ -107,6 +107,23 @@
   }
 }
 
+@media (max-width: 936px) {
+  .div {
+    flex-direction: column;
+  }
+
+  .div {
+    flex-direction: column;
+    margin-left: 12.5%;
+    margin-right: 12.5%;
+    width: 60%;
+  }
+  .sideComparison,
+  .centerComparison {
+    width: 100%;
+    // border-radius: 0;
+  }
+}
 @media (max-width: 600px) {
   .div {
     flex-direction: column;

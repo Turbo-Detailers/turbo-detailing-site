@@ -1,20 +1,57 @@
 import { Fonts } from "../bin/fonts";
 import styles from "../styles/components/PriceComparison.module.scss";
 import pricingData from "../data/pricing.json";
-import Props from "../interfaces/Props";
 
-function PriceComparisonSection({ children }: Props) {
+export interface PricingData {
+  price: number;
+  name: string;
+  description: string;
+  note: string;
+  benefits: string[];
+  location: string;
+}
+
+function PriceComparisonSection(props: PricingData) {
+  var fixedStyles: {
+    div: string;
+    title: string;
+    benefits: string;
+    benefit: string;
+    price: string;
+    accent: string;
+  } = {
+    div: styles.sideComparison,
+    title: styles.sideTitleText,
+    benefits: styles.benefits,
+    benefit: styles.benefit,
+    price: styles.price,
+    accent: styles.accent,
+  };
+
+  if (props.location == "center") {
+    fixedStyles.div = styles.centerComparison;
+    fixedStyles.title = styles.titleText;
+  }
   return (
-    <div className={styles.sideComparison}>
-      <div className={styles.sideTitleText}>{pricingData.interior.name}</div>
-      <div className={styles.benefits}>
-        {pricingData.interior.benefits.map((item) => (
-          <div key={item} className={styles.benefit}>
+    <div className={fixedStyles.div}>
+      <div className={fixedStyles.title}>{props.name}</div>
+      <div className={fixedStyles.benefits}>
+        {props.benefits.map((item) => (
+          <div key={item} className={fixedStyles.benefit}>
             {item}
           </div>
         ))}
       </div>
-      <div className={styles.price}>${pricingData.interior.price}</div>
+      <div className={fixedStyles.price}>
+        ${props.price}
+        {props.note !== "" ? (
+          <p>
+            <a className={fixedStyles.accent}>*</a> {props.note}
+          </p>
+        ) : (
+          <></>
+        )}
+      </div>
     </div>
   );
 }
@@ -22,38 +59,31 @@ function PriceComparisonSection({ children }: Props) {
 function PriceComparison() {
   return (
     <div className={`${styles.div} ${Fonts.body}`}>
-      <PriceComparisonSection />
+      <PriceComparisonSection
+        name={pricingData.interior.name}
+        price={pricingData.interior.price}
+        description={pricingData.interior.description}
+        benefits={pricingData.interior.benefits}
+        note={pricingData.interior.note}
+        location="side"
+      />
 
-      <div className={styles.centerComparison}>
-        <div className={styles.titleText}>{pricingData.full.name}</div>
-        <div className={styles.subtitleText}>
-          {pricingData.full.description}
-        </div>
-        <div className={styles.benefits}>
-          {pricingData.full.benefits.map((item) => (
-            <div key={item} className={styles.benefit}>
-              {item}
-            </div>
-          ))}
-        </div>
-        <div className={styles.price}>
-          ${pricingData.full.price}
-          <p>
-            <a className={styles.accent}>*</a> {pricingData.full.note}
-          </p>
-        </div>
-      </div>
-      <div className={styles.sideComparison}>
-        <div className={styles.sideTitleText}>{pricingData.exterior.name}</div>
-        <div className={styles.benefits}>
-          {pricingData.exterior.benefits.map((item) => (
-            <div key={item} className={styles.benefit}>
-              {item}
-            </div>
-          ))}
-        </div>
-        <div className={styles.price}>${pricingData.exterior.price}</div>
-      </div>
+      <PriceComparisonSection
+        name={pricingData.full.name}
+        price={pricingData.full.price}
+        description={pricingData.full.description}
+        benefits={pricingData.full.benefits}
+        note={pricingData.full.note}
+        location="center"
+      />
+      <PriceComparisonSection
+        name={pricingData.exterior.name}
+        price={pricingData.exterior.price}
+        description={pricingData.exterior.description}
+        benefits={pricingData.exterior.benefits}
+        note={pricingData.exterior.note}
+        location="side"
+      />
     </div>
   );
 }
