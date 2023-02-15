@@ -35,6 +35,7 @@ function AboutSection() {
             src={"/images/home/3.png"}
             alt="Bugatti"
             fill={true}
+            quality={90}
             style={{ objectFit: "cover", zIndex: -2 }}
           />
         </div>
