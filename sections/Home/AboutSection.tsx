@@ -14,11 +14,17 @@ function AboutSection() {
         viewport={{ once: true }}
         className={sectionTwoStyles.wrapper}
       >
+        <div style={{ marginLeft: "2rem" }}>
+          <h1 className={`${sectionTwoStyles.title} ${Fonts.title}`}>
+            About Us
+          </h1>
+        </div>
         <div
           style={{
             borderRadius: "10px",
             width: "100%",
             position: "relative",
+            backgroundColor: "none",
           }}
         >
           <div className={`${sectionTwoStyles.paragraph} ${Fonts.body}`}>
@@ -34,6 +40,7 @@ function AboutSection() {
           <Image
             src={"/images/home/3.png"}
             alt="Bugatti"
+            key="/images/home/3.png"
             fill={true}
             quality={90}
             style={{ objectFit: "cover", zIndex: -2 }}

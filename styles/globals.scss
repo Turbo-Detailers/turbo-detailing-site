@@ -1,5 +1,5 @@
 * {
-  --page-background-color: #060606;
+  // --page-background-color: #060606;
   --title-color: #ffff;
   --text-accent-color: #e93f33;
 
@@ -17,6 +17,7 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  z-index: -100;
 }
 
 .bg-img {
@@ -38,4 +39,10 @@ html {
 body {
   color: white;
   background: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  img {
+    filter: brightness(0.8) contrast(1.1);
+  }
 }
