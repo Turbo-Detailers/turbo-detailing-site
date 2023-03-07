@@ -1,10 +1,16 @@
 import Link from "next/link";
+import styles from "../styles/components/LinkButton.module.scss";
 
-function LinkButton() {
+interface LinkProps {
+  href: string;
+  text: string;
+}
+
+function LinkButton(props: LinkProps) {
   return (
-    <Link href="">
-      <a>Book</a>
-    </Link>
+    <div className={styles.button}>
+      <Link href={props.href}>{props.text}</Link>
+    </div>
   );
 }
 

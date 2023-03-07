@@ -1,0 +1,16 @@
+.button {
+  background-color: black;
+  border-color: #e93f33;
+  border-width: 2px;
+  font-size: 1.2rem;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  &:hover {
+    background-color: #fff;
+    color: #000;
+  }
+}
