@@ -9,6 +9,7 @@ export interface PricingData {
   note: string;
   benefits: string[];
   location: string;
+  link: string;
 }
 
 function PriceComparisonSection(props: PricingData) {
@@ -34,7 +35,10 @@ function PriceComparisonSection(props: PricingData) {
   }
   return (
     <div className={fixedStyles.div}>
-      <div className={fixedStyles.title}>{props.name}</div>
+      <div className={fixedStyles.title}>
+        <a href={props.link}>{props.name}</a>
+        <div className={styles.description}>{props.description}</div>
+      </div>
       <div className={fixedStyles.benefits}>
         {props.benefits.map((item) => (
           <div key={item} className={fixedStyles.benefit}>
@@ -65,6 +69,7 @@ function PriceComparison() {
         description={pricingData.interior.description}
         benefits={pricingData.interior.benefits}
         note={pricingData.interior.note}
+        link={pricingData.interior.link}
         location="side"
       />
 
@@ -74,6 +79,7 @@ function PriceComparison() {
         description={pricingData.full.description}
         benefits={pricingData.full.benefits}
         note={pricingData.full.note}
+        link={pricingData.full.link}
         location="center"
       />
       <PriceComparisonSection
@@ -82,6 +88,7 @@ function PriceComparison() {
         description={pricingData.exterior.description}
         benefits={pricingData.exterior.benefits}
         note={pricingData.exterior.note}
+        link={pricingData.exterior.link}
         location="side"
       />
     </div>

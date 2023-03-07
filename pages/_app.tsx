@@ -15,7 +15,7 @@ export default function App({ Component, pageProps }: AppProps) {
         <meta httpEquiv="content-language" content="en-us" />
       </Head>
       <Navbar />
-      <AnimatePresence mode="wait" initial={false}>
+      <AnimatePresence mode="wait" initial={true}>
         <Layout>
           <Component {...pageProps} />
         </Layout>

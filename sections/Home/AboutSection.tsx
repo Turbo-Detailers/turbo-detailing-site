@@ -14,11 +14,6 @@ function AboutSection() {
         viewport={{ once: true }}
         className={sectionTwoStyles.wrapper}
       >
-        <div style={{ marginLeft: "2rem" }}>
-          <h1 className={`${sectionTwoStyles.title} ${Fonts.title}`}>
-            About Us
-          </h1>
-        </div>
         <div
           style={{
             borderRadius: "10px",
@@ -27,6 +22,11 @@ function AboutSection() {
             backgroundColor: "none",
           }}
         >
+          <div style={{ marginLeft: "2rem" }}>
+            <h1 className={`${sectionTwoStyles.title} ${Fonts.body}`}>
+              <b>About Us</b>
+            </h1>
+          </div>
           <div className={`${sectionTwoStyles.paragraph} ${Fonts.body}`}>
             Welcome to Turbo Luxury Auto Detailing, where we tailor our services
             to meet the unique needs of your vehicle. Our full interior and
