@@ -42,7 +42,7 @@ function AboutSection() {
             alt="Bugatti"
             key="/images/home/3.png"
             fill={true}
-            quality={90}
+            quality={100}
             style={{ objectFit: "cover", zIndex: -2 }}
           />
         </div>
