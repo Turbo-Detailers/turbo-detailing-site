@@ -5,6 +5,9 @@ import SectionBreak from "../components/SectionBreak";
 import Top from "../sections/Home/Top";
 import AboutSection from "../sections/Home/AboutSection";
 import PricingSection from "../sections/Home/PricingSection";
+import FAQ from "../components/FAQ";
+import faqList from "../data/faq.json";
+import Spacer from "../components/Spacer";
 
 export default function Home() {
   return (
@@ -23,6 +26,9 @@ export default function Home() {
       <AboutSection />
       <SectionBreak>Our Pricing</SectionBreak>
       <PricingSection />
+      <Spacer height={3} />
+      <SectionBreak>FAQ</SectionBreak>
+      <FAQ faqList={faqList} />
     </div>
   );
 }
