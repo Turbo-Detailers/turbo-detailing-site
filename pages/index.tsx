@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Turbo Detailing</title>
+        <title>Turbo Mobile Auto Detailing - Turbo Detailers</title>
         <meta
           name="description"
           content="Turbo Detailing | Luxury Mobile Auto Detailing in the Twin Cities Area"
@@ -24,7 +24,9 @@ export default function Home() {
       <Top />
       <SectionBreak />
       <AboutSection />
-      <SectionBreak>Our Pricing</SectionBreak>
+      <SectionBreak>
+        Our <b>Pricing</b>
+      </SectionBreak>
       <PricingSection />
       <Spacer height={3} />
       <SectionBreak>Turbo FAQs</SectionBreak>

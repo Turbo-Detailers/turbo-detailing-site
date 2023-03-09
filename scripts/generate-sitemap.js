@@ -13,7 +13,7 @@ function addPage(page) {
   return `<url>
     <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
     <changefreq>hourly</changefreq>
-    <lastmod>2023-02-08</lastmod>
+    <lastmod>2023-03-08</lastmod>
   </url>`;
 }
 
