@@ -43,7 +43,7 @@ const FAQ = ({ faqList, limit }: FAQProps) => {
                 transition={{ duration: 0.2 }}
                 className={styles.heading}
               >
-                <h3>{faq.question}</h3>
+                <p>{faq.question}</p>
                 <AnimatePresence>
                   {selectedQuestionIndex === index && (
                     <motion.div
