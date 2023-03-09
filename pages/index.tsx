@@ -27,7 +27,7 @@ export default function Home() {
       <SectionBreak>Our Pricing</SectionBreak>
       <PricingSection />
       <Spacer height={3} />
-      <SectionBreak>FAQ</SectionBreak>
+      <SectionBreak>Turbo FAQs</SectionBreak>
       <FAQ faqList={faqList} />
     </div>
   );

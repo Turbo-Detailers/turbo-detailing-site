@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import styles from "../styles/components/FAQ.module.scss";
+import { Fonts } from "../bin/fonts";
 
 interface FAQProps {
   faqList: FAQ[];
@@ -41,9 +42,10 @@ const FAQ = ({ faqList, limit }: FAQProps) => {
                     selectedQuestionIndex === index ? "#e93f33" : "white",
                 }}
                 transition={{ duration: 0.2 }}
-                className={styles.heading}
+                className={`${styles.heading} ${Fonts.body}`}
               >
-                <p>{faq.question}</p>
+                <h4>{faq.question}</h4>
+
                 <AnimatePresence>
                   {selectedQuestionIndex === index && (
                     <motion.div
