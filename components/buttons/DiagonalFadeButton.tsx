@@ -5,10 +5,10 @@ import styles from "../../styles/components/DiagonalFadeButton.module.scss";
 
 export default function DiagonalFadeButton({ href, text }: ButtonProps) {
   return (
-    <div className={`${styles["button-borders"]} ${Fonts.body}`}>
+    <Link href={href} className={`${styles["button-borders"]} ${Fonts.body}`}>
       <button className={`${styles["primary-button"]} ${Fonts.body}`}>
         {text}
       </button>
-    </div>
+    </Link>
   );
 }
