@@ -9,6 +9,10 @@
   margin-right: 50%;
 }
 
+.textDiv {
+  backdrop-filter: blur(10px);
+}
+
 .sectionTwo {
   width: 100%;
   padding: 0;
@@ -19,6 +23,7 @@
 }
 .title {
   padding-top: 1.5rem;
+  margin-left: 1.5rem;
 }
 
 /* .actionButton {
@@ -39,7 +44,7 @@
   margin-right: 50%;
 } */
 
-@media (max-width: 600px) {
+@media (max-width: 767px) {
   .actionButton {
     justify-content: center;
     margin-top: 10%;
@@ -59,5 +64,8 @@
     text-align: center;
     margin: 0;
     font-size: 1.1rem;
+  }
+  .title {
+    margin-left: 0;
   }
 }
