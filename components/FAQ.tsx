@@ -44,8 +44,25 @@ const FAQ = ({ faqList, limit }: FAQProps) => {
                 transition={{ duration: 0.2 }}
                 className={`${styles.heading} ${Fonts.body}`}
               >
-                <h4>{faq.question}</h4>
-
+                <div className="flex-row">
+                  <h4>{faq.question}</h4>
+                  <motion.li
+                    style={{
+                      listStyle: "none",
+                      maxWidth: "1.5rem",
+                      maxHeight: "1.5rem",
+                      userSelect: "none",
+                      width: "auto",
+                    }}
+                    className="flex-column"
+                    animate={{
+                      rotate:
+                        selectedQuestionIndex === index ? "45deg" : "0deg",
+                    }}
+                  >
+                    <span>+</span>
+                  </motion.li>
+                </div>
                 <AnimatePresence>
                   {selectedQuestionIndex === index && (
                     <motion.div
