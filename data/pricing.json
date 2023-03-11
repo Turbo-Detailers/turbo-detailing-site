@@ -1,6 +1,6 @@
 {
   "interior": {
-    "price": 150,
+    "price": 125,
     "name": "Interior",
     "description": "Leave your car feeling brand new.",
     "note": "",
@@ -17,7 +17,7 @@
     ]
   },
   "exterior": {
-    "price": 150,
+    "price": 125,
     "name": "Exterior",
     "description": "Stand out with a fresh exterior finish.",
     "note": "",
@@ -35,7 +35,7 @@
     ]
   },
   "full": {
-    "price": 250,
+    "price": 200,
     "name": "Turbo",
     "description": "The best of both worlds.",
     "note": "Most Popular",
