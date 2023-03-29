@@ -2,6 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import styles from "../styles/components/ContactForm.module.scss";
 export default function ContactForm() {
+  var [submitted, setSubmitted] = useState(false);
   // Input Change Handling
   const [inputs, setInputs] = useState({
     email: "",
@@ -21,20 +22,31 @@ export default function ContactForm() {
   const handleOnSubmit = (event: any) => {
     event.preventDefault();
 
+    if (inputs.email === "" || inputs.subject === "" || inputs.message === "")
+      return;
+
     axios({
       method: "POST",
       url: "https://formbold.com/s/9mZRP",
       data: inputs,
     })
-      .then((r) => {
+      .then(() => {
         console.log("Sent");
         setInputs({ email: "", subject: "", message: "" });
+
+        setSubmitted(true);
       })
-      .catch((r) => {
+      .catch((error: any) => {
         console.log("error");
       });
   };
 
+  if (submitted)
+    return (
+      <div className={styles.form}>
+        <h3>Message Sent!</h3>
+      </div>
+    );
   return (
     <form onSubmit={handleOnSubmit} className={styles.form}>
       <input
