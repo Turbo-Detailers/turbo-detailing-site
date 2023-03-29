@@ -1,0 +1,35 @@
+.form input[type="text"],
+.form input[type="email"],
+.form textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 3px solid #555;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.form input[type="text"]:focus,
+.form input[type="email"]:focus,
+.form textarea:focus {
+  border: 3px solid #ccc;
+}
+
+.form textarea {
+  resize: none;
+  height: 150px;
+}
+
+.form button {
+  background-color: #555;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+}
