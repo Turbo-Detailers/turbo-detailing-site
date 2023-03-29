@@ -23,7 +23,10 @@ export default function App({ Component, pageProps }: AppProps) {
           name="description"
           content="Turbo Mobile Auto Detailing: Low price, high quality luxury detailing in the Twin Cities area."
         />
-        <meta property="og:image" content="Turbo Detailers" />
+        <meta
+          property="og:image"
+          content="/images/og/social-sharing-with-text.jpg"
+        />
       </Head>
       <Navbar />
       <AnimatePresence mode="wait" initial={true}>
