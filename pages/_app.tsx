@@ -29,13 +29,13 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Navbar />
+      <div itemScope itemType="https://schema.org/WebSite">
+        <meta itemProp="url" content="https://turbodetailers.com/" />
+        <meta itemProp="name" content="Turbo Detailers" />
+        <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
+      </div>
       <AnimatePresence mode="wait" initial={true}>
         <Layout>
-          <div itemScope itemType="https://schema.org/WebSite">
-            <meta itemProp="url" content="https://turbodetailers.com/" />
-            <meta itemProp="name" content="Turbo Detailers" />
-            <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
-          </div>
           <GoogleAnalytics trackPageViews gaMeasurementId="G-EC18NFWZEX" />
           <Component {...pageProps} />
         </Layout>
