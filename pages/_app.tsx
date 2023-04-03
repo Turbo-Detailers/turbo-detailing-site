@@ -3,11 +3,11 @@ import Head from "next/head";
 
 import type { AppProps } from "next/app";
 import Navbar from "../components/Navbar";
-import { motion, AnimatePresence } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 
-import NavigationBar from "../components/NavigationBar/NavigationBar";
+// import NavigationBar from "../components/NavigationBar/NavigationBar";
 
 import { GoogleAnalytics } from "nextjs-google-analytics";
 

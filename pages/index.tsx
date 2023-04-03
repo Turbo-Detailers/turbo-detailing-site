@@ -8,7 +8,7 @@ import PricingSection from "../sections/Home/PricingSection";
 import FAQ from "../components/FAQ";
 import faqList from "../data/faq.json";
 import Spacer from "../components/Spacer";
-import WhyUs from "../sections/Home/WhyUs";
+// import WhyUs from "../sections/Home/WhyUs";
 
 export default function Home() {
   return (

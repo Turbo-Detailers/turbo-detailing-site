@@ -1,4 +1,4 @@
-import { motion, useScroll, useMotionValue, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import variants from "../../bin/variants";
 import AccentedTitle from "../../components/titles/AccentedTitle";
 import Subtitle from "../../components/titles/Subtitle";
