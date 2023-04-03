@@ -8,6 +8,7 @@ import PricingSection from "../sections/Home/PricingSection";
 import FAQ from "../components/FAQ";
 import faqList from "../data/faq.json";
 import Spacer from "../components/Spacer";
+import WhyUs from "../sections/Home/WhyUs";
 
 export default function Home() {
   return (
@@ -22,8 +23,10 @@ export default function Home() {
       </Head>
 
       <Top />
-      <SectionBreak />
+      {/* <SectionBreak /> */}
+      <Spacer height={0.5} />
       <AboutSection />
+      {/* <WhyUs /> */}
       <SectionBreak>Our Pricing</SectionBreak>
       <PricingSection />
       <Spacer height={3} />

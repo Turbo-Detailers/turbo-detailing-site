@@ -33,6 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: rgba(0, 0, 0, 0.5);
 }
 
 .description {
@@ -119,4 +120,14 @@
   .logo img {
     filter: invert(1);
   }
+}
+
+.backgroundVid {
+  position: absolute;
+  object-fit: cover;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: -3;
 }

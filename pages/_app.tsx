@@ -7,6 +7,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 
+import NavigationBar from "../components/NavigationBar/NavigationBar";
+
 import { GoogleAnalytics } from "nextjs-google-analytics";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -29,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Navbar />
+      {/* <NavigationBar /> */}
       <div itemScope itemType="https://schema.org/WebSite">
         <meta itemProp="url" content="https://turbodetailers.com/" />
         <meta itemProp="name" content="Turbo Detailers" />
