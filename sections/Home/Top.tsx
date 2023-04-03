@@ -15,9 +15,9 @@ function Top() {
             muted
             loop
             className={styles.backgroundVid}
-            src={"/videos/a4-detail.mov"}
+            src={"/videos/audi-a4.mov"}
           >
-            <source src={"/videos/a4-detail.mov"} type="video/mov" />
+            <source src={"/videos/audi-a4.mov"} type="video/mov" />
           </video>
           <AccentedTitle>Turbo</AccentedTitle>
           <motion.div
