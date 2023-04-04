@@ -9,10 +9,10 @@ function ContactPage() {
   return (
     <>
       <Head>
-        <title>Turbo Mobile Auto Detailing - Turbo Detailers</title>
+        <title>Contact Us - Turbo Detailers</title>
         <meta
           name="description"
-          content="Turbo Mobile Auto Detailing aims to give you the best car detailing experience in the comfort of your own home. Located in the Twin Cities Area, we come to you!"
+          content="Contact us. If you have any questions about our services, feel free to reach out to us using our form! We provide detailing services in the Greater Twin Cities and Minneapolis area: Chaska, Chanhassen, Eden Prairie, Plymouth, Minnetonka, Wayzata, and more!"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
