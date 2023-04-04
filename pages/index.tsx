@@ -29,6 +29,7 @@ export default function Home() {
           autoPlay={true}
           muted
           loop
+          playsInline
           className={styles.backgroundVid}
           src={"/videos/audi-a4.mov"}
         >
