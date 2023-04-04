@@ -1,7 +1,8 @@
 .main {
-  padding: 1rem;
+  padding: 2.5rem;
   margin: 1rem 0;
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
+  /* background-color: rgb(0, 0, 0); */
 }
 
 .text {
@@ -9,6 +10,8 @@
   font-weight: 600;
   text-align: center;
   color: #fff;
+  /* color: rgb(0, 255, 255); */
+  /* mix-blend-mode: screen; */
 }
 
 .accent {

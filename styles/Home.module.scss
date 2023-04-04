@@ -33,7 +33,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(0, 0, 0);
 }
 
 .description {
@@ -110,24 +110,28 @@
 }
 
 @media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
+  // .card,
+  // .footer {
+  //   border-color: #222;
+  // }
+  // .code {
+  //   background: #111;
+  // }
   .logo img {
     filter: invert(1);
   }
 }
 
 .backgroundVid {
-  position: absolute;
+  position: fixed;
   object-fit: cover;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
   z-index: -3;
+}
+
+.covered {
+  background-color: black;
 }

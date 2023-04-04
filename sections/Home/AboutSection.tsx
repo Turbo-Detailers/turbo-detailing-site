@@ -31,14 +31,15 @@ function AboutSection() {
               care to tire shining. Experience the Turbo difference.
             </div>
           </div>
-          <Image
+
+          {/* <Image
             src={"/images/home/bugatti.JPG"}
             alt="Bugatti"
             key="/images/home/bugatti.JPG"
             fill={true}
             quality={100}
             style={{ objectFit: "cover", zIndex: -2 }}
-          />
+          /> */}
         </div>
       </motion.div>
     </div>

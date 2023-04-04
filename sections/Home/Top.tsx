@@ -10,15 +10,6 @@ function Top() {
     <>
       <main className={styles.main}>
         <div>
-          <video
-            autoPlay={true}
-            muted
-            loop
-            className={styles.backgroundVid}
-            src={"/videos/audi-a4.mov"}
-          >
-            <source src={"/videos/audi-a4.mov"} type="video/mov" />
-          </video>
           <AccentedTitle>Turbo</AccentedTitle>
           <motion.div
             variants={variants.fadeInUp}

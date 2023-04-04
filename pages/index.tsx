@@ -24,11 +24,22 @@ export default function Home() {
 
       <Top />
       {/* <SectionBreak /> */}
-      <Spacer height={0.5} />
-      <AboutSection />
-      {/* <WhyUs /> */}
-      <SectionBreak>Our Pricing</SectionBreak>
-      <PricingSection />
+      <div>
+        <video
+          autoPlay={true}
+          muted
+          loop
+          className={styles.backgroundVid}
+          src={"/videos/audi-a4.mov"}
+        >
+          <source src={"/videos/audi-a4.mov"} type="video/mov" />
+        </video>
+        <AboutSection />
+        {/* <WhyUs /> */}
+        <SectionBreak>Our Pricing</SectionBreak>
+        <PricingSection />
+      </div>
+
       <Spacer height={3} />
       <SectionBreak>Turbo FAQs</SectionBreak>
       <FAQ faqList={faqList} />
