@@ -3,6 +3,8 @@ import ContactForm from "../components/ContactForm";
 import Spacer from "../components/Spacer";
 import AccentedTitle from "../components/titles/AccentedTitle";
 import styles from "../styles/Home.module.scss";
+import FAQ from "../components/FAQ";
+import faqList from "../data/faq.json";
 
 function FAQPage() {
   return (
@@ -18,10 +20,10 @@ function FAQPage() {
       <main className={styles.main}>
         <Spacer height={1.75} />
 
-        <AccentedTitle>Contact</AccentedTitle>
+        <AccentedTitle>FAQ</AccentedTitle>
         <Spacer height={3} />
 
-        <ContactForm />
+        <FAQ faqList={faqList} />
       </main>
     </>
   );
