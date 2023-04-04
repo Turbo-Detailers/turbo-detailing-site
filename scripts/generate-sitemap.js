@@ -9,11 +9,12 @@ function addPage(page) {
     .replace(".tsx", "")
     .replace(".ts", "");
   const route = path === "/index" ? "/" : path;
-
+  let yourDate = new Date();
+  yourDate = yourDate.toISOString().split("T")[0];
   return `<url>
     <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
     <changefreq>hourly</changefreq>
-    <lastmod>2023-03-08</lastmod>
+    <lastmod>${yourDate}</lastmod>
   </url>`;
 }
 
