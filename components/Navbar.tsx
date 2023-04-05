@@ -27,6 +27,9 @@ function Navbar() {
         >
           Pricing
         </Link>
+        <Link href="/FAQ" className={linkStyles["hover-animation"]}>
+          FAQ
+        </Link>
         <Link href="/contact" className={linkStyles["hover-animation"]}>
           Contact
         </Link>
