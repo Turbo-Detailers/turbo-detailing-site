@@ -27,7 +27,11 @@ function Navbar() {
         >
           Pricing
         </Link>
-        <Link href="/FAQ" className={linkStyles["hover-animation"]}>
+        <Link
+          href="/FAQ"
+          className={linkStyles["hover-animation"]}
+          style={{ marginRight: "2.5rem" }}
+        >
           FAQ
         </Link>
         <Link href="/contact" className={linkStyles["hover-animation"]}>
