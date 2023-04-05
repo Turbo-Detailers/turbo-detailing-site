@@ -28,7 +28,7 @@ function Navbar() {
           Pricing
         </Link>
         <Link
-          href="/FAQ"
+          href="/faq"
           className={linkStyles["hover-animation"]}
           style={{ marginRight: "2.5rem" }}
         >
