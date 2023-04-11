@@ -8,9 +8,13 @@ import PricingSection from "../sections/Home/PricingSection";
 import FAQ from "../components/FAQ";
 import faqList from "../data/faq.json";
 import Spacer from "../components/Spacer";
+import ImageCarousel from "../components/ImageCarousel";
+import Carousel from "../components/Carousel/Carousel";
 // import WhyUs from "../sections/Home/WhyUs";
 
 export default function Home() {
+  const SLIDE_COUNT = 5;
+  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
   return (
     <div className={styles.container}>
       <Head>
@@ -40,7 +44,7 @@ export default function Home() {
         <SectionBreak>Our Pricing</SectionBreak>
         <PricingSection />
       </div>
-
+      <Carousel slides={SLIDES} />
       <Spacer height={3} />
       <SectionBreak>Turbo FAQs</SectionBreak>
       <FAQ faqList={faqList} />
