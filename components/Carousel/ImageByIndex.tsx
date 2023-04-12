@@ -1,8 +1,9 @@
 export const images: string[] = [
-  "/images/home/1.png",
-  "/images/home/2.png",
-  "/images/home/3.png",
-  "/images/home/bugatti.JPG",
+  "/images/details/a4/A4_2470.jpg",
+  "/images/details/a4/A4_2473.jpg",
+  "/images/details/a4/A4_2474.jpg",
+  "/images/details/a4/A4_2481.jpg",
+  "/images/details/a4/A4_2486.jpg",
 ];
 
 const imageByIndex = (index: number): string => images[index % images.length];
