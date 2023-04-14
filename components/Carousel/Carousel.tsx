@@ -28,7 +28,6 @@ const items = localImages.map((image: any) => (
 ));
 
 function Carousel() {
-  console.log(items);
   return (
     <AliceCarousel
       autoPlay
