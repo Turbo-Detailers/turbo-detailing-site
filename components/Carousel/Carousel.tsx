@@ -17,7 +17,6 @@ const items = localImages.map((image: any) => (
       key={image}
       alt={styles["Car Detail Images"]}
       role="presentation"
-      loading="eager"
       style={{ objectFit: "cover", maxWidth: "100vw" }}
       onDragStart={handleDragStart}
       placeholder="blur"
