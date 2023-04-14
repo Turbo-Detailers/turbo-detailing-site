@@ -28,7 +28,7 @@ export default function Home() {
 
       <Top />
       {/* <SectionBreak /> */}
-      <div>
+      <div className={styles.backgroundVidContainer}>
         <video
           autoPlay={true}
           muted
@@ -36,7 +36,9 @@ export default function Home() {
           playsInline
           className={styles.backgroundVid}
           src={"/videos/audi-a4.mov"}
-        ></video>
+        >
+          <source src={"/videos/audi-a4.mov"} type="video/mov" />
+        </video>
         <AboutSection />
       </div>
 

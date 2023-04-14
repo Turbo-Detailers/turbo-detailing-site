@@ -122,14 +122,18 @@
   }
 }
 
+.backgroundVidContainer {
+  position: relative;
+}
+
 .backgroundVid {
-  position: fixed;
+  position: absolute;
   object-fit: cover;
   right: 0;
   bottom: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: -3;
+  z-index: -8;
 }
 
 .covered {
