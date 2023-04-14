@@ -47,7 +47,6 @@ export default function Home() {
         {/* <WhyUs /> */}
         <SectionBreak>Our Pricing</SectionBreak>
         <PricingSection />
-        {/* <ImageCarousel /> */}
         <Spacer height={6} />
         <SectionBreak>Gallery</SectionBreak>
         <Carousel />
