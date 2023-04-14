@@ -84,3 +84,12 @@ body {
 .alice-carousel__next-btn-item {
   color: var(--text-accent-color);
 }
+
+.alice-carousel__dots-item:not(.__custom):hover,
+.alice-carousel__dots-item:not(.__custom).__active {
+  background-color: var(--text-accent-color) !important;
+}
+.alice-carousel__dots-item:not(.__custom),
+.alice-carousel__dots-item:not(.__custom) {
+  background-color: var(--main-navbar-elevation-color) !important;
+}
