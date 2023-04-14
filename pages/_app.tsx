@@ -39,7 +39,7 @@ export default function App({ Component, pageProps }: AppProps) {
       </div>
       <AnimatePresence mode="wait" initial={true}>
         <Layout>
-          <GoogleAnalytics trackPageViews gaMeasurementId="G-EC18NFWZEX" />
+          {/* <GoogleAnalytics trackPageViews gaMeasurementId="G-EC18NFWZEX" /> */}
           <Component {...pageProps} />
         </Layout>
       </AnimatePresence>
