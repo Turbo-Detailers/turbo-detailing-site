@@ -18,11 +18,9 @@ const items = localImages.map((image: any) => (
       alt={styles["Car Detail Images"]}
       role="presentation"
       loading="eager"
-      // width={"1920"}
-      // height={"1080"}
-      // fill
       style={{ objectFit: "cover", maxWidth: "100vw" }}
       onDragStart={handleDragStart}
+      placeholder="blur"
     />
   </div>
 ));

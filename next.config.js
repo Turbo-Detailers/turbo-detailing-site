@@ -1,8 +1,10 @@
 /** @type {import('next').NextConfig} */
+const withImages = require("next-images");
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-i18n: {
+  i18n: {
     locales: ["en"],
     defaultLocale: "en",
   },
