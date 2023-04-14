@@ -10,6 +10,7 @@
 }
 
 .textDiv {
+  height: 100vh;
   backdrop-filter: blur(10px) brightness(0.45);
 }
 
@@ -20,6 +21,8 @@
   margin: 0;
   background-color: transparent;
   overflow-wrap: break-word;
+  // height: 50vh;
+  // display: flex;
 }
 .title {
   padding-top: 1.5rem;
