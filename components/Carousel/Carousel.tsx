@@ -7,12 +7,9 @@ import React, {
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import Autoplay from "embla-carousel-autoplay";
 
-import { DotButton, PrevButton, NextButton } from "./ArrowsAndButtons";
 import imageByIndex, { images } from "./ImageByIndex";
 import styles from "../../styles/components/Carousel.module.scss";
 import Image from "next/image";
-
-import Flickity from "react-flickity-component";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
 
