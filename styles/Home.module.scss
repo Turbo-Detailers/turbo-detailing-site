@@ -124,10 +124,11 @@
 
 .backgroundVidContainer {
   position: relative;
+  background-color: none;
 }
 
 .backgroundVid {
-  position: absolute;
+  position: fixed;
   object-fit: cover;
   right: 0;
   bottom: 0;

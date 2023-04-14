@@ -33,6 +33,7 @@ export default function Home() {
           autoPlay={true}
           muted
           loop
+          controls={false}
           playsInline
           className={styles.backgroundVid}
           src={"/videos/audi-a4.mov"}
@@ -42,15 +43,17 @@ export default function Home() {
         <AboutSection />
       </div>
 
-      {/* <WhyUs /> */}
-      <SectionBreak>Our Pricing</SectionBreak>
-      <PricingSection />
-      {/* <ImageCarousel /> */}
-      <Spacer height={6} />
-      <Carousel />
-      <Spacer height={3} />
-      <SectionBreak>Turbo FAQs</SectionBreak>
-      <FAQ faqList={faqList} />
+      <div className="withBackground">
+        {/* <WhyUs /> */}
+        <SectionBreak>Our Pricing</SectionBreak>
+        <PricingSection />
+        {/* <ImageCarousel /> */}
+        <Spacer height={6} />
+        <Carousel />
+        <Spacer height={3} />
+        <SectionBreak>Turbo FAQs</SectionBreak>
+        <FAQ faqList={faqList} />
+      </div>
     </div>
   );
 }

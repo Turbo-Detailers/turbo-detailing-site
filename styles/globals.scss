@@ -93,3 +93,7 @@ body {
 .alice-carousel__dots-item:not(.__custom) {
   background-color: var(--main-navbar-elevation-color) !important;
 }
+
+.withBackground {
+  background-color: var(--background-main-color);
+}

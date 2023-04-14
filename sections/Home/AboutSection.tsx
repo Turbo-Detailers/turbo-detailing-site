@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { Fonts } from "../../bin/fonts";
 import variants from "../../bin/variants";
 import styles from "../../styles/components/Home/AboutSection.module.scss";
-import Image from "next/image";
 
 function AboutSection() {
   return (
