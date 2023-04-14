@@ -11,7 +11,7 @@ import Image from "next/image";
 const handleDragStart = (e: any) => e.preventDefault();
 
 const items = localImages.map((image: any) => (
-  <div>
+  <div key={image}>
     <Image
       src={image}
       key={image}
