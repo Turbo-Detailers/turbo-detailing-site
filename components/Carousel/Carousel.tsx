@@ -11,12 +11,13 @@ import Image from "next/image";
 const handleDragStart = (e: any) => e.preventDefault();
 
 const items = images.map((image: any) => (
-  <img
+  <Image
     src={image}
     key={image}
     alt={styles["Car Detail Images"]}
     role="presentation"
     loading="eager"
+    fill
     onDragStart={handleDragStart}
   />
 ));
