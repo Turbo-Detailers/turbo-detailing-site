@@ -36,9 +36,7 @@ export default function Home() {
           playsInline
           className={styles.backgroundVid}
           src={"/videos/audi-a4.mov"}
-        >
-          <source src={"/videos/audi-a4.mov"} type="video/mov" />
-        </video>
+        ></video>
         <AboutSection />
       </div>
 
@@ -46,7 +44,7 @@ export default function Home() {
       <SectionBreak>Our Pricing</SectionBreak>
       <PricingSection />
       {/* <ImageCarousel /> */}
-      <Carousel slides={SLIDES} />
+      <Carousel />
       <Spacer height={3} />
       <SectionBreak>Turbo FAQs</SectionBreak>
       <FAQ faqList={faqList} />
