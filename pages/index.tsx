@@ -40,10 +40,11 @@ export default function Home() {
           <source src={"/videos/audi-a4.mov"} type="video/mov" />
         </video>
         <AboutSection />
-        {/* <WhyUs /> */}
-        <SectionBreak>Our Pricing</SectionBreak>
-        <PricingSection />
       </div>
+
+      {/* <WhyUs /> */}
+      <SectionBreak>Our Pricing</SectionBreak>
+      <PricingSection />
       {/* <ImageCarousel /> */}
       <Carousel slides={SLIDES} />
       <Spacer height={3} />
