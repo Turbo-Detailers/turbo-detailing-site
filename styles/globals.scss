@@ -68,3 +68,18 @@ body {
     filter: brightness(0.8) contrast(1.1);
   }
 }
+
+.alice-carousel__stage-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 676px;
+}
+.alice-carousel__stage-item img {
+  max-height: 676px;
+}
+
+.alice-carousel__next-btn,
+.alice-carousel__next-btn-item {
+  color: var(--text-accent-color);
+}

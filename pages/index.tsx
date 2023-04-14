@@ -44,6 +44,7 @@ export default function Home() {
         <SectionBreak>Our Pricing</SectionBreak>
         <PricingSection />
       </div>
+      {/* <ImageCarousel /> */}
       <Carousel slides={SLIDES} />
       <Spacer height={3} />
       <SectionBreak>Turbo FAQs</SectionBreak>

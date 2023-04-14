@@ -24,8 +24,12 @@
     "next": "^13.0.5",
     "next-videos": "^1.4.1",
     "nextjs-google-analytics": "^2.3.3",
+    "pure-react-carousel": "^1.30.1",
     "react": "18.2.0",
+    "react-alice-carousel": "^2.7.1",
     "react-dom": "18.2.0",
+    "react-flickity": "^1.0.8",
+    "react-flickity-component": "^4.0.5",
     "sass": "^1.58.0",
     "typescript": "4.9.3",
     "update": "^0.7.4"
