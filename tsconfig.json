@@ -15,6 +15,12 @@
     "jsx": "preserve",
     "incremental": true
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "components/NavigationBar/MenuItem.jsx"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "components/NavigationBar/MenuItem.jsx",
+    "components/Carousel/ImageByIndex.jsx"
+  ],
   "exclude": ["node_modules"]
 }

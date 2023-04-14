@@ -1,4 +1,4 @@
-import { images } from "./ImageByIndex";
+import { images, localImages } from "./ImageByIndex";
 import styles from "../../styles/components/Carousel.module.scss";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
@@ -10,16 +10,21 @@ import Image from "next/image";
 
 const handleDragStart = (e: any) => e.preventDefault();
 
-const items = images.map((image: any) => (
-  <img
-    src={image}
-    key={image}
-    alt={styles["Car Detail Images"]}
-    role="presentation"
-    loading="eager"
-    // fill
-    onDragStart={handleDragStart}
-  />
+const items = localImages.map((image: any) => (
+  <div>
+    <Image
+      src={image}
+      key={image}
+      alt={styles["Car Detail Images"]}
+      role="presentation"
+      loading="eager"
+      // width={"1920"}
+      // height={"1080"}
+      // fill
+      style={{ objectFit: "cover", maxWidth: "100vw" }}
+      onDragStart={handleDragStart}
+    />
+  </div>
 ));
 
 function Carousel() {
