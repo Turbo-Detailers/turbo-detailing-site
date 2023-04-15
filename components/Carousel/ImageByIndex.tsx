@@ -1,19 +1,28 @@
-import imgOne from "../../public/images/details/a4/A4_2470.jpeg";
-import imgTwo from "../../public/images/details/a4/A4_2473.jpeg";
-import imgThree from "../../public/images/details/a4/A4_2474.jpeg";
-import imgFour from "../../public/images/details/a4/A4_2481.jpeg";
-import imgFive from "../../public/images/details/a4/A4_2486.jpeg";
+// Audi A4 Imports
+import a4InteriorRear from "../../public/images/details/a4/a4-interior-rear.jpeg";
+import a4InteriorWheel from "../../public/images/details/a4/a4-interior-wheel.jpeg";
+import a4InteriorDoorPanel from "../../public/images/details/a4/a4-interior-door-panel.jpeg";
+import a4SteeringWheel from "../../public/images/details/a4/a4-steering-wheel.jpeg";
+import a4InteriorDoorPanelSide from "../../public/images/details/a4/a4-interior-door-panel-side.jpeg";
 
-export const images = [
-  "/images/details/a4/A4_2470.JPG",
-  "/images/details/a4/A4_2473.JPG",
-  "/images/details/a4/A4_2474.JPG",
-  "/images/details/a4/A4_2481.JPG",
-  "/images/details/a4/A4_2486.JPG",
+// Tesla Model Y Imports
+import modelYFrontSoap from "../../public/images/details/model-y/model-y-front-soap.jpg";
+import modelYFrontClean from "../../public/images/details/model-y/model-y-front-clean.jpg";
+import modelYIsometricClean from "../../public/images/details/model-y/model-y-isometric-clean.jpg";
+import modelYRearClean from "../../public/images/details/model-y/model-y-rear-clean.jpg";
+import modelYSideRearClean from "../../public/images/details/model-y/model-y-side-rear-clean.jpg";
+import modelYWheelClean from "../../public/images/details/model-y/model-y-wheel-clean.jpg";
+
+export const localImages = [
+  a4InteriorRear,
+  a4InteriorWheel,
+  a4InteriorDoorPanel,
+  a4SteeringWheel,
+  a4InteriorDoorPanelSide,
+  modelYFrontClean,
+  modelYFrontSoap,
+  modelYIsometricClean,
+  modelYRearClean,
+  modelYSideRearClean,
+  modelYWheelClean,
 ];
-
-export const localImages = [imgOne, imgTwo, imgThree, imgFour, imgFive];
-
-const imageByIndex = (index: any) => images[index % images.length];
-
-export default imageByIndex;
