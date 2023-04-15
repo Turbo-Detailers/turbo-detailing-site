@@ -1,4 +1,4 @@
-import { images, localImages } from "./ImageByIndex";
+import { localImages } from "./ImageByIndex";
 import styles from "../../styles/components/Carousel.module.scss";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
