@@ -15,11 +15,12 @@ const items = localImages.map((image: any) => (
     <Image
       src={image}
       key={image}
-      alt={styles["Car Detail Images"]}
+      alt={"Car Detail Images"}
       role="presentation"
       style={{ objectFit: "cover", maxWidth: "100vw" }}
       onDragStart={handleDragStart}
       placeholder="blur"
+      quality={70}
     />
   </div>
 ));
