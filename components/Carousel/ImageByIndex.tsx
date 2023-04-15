@@ -19,10 +19,10 @@ export const localImages = [
   a4InteriorDoorPanel,
   a4SteeringWheel,
   a4InteriorDoorPanelSide,
+  modelYWheelClean,
   modelYFrontClean,
   modelYFrontSoap,
   modelYIsometricClean,
   modelYRearClean,
   modelYSideRearClean,
-  modelYWheelClean,
 ];
