@@ -1,9 +1,6 @@
 import { Fonts } from "../bin/fonts";
 import styles from "../styles/components/PriceComparison.module.scss";
 import pricingData from "../data/pricing.json";
-import Link from "next/link";
-import LinkButton from "./buttons/LinkButton";
-import HoverLineButton from "./buttons/HoverLineButton";
 import DiagonalFadeButton from "./buttons/DiagonalFadeButton";
 
 export interface PricingData {
