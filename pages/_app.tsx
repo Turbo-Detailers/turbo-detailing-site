@@ -3,9 +3,11 @@ import Head from "next/head";
 
 import type { AppProps } from "next/app";
 import Navbar from "../components/Navbar";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
+
+import Router from "next/router";
 
 export default function App({ Component, pageProps, router }: AppProps) {
   return (
@@ -50,3 +52,22 @@ export default function App({ Component, pageProps, router }: AppProps) {
     </main>
   );
 }
+
+// fixing flashes of unstyled content
+const routeChange = () => {
+  // Temporary fix to avoid flash of unstyled content
+  // during route transitions. Keep an eye on this
+  // issue and remove this code when resolved:
+  // https://github.com/vercel/next.js/issues/17464
+
+  const tempFix = () => {
+    const allStyleElems = document.querySelectorAll('style[media="x"]');
+    allStyleElems.forEach((elem) => {
+      elem.removeAttribute("media");
+    });
+  };
+  tempFix();
+};
+
+Router.events.on("routeChangeComplete", routeChange);
+Router.events.on("routeChangeStart", routeChange);
