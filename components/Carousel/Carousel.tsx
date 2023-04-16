@@ -27,7 +27,6 @@ const items = localImages.map((image: any) => {
         onDragStart={handleDragStart}
         placeholder="blur"
         quality={70}
-        fill
         priority={isPriority}
       />
     </div>
