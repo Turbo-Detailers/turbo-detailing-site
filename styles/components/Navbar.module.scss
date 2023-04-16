@@ -29,6 +29,16 @@
   color: white;
 }
 
+.link_row a {
+  margin-left: 2.5rem;
+}
+
 .logoText {
   top: 0.16rem;
+}
+
+@media (max-width: 676px) {
+  .link_row a {
+    margin-left: 1rem;
+  }
 }

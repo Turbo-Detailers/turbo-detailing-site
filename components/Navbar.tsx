@@ -55,20 +55,27 @@ function Navbar() {
       </Link>
 
       <a></a>
-      <div className={"flex-row"}>
+      <div className={`flex-row ${styles.link_row}`}>
         <Link
           href="/pricing"
           className={linkStyles["hover-animation"]}
-          style={{ marginRight: "2.5rem" }}
+          // style={{ marginRight: "2.5rem" }}
         >
           Pricing
         </Link>
         <Link
           href="/faq"
           className={linkStyles["hover-animation"]}
-          style={{ marginRight: "2.5rem" }}
+          // style={{ marginRight: "2.5rem" }}
         >
           FAQ
+        </Link>
+        <Link
+          href="/gallery"
+          className={linkStyles["hover-animation"]}
+          // style={{ marginRight: "2.5rem" }}
+        >
+          Gallery
         </Link>
         <Link href="/contact" className={linkStyles["hover-animation"]}>
           Contact
