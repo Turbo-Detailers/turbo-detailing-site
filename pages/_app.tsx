@@ -33,17 +33,17 @@ export default function App({ Component, pageProps, router }: AppProps) {
         <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
       </div>
       <AnimatePresence mode="wait" initial={true}>
-        <Layout>
+        <Layout key={router.route}>
           {/* <GoogleAnalytics trackPageViews gaMeasurementId="G-EC18NFWZEX" /> */}
-          <motion.div
+          {/* <motion.div
             key={router.route}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ opacity: { duration: 0.5 } }}
-          >
-            <Component {...pageProps} />
-          </motion.div>
+            transition={{ opacity: { duration: 2 } }}
+          > */}
+          <Component {...pageProps} />
+          {/* </motion.div> */}
         </Layout>
       </AnimatePresence>
       <Footer />
