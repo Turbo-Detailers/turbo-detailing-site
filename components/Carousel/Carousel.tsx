@@ -1,5 +1,4 @@
 import { localImages } from "./ImageByIndex";
-import styles from "../../styles/components/Carousel.module.scss";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -9,21 +8,31 @@ import "react-alice-carousel/lib/alice-carousel.css";
 import Image from "next/image";
 
 const handleDragStart = (e: any) => e.preventDefault();
+var isFirst = true;
+const items = localImages.map((image: any) => {
+  var isPriority;
+  if (isFirst) isPriority = true;
+  else isPriority = false;
 
-const items = localImages.map((image: any) => (
-  <div key={image}>
-    <Image
-      src={image}
-      key={image}
-      alt={"Car Detail Images"}
-      role="presentation"
-      style={{ objectFit: "cover", maxWidth: "100vw" }}
-      onDragStart={handleDragStart}
-      placeholder="blur"
-      quality={70}
-    />
-  </div>
-));
+  isFirst = false;
+
+  return (
+    <div key={image}>
+      <Image
+        src={image}
+        key={image}
+        alt={"Car Detail Images"}
+        role="presentation"
+        style={{ objectFit: "cover", maxWidth: "100vw" }}
+        onDragStart={handleDragStart}
+        placeholder="blur"
+        quality={70}
+        fill
+        priority={isPriority}
+      />
+    </div>
+  );
+});
 
 function Carousel() {
   return (

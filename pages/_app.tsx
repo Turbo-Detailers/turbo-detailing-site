@@ -3,15 +3,11 @@ import Head from "next/head";
 
 import type { AppProps } from "next/app";
 import Navbar from "../components/Navbar";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 
-// import NavigationBar from "../components/NavigationBar/NavigationBar";
-
-import { GoogleAnalytics } from "nextjs-google-analytics";
-
-export default function App({ Component, pageProps }: AppProps) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <main>
       <Head>
@@ -31,7 +27,6 @@ export default function App({ Component, pageProps }: AppProps) {
         />
       </Head>
       <Navbar />
-      {/* <NavigationBar /> */}
       <div itemScope itemType="https://schema.org/WebSite">
         <meta itemProp="url" content="https://turbodetailers.com/" />
         <meta itemProp="name" content="Turbo Detailers" />
@@ -40,7 +35,15 @@ export default function App({ Component, pageProps }: AppProps) {
       <AnimatePresence mode="wait" initial={true}>
         <Layout>
           {/* <GoogleAnalytics trackPageViews gaMeasurementId="G-EC18NFWZEX" /> */}
-          <Component {...pageProps} />
+          <motion.div
+            key={router.route}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ opacity: { duration: 0.5 } }}
+          >
+            <Component {...pageProps} />
+          </motion.div>
         </Layout>
       </AnimatePresence>
       <Footer />
