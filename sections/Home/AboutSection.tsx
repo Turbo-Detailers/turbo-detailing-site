@@ -20,7 +20,13 @@ function AboutSection() {
                 <b>About Us</b>
               </h1>
             </div>
-            <div className={`${styles.paragraph} ${Fonts.body}`}>
+            <div
+              className={`${styles.paragraph} ${Fonts.body}`}
+              // initial={{ x: -75, opacity: 0 }}
+              // animate={{ x: 0, opacity: 1 }}
+              // whileInView={"show"}
+              // viewport={{ once: true }}
+            >
               Welcome to Turbo Luxury Auto Detailing, where we tailor our
               services to meet the unique needs of your vehicle. Our full
               interior and exterior detailing services use only the best
