@@ -15,15 +15,14 @@ import modelYWheelClean from "../public/images/details/model-y/model-y-wheel-cle
 
 export const localImages = [
   a4InteriorRear,
-  a4InteriorWheel,
-  a4InteriorDoorPanel,
-  a4SteeringWheel,
-  a4InteriorDoorPanelSide,
   modelYWheelClean,
+  a4InteriorWheel,
   modelYFrontSoap,
-  modelYFrontClean,
-  modelYIsometricClean,
+  a4InteriorDoorPanel,
   modelYRearClean,
+  a4SteeringWheel,
+  modelYIsometricClean,
+  a4InteriorDoorPanelSide,
   modelYSideRearClean,
 ];
 

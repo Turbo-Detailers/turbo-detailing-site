@@ -48,7 +48,7 @@ function Carousel() {
         0: {
           items: 1,
         },
-        767: {
+        1024: {
           items: 3,
           itemsFit: "contain",
         },
