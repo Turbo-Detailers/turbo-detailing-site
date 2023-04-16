@@ -29,9 +29,9 @@ export const localImages = [
 
 export const photos = [
   {
-    src: a4InteriorRear.src,
-    width: a4InteriorRear.width,
-    height: a4InteriorRear.height,
+    src: modelYWheelClean.src,
+    width: modelYWheelClean.width,
+    height: modelYWheelClean.height,
   },
   {
     src: a4InteriorWheel.src,
@@ -39,29 +39,14 @@ export const photos = [
     height: a4InteriorWheel.height,
   },
   {
+    src: modelYSideRearClean.src,
+    width: modelYSideRearClean.width,
+    height: modelYSideRearClean.height,
+  },
+  {
     src: a4InteriorDoorPanel.src,
     width: a4InteriorDoorPanel.width,
     height: a4InteriorDoorPanel.height,
-  },
-  {
-    src: a4SteeringWheel.src,
-    width: a4SteeringWheel.width,
-    height: a4SteeringWheel.height,
-  },
-  {
-    src: a4InteriorDoorPanelSide.src,
-    width: a4InteriorDoorPanelSide.width,
-    height: a4InteriorDoorPanelSide.height,
-  },
-  {
-    src: modelYWheelClean.src,
-    width: modelYWheelClean.width,
-    height: modelYWheelClean.height,
-  },
-  {
-    src: modelYFrontSoap.src,
-    width: modelYFrontSoap.width,
-    height: modelYFrontSoap.height,
   },
   {
     src: modelYFrontClean.src,
@@ -69,18 +54,35 @@ export const photos = [
     height: modelYFrontClean.height,
   },
   {
+    src: a4SteeringWheel.src,
+    width: a4SteeringWheel.width,
+    height: a4SteeringWheel.height,
+  },
+  {
     src: modelYIsometricClean.src,
     width: modelYIsometricClean.width,
     height: modelYIsometricClean.height,
   },
   {
+    src: a4InteriorDoorPanelSide.src,
+    width: a4InteriorDoorPanelSide.width,
+    height: a4InteriorDoorPanelSide.height,
+  },
+  {
+    src: modelYFrontSoap.src,
+    width: modelYFrontSoap.width,
+    height: modelYFrontSoap.height,
+  },
+
+  {
     src: modelYRearClean.src,
     width: modelYRearClean.width,
     height: modelYRearClean.height,
   },
+
   {
-    src: modelYSideRearClean.src,
-    width: modelYSideRearClean.width,
-    height: modelYSideRearClean.height,
+    src: a4InteriorRear.src,
+    width: a4InteriorRear.width,
+    height: a4InteriorRear.height,
   },
 ];
