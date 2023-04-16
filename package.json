@@ -31,6 +31,7 @@
     "react-dom": "18.2.0",
     "react-flickity": "^1.0.8",
     "react-flickity-component": "^4.0.5",
+    "react-photo-album": "^2.0.4",
     "react-responsive-carousel": "^3.2.23",
     "sass": "^1.58.0",
     "typescript": "4.9.3",
