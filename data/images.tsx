@@ -14,7 +14,6 @@ import modelYSideRearClean from "../public/images/details/model-y/model-y-side-r
 import modelYWheelClean from "../public/images/details/model-y/model-y-wheel-clean.jpg";
 
 export const localImages = [
-  a4InteriorRear,
   modelYWheelClean,
   a4InteriorWheel,
   modelYFrontSoap,
@@ -24,6 +23,7 @@ export const localImages = [
   modelYIsometricClean,
   a4InteriorDoorPanelSide,
   modelYSideRearClean,
+  a4InteriorRear,
 ];
 
 export const photos = [
