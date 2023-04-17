@@ -37,7 +37,7 @@ export default function App({ Component, pageProps, router }: AppProps) {
           <meta itemProp="name" content="Turbo Detailers" />
           <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
         </div>
-        <AnimatePresence mode="wait" initial={true}>
+        <AnimatePresence mode="wait" initial={false}>
           <Layout key={router.route}>
             {/* <GoogleAnalytics trackPageViews gaMeasurementId="G-EC18NFWZEX" /> */}
             {/* <motion.div
