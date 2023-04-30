@@ -43,11 +43,7 @@ export default function Home() {
         <AboutSection />
       </div>
 
-      <div className="withBackgroundDark">
-        <SectionBreak>Service Areas</SectionBreak>
-        <ServiceAreas />
-        <Spacer height={2} />
-      </div>
+   
       <div className="withBackground">
         {/* <WhyUs /> */}
         <SectionBreak>Our Pricing</SectionBreak>
@@ -58,6 +54,12 @@ export default function Home() {
         <Spacer height={3} />
         <SectionBreak>Turbo FAQs</SectionBreak>
         <FAQ faqList={faqList} />
+     <Spacer height={2} />
+      </div>
+   <div className="withBackgroundDark">
+        <SectionBreak>Service Areas</SectionBreak>
+        <ServiceAreas />
+   
       </div>
     </div>
   );
