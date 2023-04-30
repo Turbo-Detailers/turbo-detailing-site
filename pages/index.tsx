@@ -48,19 +48,23 @@ export default function Home() {
         {/* <WhyUs /> */}
         <SectionBreak>Our Pricing</SectionBreak>
         <PricingSection />
-        <Spacer height={6} />
+    <Spacer height={4} />
+
+<div className="withBackgroundDark">
+        <SectionBreak>Service Areas</SectionBreak>
+        <ServiceAreas />
+   <Spacer height={2} />
+      </div>
+
+    
         <SectionBreak>Gallery</SectionBreak>
         <Carousel />
         <Spacer height={3} />
         <SectionBreak>Turbo FAQs</SectionBreak>
         <FAQ faqList={faqList} />
-     <Spacer height={2} />
+     
       </div>
-   <div className="withBackgroundDark">
-        <SectionBreak>Service Areas</SectionBreak>
-        <ServiceAreas />
    
-      </div>
     </div>
   );
 }
