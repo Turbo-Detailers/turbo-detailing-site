@@ -9,6 +9,7 @@ import FAQ from "../components/FAQ";
 import faqList from "../data/faq.json";
 import Spacer from "../components/Spacer";
 import Carousel from "../components/Carousel/Carousel";
+import ServiceAreas from "../sections/Home/ServiceAreas";
 // import WhyUs from "../sections/Home/WhyUs";
 
 export default function Home() {
@@ -42,6 +43,11 @@ export default function Home() {
         <AboutSection />
       </div>
 
+      <div className="withBackgroundDark">
+        <SectionBreak>Service Areas</SectionBreak>
+        <ServiceAreas />
+        <Spacer height={2} />
+      </div>
       <div className="withBackground">
         {/* <WhyUs /> */}
         <SectionBreak>Our Pricing</SectionBreak>

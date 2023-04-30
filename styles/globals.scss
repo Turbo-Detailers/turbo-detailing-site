@@ -8,6 +8,7 @@
   --main-navbar-elevation-color: #2e2e2e;
   --navbar-text-color: white;
   --background-main-color: #121212;
+  --background-dark-color: #0b0b0b;
   --menu-toggle-color: white;
   --title-text-color: white;
 }
@@ -96,4 +97,7 @@ body {
 
 .withBackground {
   background-color: var(--background-main-color);
+}
+.withBackgroundDark {
+  background-color: var(--background-dark-color);
 }

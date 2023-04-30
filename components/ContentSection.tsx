@@ -1,12 +1,12 @@
 import { motion } from "framer-motion";
-import styles from "../styles/components/Home/AboutSection.module.scss";
+import styles from "../styles/components/ContentSection.module.scss";
 import { Fonts } from "../bin/fonts";
 import variants from "../bin/variants";
 import Image from "next/image";
 
 interface ContentSectionProps {
   text: string;
-  title: string;
+  title?: string;
   image: string;
   imageAlt: string;
   imagePosition?: "left" | "right";
