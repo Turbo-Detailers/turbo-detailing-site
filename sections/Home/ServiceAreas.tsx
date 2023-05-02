@@ -27,7 +27,7 @@ function ServiceAreas() {
     //   </div>
     // </section>
     <ContentSection
-      text="We provide services throughout the West-Metro of the Twin Cities area. This includes Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, and more!"
+      text="We provide services throughout the West-Metro of the Twin Cities area. This includes Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, and more! Please note that we only detail SUVs and Sedans"
       //   title="Why Turbo?"
       image="/images/home/2.png"
       imageAlt="none"
