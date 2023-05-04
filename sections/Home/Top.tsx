@@ -3,7 +3,7 @@ import variants from "../../bin/variants";
 import AccentedTitle from "../../components/titles/AccentedTitle";
 import Subtitle from "../../components/titles/Subtitle";
 import styles from "../../styles/Home.module.scss";
-// import backgroundVid from "../../public/videos/a4-detail.mov";
+// import backgroundVid from "../../public/videos/a4-detail.mp4";
 
 function Top() {
   return (
