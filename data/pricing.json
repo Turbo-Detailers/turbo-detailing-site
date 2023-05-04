@@ -1,12 +1,13 @@
 {
   "interior": {
-    "price": 125,
+    "price": 175,
     "name": "Interior",
     "description": "Leave your car feeling brand new.",
     "note": "",
     "link": "https://turbodetailers.zohobookings.com/#/customer/4495603000000031078",
     "benefits": [
       "Thorough vacuuming",
+      "Deep disinfection",
       "Shampooing of all fabrics and carpets",
       "Cleaning and conditioning of leather",
       "Detailed cleaning of hard surfaces",
@@ -17,7 +18,7 @@
     ]
   },
   "exterior": {
-    "price": 125,
+    "price": 150,
     "name": "Exterior",
     "description": "Stand out with a fresh exterior finish.",
     "note": "",
@@ -35,7 +36,7 @@
     ]
   },
   "full": {
-    "price": 225,
+    "price": 300,
     "name": "Turbo",
     "description": "The best of both worlds.",
     "note": "Most Popular",
