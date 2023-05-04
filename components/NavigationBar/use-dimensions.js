@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { ref, useEffect, useRef } from "react";
 
 // Naive implementation - in reality would want to attach
 // a window or resize listener. Also use state/layoutEffect instead of ref/effect
@@ -10,6 +10,7 @@ export default function useDimensions(ref) {
   useEffect(() => {
     dimensions.current.width = ref.current.offsetWidth;
     dimensions.current.height = ref.current.offsetHeight;
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return dimensions.current;
