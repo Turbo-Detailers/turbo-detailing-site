@@ -31,7 +31,7 @@ function ServiceAreas() {
       //   title="Why Turbo?"
       image="/images/home/2.png"
       imageAlt="none"
-      isBackgroundImage={true}
+      isBackgroundImage={false}
     />
   );
 }
