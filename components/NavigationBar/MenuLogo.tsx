@@ -1,13 +1,15 @@
 import React from "react";
 import logoStyle from "../../styles/Navbar.module.css";
+import Image from "next/image";
 
 const MenuLogo = () => {
   return (
     <div className="logo">
-      <img
+      <Image
+        alt="Turbo Logo"
         className={logoStyle.menuLogo}
         src={"/assets/images/Hemlock_Logo.svg"}
-      ></img>
+      ></Image>
     </div>
   );
 };
