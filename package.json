@@ -20,7 +20,7 @@
     "embla-carousel-react": "^7.1.0",
     "eslint": "^8.28.0",
     "eslint-config-next": "^13.4.0",
-    "framer-motion": "^7.6.0",
+    "framer-motion": "^7.6.18",
     "next": "^13.4.0",
     "next-images": "^1.8.4",
     "next-videos": "^1.4.1",
@@ -35,7 +35,7 @@
     "react-photo-album": "^2.0.4",
     "react-responsive-carousel": "^3.2.23",
     "sass": "^1.58.0",
-    "typescript": "^5.0.4",
+    "typescript": "^4.9.3",
     "update": "^0.7.4"
   }
 }
