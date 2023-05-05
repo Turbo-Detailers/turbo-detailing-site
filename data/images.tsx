@@ -13,12 +13,6 @@ import modelYRearClean from "../public/images/details/model-y/model-y-rear-clean
 import modelYSideRearClean from "../public/images/details/model-y/model-y-side-rear-clean.jpg";
 import modelYWheelClean from "../public/images/details/model-y/model-y-wheel-clean.jpg";
 
-interface LocalPhoto {
-  src: string;
-  width: number;
-  height: number;
-}
-
 export const localImages = [
   modelYWheelClean,
   a4InteriorWheel,
@@ -32,7 +26,7 @@ export const localImages = [
   a4InteriorRear,
 ];
 
-export const photos: LocalPhoto[] = [
+export const photos = [
   {
     src: modelYWheelClean.src,
     width: modelYWheelClean.width,
@@ -89,33 +83,5 @@ export const photos: LocalPhoto[] = [
     src: a4InteriorRear.src,
     width: a4InteriorRear.width,
     height: a4InteriorRear.height,
-  },
-];
-
-import carPro from "../public/images/logos/carpro.png";
-import luxuryMicrofibers from "../public/images/logos/lm.png";
-import kochChemie from "../public/images/logos/kc.png";
-import ps from "../public/images/logos/ps.png";
-
-export const brandImages: LocalPhoto[] = [
-  {
-    src: carPro.src,
-    width: carPro.width,
-    height: carPro.height,
-  },
-  {
-    src: luxuryMicrofibers.src,
-    width: luxuryMicrofibers.width,
-    height: luxuryMicrofibers.height,
-  },
-  {
-    src: kochChemie.src,
-    width: kochChemie.width,
-    height: kochChemie.height,
-  },
-  {
-    src: ps.src,
-    width: ps.width,
-    height: ps.height,
   },
 ];
