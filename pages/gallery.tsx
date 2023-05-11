@@ -9,6 +9,7 @@ import styles from "../styles/Gallery.module.scss";
 import Spacer from "../components/Spacer";
 import Head from "next/head";
 import AccentedTitle from "../components/titles/AccentedTitle";
+import Link from "next/link";
 
 function NextJsImage({
   photo,
@@ -17,12 +18,14 @@ function NextJsImage({
 }: RenderPhotoProps) {
   return (
     <div style={{ ...wrapperStyle, position: "relative" }}>
-      <Image
-        fill
-        src={photo}
-        placeholder={"blurDataURL" in photo ? "blur" : undefined}
-        {...{ alt, title, sizes, className, onClick }}
-      />
+      <Link href={`/gallery/${photo.src}`}>
+        <Image
+          fill
+          src={photo}
+          placeholder={"blurDataURL" in photo ? "blur" : undefined}
+          {...{ alt, title, sizes, className, onClick }}
+        />
+      </Link>
     </div>
   );
 }
