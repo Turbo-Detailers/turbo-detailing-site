@@ -107,7 +107,9 @@ function PriceComparison() {
           description={pricingData.interior.description}
           benefits={pricingData.interior.benefits}
           note={pricingData.interior.note}
-          link={pricingData.interior.link}
+          link={
+            isSuv ? pricingData.interior.suvLink : pricingData.interior.link
+          }
           location="side"
         />
 
