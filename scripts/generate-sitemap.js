@@ -9,6 +9,9 @@ function addPage(page) {
     .replace(".tsx", "")
     .replace(".ts", "");
   const route = path === "/index" ? "/" : path;
+  if (typeof route == "string") {
+    if (route.includes("[")) return;
+  }
   let yourDate = new Date();
   yourDate = yourDate.toISOString().split("T")[0];
   return `<url>
