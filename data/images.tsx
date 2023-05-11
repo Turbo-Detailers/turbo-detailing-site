@@ -73,20 +73,27 @@ export const photos: PhotoData[] = [
     height: a4InteriorWheel.height,
   },
   {
+    src: x5FrontSeatsRear.src,
+    width: x5FrontSeatsRear.width,
+    height: x5FrontSeatsRear.height,
+  },
+  {
     src: modelYSideRearClean.src,
     width: modelYSideRearClean.width,
     height: modelYSideRearClean.height,
   },
+
   {
-    src: x5FrontSeatsRear.src,
-    width: x5FrontSeatsRear.width,
-    height: x5FrontSeatsRear.height,
+    src: x5Indicator.src,
+    width: x5Indicator.width,
+    height: x5Indicator.height,
   },
   {
     src: a4InteriorDoorPanel.src,
     width: a4InteriorDoorPanel.width,
     height: a4InteriorDoorPanel.height,
   },
+
   {
     src: modelYFrontClean.src,
     width: modelYFrontClean.width,
@@ -102,11 +109,7 @@ export const photos: PhotoData[] = [
     width: modelYIsometricClean.width,
     height: modelYIsometricClean.height,
   },
-  {
-    src: x5Indicator.src,
-    width: x5Indicator.width,
-    height: x5Indicator.height,
-  },
+
   {
     src: a4InteriorDoorPanelSide.src,
     width: a4InteriorDoorPanelSide.width,
