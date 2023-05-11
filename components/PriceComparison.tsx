@@ -2,6 +2,8 @@ import { Fonts } from "../bin/fonts";
 import styles from "../styles/components/PriceComparison.module.scss";
 import pricingData from "../data/pricing.json";
 import DiagonalFadeButton from "./buttons/DiagonalFadeButton";
+import { useRef, useState } from "react";
+import SegmentedControl from "./SegmentedControl";
 
 export interface PricingData {
   price: number;
@@ -67,37 +69,68 @@ function PriceComparisonSection(props: PricingData) {
 }
 
 function PriceComparison() {
-  return (
-    <div className={`${styles.div} ${Fonts.body}`}>
-      <PriceComparisonSection
-        name={pricingData.interior.name}
-        price={pricingData.interior.price}
-        description={pricingData.interior.description}
-        benefits={pricingData.interior.benefits}
-        note={pricingData.interior.note}
-        link={pricingData.interior.link}
-        location="side"
-      />
+  var [isSuv, updateSuv] = useState(false);
+  var interiorPrice = pricingData.interior.price;
+  var exteriorPrice = pricingData.exterior.price;
+  var turboPrice = pricingData.full.price;
 
-      <PriceComparisonSection
-        name={pricingData.full.name}
-        price={pricingData.full.price}
-        description={pricingData.full.description}
-        benefits={pricingData.full.benefits}
-        note={pricingData.full.note}
-        link={pricingData.full.link}
-        location="center"
+  if (isSuv) {
+    interiorPrice = pricingData.interior.suvPrice;
+    exteriorPrice = pricingData.exterior.suvPrice;
+    turboPrice = pricingData.full.suvPrice;
+  }
+
+  return (
+    <>
+      <SegmentedControl
+        name={"SUV selector"}
+        segments={[
+          {
+            label: "Sedan",
+            value: false,
+            ref: useRef(),
+          },
+          {
+            label: "SUV",
+            value: true,
+            ref: useRef(),
+          },
+        ]}
+        callback={updateSuv}
+        defaultIndex={0}
+        controlRef={undefined}
       />
-      <PriceComparisonSection
-        name={pricingData.exterior.name}
-        price={pricingData.exterior.price}
-        description={pricingData.exterior.description}
-        benefits={pricingData.exterior.benefits}
-        note={pricingData.exterior.note}
-        link={pricingData.exterior.link}
-        location="side"
-      />
-    </div>
+      <div className={`${styles.div} ${Fonts.body}`}>
+        <PriceComparisonSection
+          name={pricingData.interior.name}
+          price={interiorPrice}
+          description={pricingData.interior.description}
+          benefits={pricingData.interior.benefits}
+          note={pricingData.interior.note}
+          link={pricingData.interior.link}
+          location="side"
+        />
+
+        <PriceComparisonSection
+          name={pricingData.full.name}
+          price={turboPrice}
+          description={pricingData.full.description}
+          benefits={pricingData.full.benefits}
+          note={pricingData.full.note}
+          link={pricingData.full.link}
+          location="center"
+        />
+        <PriceComparisonSection
+          name={pricingData.exterior.name}
+          price={exteriorPrice}
+          description={pricingData.exterior.description}
+          benefits={pricingData.exterior.benefits}
+          note={pricingData.exterior.note}
+          link={pricingData.exterior.link}
+          location="side"
+        />
+      </div>
+    </>
   );
 }
 
