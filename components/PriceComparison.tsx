@@ -119,7 +119,7 @@ function PriceComparison() {
           description={pricingData.full.description}
           benefits={pricingData.full.benefits}
           note={pricingData.full.note}
-          link={pricingData.full.link}
+          link={isSuv ? pricingData.full.suvLink : pricingData.full.link}
           location="center"
         />
         <PriceComparisonSection
@@ -128,7 +128,9 @@ function PriceComparison() {
           description={pricingData.exterior.description}
           benefits={pricingData.exterior.benefits}
           note={pricingData.exterior.note}
-          link={pricingData.exterior.link}
+          link={
+            isSuv ? pricingData.interior.suvLink : pricingData.interior.link
+          }
           location="side"
         />
       </div>
