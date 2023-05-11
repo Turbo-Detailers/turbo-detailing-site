@@ -41,19 +41,19 @@ export const localImages = [
   a4InteriorRear,
 ];
 
-function getPhotosObject(images: StaticImageData[]): PhotoData[] {
-  var photosObject: PhotoData[] = [];
+// function getPhotosObject(images: StaticImageData[]): PhotoData[] {
+//   var photosObject: PhotoData[] = [];
 
-  for (var image in images) {
-    photosObject.push({
-      src: image.src,
-      width: image.width,
-      height: image.height,
-    });
-  }
+//   for (var image in images) {
+//     photosObject.push({
+//       src: image.src,
+//       width: image.width,
+//       height: image.height,
+//     });
+//   }
 
-  return photosObject;
-}
+//   return photosObject;
+// }
 
 export const photos: PhotoData[] = [
   {
