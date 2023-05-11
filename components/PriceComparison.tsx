@@ -13,6 +13,7 @@ export interface PricingData {
   benefits: string[];
   location: string;
   link: string;
+  isSuv: boolean;
 }
 
 function PriceComparisonSection(props: PricingData) {
@@ -53,7 +54,11 @@ function PriceComparisonSection(props: PricingData) {
         <div className={styles.booking}>
           <div>${props.price}</div>
           <div>
-            <DiagonalFadeButton text="Book" href={props.link} />
+            {props.isSuv ? (
+              <DiagonalFadeButton text="Book SUV" href={props.link} />
+            ) : (
+              <DiagonalFadeButton text="Book Sedan" href={props.link} />
+            )}
           </div>
         </div>
         {props.note !== "" ? (
@@ -110,6 +115,7 @@ function PriceComparison() {
           link={
             isSuv ? pricingData.interior.suvLink : pricingData.interior.link
           }
+          isSuv={isSuv}
           location="side"
         />
 
@@ -120,6 +126,7 @@ function PriceComparison() {
           benefits={pricingData.full.benefits}
           note={pricingData.full.note}
           link={isSuv ? pricingData.full.suvLink : pricingData.full.link}
+          isSuv={isSuv}
           location="center"
         />
         <PriceComparisonSection
@@ -131,6 +138,7 @@ function PriceComparison() {
           link={
             isSuv ? pricingData.interior.suvLink : pricingData.interior.link
           }
+          isSuv={isSuv}
           location="side"
         />
       </div>
