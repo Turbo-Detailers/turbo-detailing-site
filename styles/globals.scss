@@ -101,3 +101,68 @@ body {
 .withBackgroundDark {
   background-color: var(--background-dark-color);
 }
+
+.controls-container {
+  --highlight-width: auto;
+  --highlight-x-pos: 0;
+
+  display: flex;
+}
+
+.controls {
+  display: inline-flex;
+  justify-content: space-between;
+  background: rgb(28, 27, 27);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  max-width: 500px;
+  padding: 12px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.controls input {
+  opacity: 0;
+  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  cursor: pointer;
+  height: 100%;
+}
+
+.segment {
+  min-width: 120px;
+  position: relative;
+  text-align: center;
+  z-index: 1;
+}
+
+.segment label {
+  cursor: pointer;
+  display: block;
+  font-weight: 700;
+  padding: 10px;
+  position: relative;
+  transition: color 0.5s ease;
+}
+
+.segment.active label {
+  color: #e03333;
+}
+
+.controls::before {
+  content: "";
+  background: #ea3939;
+  border-radius: 8px;
+  width: var(--highlight-width);
+  transform: translateX(var(--highlight-x-pos));
+  position: absolute;
+  top: 8px;
+  bottom: 8px;
+  left: 0;
+  z-index: 0;
+}
