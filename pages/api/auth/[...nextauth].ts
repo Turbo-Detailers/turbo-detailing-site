@@ -1,7 +1,9 @@
-import NextAuth from "next-auth";
+import NextAuth, { AuthOptions, Session, User } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
+import { FirestoreAdapter, initFirestore } from "@next-auth/firebase-adapter";
+import { cert } from "firebase-admin/app";
 
-export const authOptions = {
+export const authOptions: AuthOptions = {
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
@@ -10,6 +12,27 @@ export const authOptions = {
     }),
     // ...add more providers here
   ],
+  adapter: FirestoreAdapter({
+    credential: cert({
+      projectId: process.env.FIREBASE_PROJECT_ID || "",
+      clientEmail: process.env.FIREBASE_CLIENT_EMAIL || "",
+      privateKey:
+        process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/gm, "\n") || "",
+    }),
+  }),
+  callbacks: {
+    session: async ({ session, user }): Promise<Session> => {
+      return Promise.resolve({ ...session, userId: user.id });
+    },
+  },
 };
+
+export const firestore = initFirestore({
+  credential: cert({
+    projectId: process.env.FIREBASE_PROJECT_ID,
+    clientEmail: process.env.FIREBASE_CLIENT_EMAIL,
+    privateKey: process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/gm, "\n"),
+  }),
+});
 
 export default NextAuth(authOptions);

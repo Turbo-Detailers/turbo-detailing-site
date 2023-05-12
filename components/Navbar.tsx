@@ -15,12 +15,14 @@ import Avatar from "@mui/material/Avatar";
 
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import { getSession, useSession } from "next-auth/react";
+import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
 import { Session } from "next-auth";
 
 const settings: {
   label: string;
   href: string;
+  onClick?: Function;
   conditional: Function;
 }[] = [
   {
@@ -41,6 +43,7 @@ const settings: {
   {
     label: "Logout",
     href: "/logout",
+    onClick: () => signOut(),
     conditional: (session: Session) => (session ? true : false),
   },
 ];
@@ -150,8 +153,8 @@ function Navbar() {
               sx={{ p: 0, marginLeft: "0.95rem" }}
             >
               <Avatar
-                alt="Profile Picture"
-                src={session ? "" : ""}
+                src={session?.user?.image ? session.user?.image : ""}
+                alt={session?.user?.name ? session.user?.name : ""}
                 sx={{ width: "30px", height: "30px" }}
               />
             </IconButton>
