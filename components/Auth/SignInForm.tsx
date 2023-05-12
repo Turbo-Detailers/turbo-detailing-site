@@ -10,6 +10,7 @@ import { ToastContainer, toast } from "react-toastify";
 import { FirebaseError } from "firebase/app";
 
 import "react-toastify/dist/ReactToastify.css";
+import Head from "next/head";
 
 export default function SignInForm() {
   const auth = getAuth();
@@ -39,43 +40,45 @@ export default function SignInForm() {
   };
 
   return (
-    <div className={styles.page}>
-      <form onSubmit={handleOnSubmit} className={styles.form}>
-        <input
-          onChange={handleOnChange}
-          value={inputs.email}
-          id="email"
-          type="email"
-          name="email"
-          placeholder="Email"
-        />
-        <input
-          onChange={handleOnChange}
-          value={inputs.password}
-          id="password"
-          type="password"
-          name="password"
-          placeholder="Password"
-        />
+    <>
+      <div className={styles.page}>
+        <form onSubmit={handleOnSubmit} className={styles.form}>
+          <input
+            onChange={handleOnChange}
+            value={inputs.email}
+            id="email"
+            type="email"
+            name="email"
+            placeholder="Email"
+          />
+          <input
+            onChange={handleOnChange}
+            value={inputs.password}
+            id="password"
+            type="password"
+            name="password"
+            placeholder="Password"
+          />
 
-        <div className={styles.forgotPasswordContainer}>
-          <a
-            onClick={() =>
-              sendPasswordResetEmail(auth, inputs.email).catch(
-                (e: FirebaseError) =>
-                  toast.error(e.code, {
-                    theme: "colored",
-                    position: "bottom-right",
-                  })
-              )
-            }
-          >
-            Forgot Password?
-          </a>
-        </div>
-        <button type="submit"> Sign In </button>
-      </form>
-      <ToastContainer />
-    </div>
+          <div className={styles.forgotPasswordContainer}>
+            <a
+              onClick={() =>
+                sendPasswordResetEmail(auth, inputs.email).catch(
+                  (e: FirebaseError) =>
+                    toast.error(e.code, {
+                      theme: "colored",
+                      position: "bottom-right",
+                    })
+                )
+              }
+            >
+              Forgot Password?
+            </a>
+          </div>
+          <button type="submit"> Sign In </button>
+        </form>
+        <ToastContainer />
+      </div>
+    </>
   );
 }
