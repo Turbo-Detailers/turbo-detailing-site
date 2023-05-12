@@ -38,6 +38,7 @@
     "react-multi-carousel": "^2.8.3",
     "react-photo-album": "^2.0.4",
     "react-responsive-carousel": "^3.2.23",
+    "react-toastify": "^9.1.2",
     "sass": "^1.58.0",
     "typescript": "4.9.3",
     "update": "^0.7.4"

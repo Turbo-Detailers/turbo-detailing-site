@@ -19,7 +19,9 @@ const initAuth = () => {
         clientEmail:
           "firebase-adminsdk-tpo3w@turbo-detailing.iam.gserviceaccount.com",
         // The private key must not be accessible on the client side.
-        privateKey: process.env.FIREBASE_PRIVATE_KEY || "",
+        privateKey: process.env.FIREBASE_PRIVATE_KEY
+          ? process.env.FIREBASE_PRIVATE_KEY.replace(/\\n/gm, "\n")
+          : "",
       },
       databaseURL: "https://turbo-detailing.firebaseio.com",
     },
