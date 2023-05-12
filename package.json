@@ -22,8 +22,10 @@
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "firebase": "^9.21.0",
+    "firebase-admin": "^11.8.0",
     "framer-motion": "^7.6.18",
     "next": "^13.0.5",
+    "next-firebase-auth": "^1.0.0-canary.19",
     "next-images": "^1.8.4",
     "next-videos": "^1.4.1",
     "nextjs-google-analytics": "^2.3.3",
@@ -36,6 +38,7 @@
     "react-multi-carousel": "^2.8.3",
     "react-photo-album": "^2.0.4",
     "react-responsive-carousel": "^3.2.23",
+    "react-toastify": "^9.1.2",
     "sass": "^1.58.0",
     "typescript": "4.9.3",
     "update": "^0.7.4"

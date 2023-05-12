@@ -21,7 +21,7 @@ export default function Pricing({ ...props }) {
       </div>
       {userData.id ? (
         <p style={{ textAlign: "center" }}>
-          You&apos;re eligible for a maintenance plan! Check them out below.
+          {"You're eligible for a maintenance plan! Check them out below."}
         </p>
       ) : (
         <></>
