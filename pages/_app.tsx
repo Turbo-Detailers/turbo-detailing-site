@@ -29,6 +29,11 @@ const firebaseConfig = {
   measurementId: "G-2RJP2Z5G2C",
 };
 
+// ./pages/_app.js
+import initAuth from "../bin/initAuth"; // the module you created above
+
+initAuth();
+
 export default function App({ Component, pageProps, router }: AppProps) {
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
