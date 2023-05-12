@@ -10,6 +10,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.0",
     "@next/bundle-analyzer": "^13.2.4",
     "@next/font": "^13.0.6",
     "@types/node": "18.11.10",
@@ -34,6 +37,7 @@
     "react-dom": "18.2.0",
     "react-flickity": "^1.0.8",
     "react-flickity-component": "^4.0.5",
+    "react-google-button": "^0.7.2",
     "react-multi-carousel": "^2.8.3",
     "react-photo-album": "^2.0.4",
     "react-responsive-carousel": "^3.2.23",

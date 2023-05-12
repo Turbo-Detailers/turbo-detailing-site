@@ -14,6 +14,15 @@ import { Analytics } from "@vercel/analytics/react";
 import { SessionProvider } from "next-auth/react";
 import { NextComponentType, NextPageContext } from "next";
 import { Session } from "next-auth";
+import { ThemeProvider, createTheme } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
+import ResponsiveAppBar from "../components/AppBar";
+
+const darkTheme = createTheme({
+  palette: {
+    mode: "dark",
+  },
+});
 
 export default function App(
   { Component, pageProps, router }: AppProps,
@@ -38,19 +47,23 @@ export default function App(
             content="/images/og/social-sharing-with-text.jpg"
           />
         </Head>
-        {/* <Navbar /> */}
+        <Navbar />
+        {/* <ResponsiveAppBar /> */}
         <div itemScope itemType="https://schema.org/WebSite">
           <meta itemProp="url" content="https://turbodetailers.com/" />
           <meta itemProp="name" content="Turbo Detailers" />
           <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
         </div>
         <SessionProvider session={session}>
-          <AnimatePresence mode="wait" initial={false}>
-            <Layout key={router.route}>
-              <Component {...pageProps} />
-              {/* </motion.div> */}
-            </Layout>
-          </AnimatePresence>
+          <ThemeProvider theme={darkTheme}>
+            <CssBaseline />
+            <AnimatePresence mode="wait" initial={false}>
+              <Layout key={router.route}>
+                <Component {...pageProps} />
+                {/* </motion.div> */}
+              </Layout>
+            </AnimatePresence>
+          </ThemeProvider>
         </SessionProvider>
         <Footer />
       </main>
