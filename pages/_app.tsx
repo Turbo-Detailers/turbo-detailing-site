@@ -11,7 +11,28 @@ import Router from "next/router";
 
 import { Analytics } from "@vercel/analytics/react";
 
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBJ0p1s-PgwuOxyBtU2lDfEa_wvmf4tle8",
+  authDomain: "turbo-detailing.firebaseapp.com",
+  projectId: "turbo-detailing",
+  storageBucket: "turbo-detailing.appspot.com",
+  messagingSenderId: "776045317969",
+  appId: "1:776045317969:web:7225f18dcf4c874df00d70",
+  measurementId: "G-2RJP2Z5G2C",
+};
+
 export default function App({ Component, pageProps, router }: AppProps) {
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
   return (
     <>
       <main>
