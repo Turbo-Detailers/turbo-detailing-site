@@ -12,17 +12,7 @@ import Router from "next/router";
 import { Analytics } from "@vercel/analytics/react";
 
 import { SessionProvider } from "next-auth/react";
-import { NextComponentType, NextPageContext } from "next";
 import { Session } from "next-auth";
-import { ThemeProvider, createTheme } from "@mui/material";
-import CssBaseline from "@mui/material/CssBaseline";
-import ResponsiveAppBar from "../components/AppBar";
-
-const darkTheme = createTheme({
-  palette: {
-    mode: "dark",
-  },
-});
 
 export default function App(
   { Component, pageProps, router }: AppProps,
@@ -30,44 +20,43 @@ export default function App(
 ) {
   return (
     <>
-      <main>
-        <Head>
-          <meta content-language="en-us" />
-          <meta httpEquiv="content-language" content="en-us" />
-          <meta charSet="UTF-8" />
-          <meta property="og:locale" content="en_US" />
-          <meta property="og:site_name" content="Turbo Detailers" />
-          <meta property="og:type" content="website" />
-          <meta
-            name="description"
-            content="Turbo Mobile Auto Detailing: Low price, high quality luxury detailing in the Twin Cities area."
-          />
-          <meta
-            property="og:image"
-            content="/images/og/social-sharing-with-text.jpg"
-          />
-        </Head>
-        <Navbar />
-        {/* <ResponsiveAppBar /> */}
-        <div itemScope itemType="https://schema.org/WebSite">
-          <meta itemProp="url" content="https://turbodetailers.com/" />
-          <meta itemProp="name" content="Turbo Detailers" />
-          <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
-        </div>
-        <SessionProvider session={session}>
-          <ThemeProvider theme={darkTheme}>
-            <CssBaseline />
-            <AnimatePresence mode="wait" initial={false}>
-              <Layout key={router.route}>
-                <Component {...pageProps} />
-                {/* </motion.div> */}
-              </Layout>
-            </AnimatePresence>
-          </ThemeProvider>
-        </SessionProvider>
-        <Footer />
-      </main>
-      <Analytics />
+      <SessionProvider session={session}>
+        <main>
+          <Head>
+            <meta content-language="en-us" />
+            <meta httpEquiv="content-language" content="en-us" />
+            <meta charSet="UTF-8" />
+            <meta property="og:locale" content="en_US" />
+            <meta property="og:site_name" content="Turbo Detailers" />
+            <meta property="og:type" content="website" />
+            <meta
+              name="description"
+              content="Turbo Mobile Auto Detailing: Low price, high quality luxury detailing in the Twin Cities area."
+            />
+            <meta
+              property="og:image"
+              content="/images/og/social-sharing-with-text.jpg"
+            />
+          </Head>
+          <Navbar />
+          {/* <ResponsiveAppBar /> */}
+          <div itemScope itemType="https://schema.org/WebSite">
+            <meta itemProp="url" content="https://turbodetailers.com/" />
+            <meta itemProp="name" content="Turbo Detailers" />
+            <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
+          </div>
+
+          <AnimatePresence mode="wait" initial={false}>
+            <Layout key={router.route}>
+              <Component {...pageProps} />
+              {/* </motion.div> */}
+            </Layout>
+          </AnimatePresence>
+
+          <Footer />
+        </main>
+        <Analytics />
+      </SessionProvider>
     </>
   );
 }

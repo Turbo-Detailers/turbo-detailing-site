@@ -5,27 +5,50 @@ import styles from "../styles/components/Navbar.module.scss";
 import linkStyles from "../styles/components/Text/Link.module.css";
 import { useState, MouseEvent } from "react";
 
-import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
-import Toolbar from "@mui/material/Toolbar";
+
 import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-import MenuIcon from "@mui/icons-material/Menu";
-import Container from "@mui/material/Container";
+
 import Avatar from "@mui/material/Avatar";
-import Button from "@mui/material/Button";
+
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { getSession, useSession } from "next-auth/react";
+import { Session } from "next-auth";
 
-const settings: { label: string; href: string }[] = [
-  { label: "Account", href: "/account" },
-  { label: "Dashboard", href: "/dashboard" },
-  { label: "Logout", href: "/signout" },
+const settings: {
+  label: string;
+  href: string;
+  conditional: Function;
+}[] = [
+  {
+    label: "Login",
+    href: "/login",
+    conditional: (session: Session) => (session ? false : true),
+  },
+  {
+    label: "Account",
+    href: "/account",
+    conditional: (session: Session) => (session ? true : false),
+  },
+  {
+    label: "Dashboard",
+    href: "/dashboard",
+    conditional: () => true,
+  },
+  {
+    label: "Logout",
+    href: "/logout",
+    conditional: (session: Session) => (session ? true : false),
+  },
 ];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { data: session } = useSession();
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
@@ -34,6 +57,7 @@ function Navbar() {
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
+    console.log(session);
     setAnchorElUser(event.currentTarget);
   };
 
@@ -125,7 +149,11 @@ function Navbar() {
               onClick={handleOpenUserMenu}
               sx={{ p: 0, marginLeft: "0.95rem" }}
             >
-              <Avatar alt="Profile Picture" src="" />
+              <Avatar
+                alt="Profile Picture"
+                src={session ? "" : ""}
+                sx={{ width: "30px", height: "30px" }}
+              />
             </IconButton>
           </Tooltip>
           <Menu
@@ -144,17 +172,19 @@ function Navbar() {
             open={Boolean(anchorElUser)}
             onClose={handleCloseUserMenu}
           >
-            {settings.map((setting) => (
-              <MenuItem key={setting.label} onClick={handleCloseUserMenu}>
-                <Typography
-                  textAlign="center"
-                  component={Link}
-                  href={setting.href}
-                >
-                  {setting.label}
-                </Typography>
-              </MenuItem>
-            ))}
+            {settings.map((setting) => {
+              return !setting.conditional(session) ? null : (
+                <MenuItem key={setting.label} onClick={handleCloseUserMenu}>
+                  <Typography
+                    textAlign="center"
+                    component={Link}
+                    href={setting.href}
+                  >
+                    {setting.label}
+                  </Typography>
+                </MenuItem>
+              );
+            })}
           </Menu>
         </Box>
       </div>
