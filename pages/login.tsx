@@ -3,7 +3,7 @@ import styles from "../styles/Gallery.module.scss";
 
 export default function Component() {
   const { data: session } = useSession();
-  if (session) {
+  if (session !== undefined && session !== null) {
     return (
       <div className={styles.main}>
         Signed in as {session.user?.email} <br />
