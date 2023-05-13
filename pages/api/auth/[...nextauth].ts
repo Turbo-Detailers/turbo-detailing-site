@@ -1,4 +1,4 @@
-import NextAuth, { AuthOptions, Session, User } from "next-auth";
+import NextAuth, { AuthOptions, Session } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { FirestoreAdapter, initFirestore } from "@next-auth/firebase-adapter";
 import { cert } from "firebase-admin/app";
@@ -23,7 +23,8 @@ export const authOptions: AuthOptions = {
   }),
   callbacks: {
     session: async ({ session, user }): Promise<Session> => {
-      return Promise.resolve({ ...session, userId: user.id });
+      session.user.id = user.id;
+      return Promise.resolve(session);
     },
   },
 };
