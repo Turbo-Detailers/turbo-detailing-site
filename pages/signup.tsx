@@ -1,5 +1,4 @@
 import React from "react";
-import { withAuthUser, AuthAction } from "next-firebase-auth";
 
 import { getAuth, GoogleAuthProvider, signInWithPopup } from "firebase/auth";
 
@@ -7,7 +6,7 @@ import styles from "../styles/Gallery.module.scss";
 import SignUpForm from "../components/Auth/SignUpForm";
 import Head from "next/head";
 
-const Auth = () => {
+export const Auth = () => {
   const auth = getAuth();
   const provider = new GoogleAuthProvider();
   return (
@@ -31,9 +30,3 @@ const Auth = () => {
     </>
   );
 };
-
-export default withAuthUser({
-  whenAuthed: AuthAction.REDIRECT_TO_APP,
-  whenUnauthedBeforeInit: AuthAction.RETURN_NULL,
-  whenUnauthedAfterInit: AuthAction.RENDER,
-})(Auth);
