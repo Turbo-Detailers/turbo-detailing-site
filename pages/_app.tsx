@@ -20,43 +20,43 @@ export default function App(
 ) {
   return (
     <>
-      <SessionProvider session={session}>
-        <main>
-          <Head>
-            <meta content-language="en-us" />
-            <meta httpEquiv="content-language" content="en-us" />
-            <meta charSet="UTF-8" />
-            <meta property="og:locale" content="en_US" />
-            <meta property="og:site_name" content="Turbo Detailers" />
-            <meta property="og:type" content="website" />
-            <meta
-              name="description"
-              content="Turbo Mobile Auto Detailing: Low price, high quality luxury detailing in the Twin Cities area."
-            />
-            <meta
-              property="og:image"
-              content="/images/og/social-sharing-with-text.jpg"
-            />
-          </Head>
-          <Navbar />
-          {/* <ResponsiveAppBar /> */}
-          <div itemScope itemType="https://schema.org/WebSite">
-            <meta itemProp="url" content="https://turbodetailers.com/" />
-            <meta itemProp="name" content="Turbo Detailers" />
-            <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
-          </div>
+      <main>
+        <Head>
+          <meta content-language="en-us" />
+          <meta httpEquiv="content-language" content="en-us" />
+          <meta charSet="UTF-8" />
+          <meta property="og:locale" content="en_US" />
+          <meta property="og:site_name" content="Turbo Detailers" />
+          <meta property="og:type" content="website" />
+          <meta
+            name="description"
+            content="Turbo Mobile Auto Detailing: Low price, high quality luxury detailing in the Twin Cities area."
+          />
+          <meta
+            property="og:image"
+            content="/images/og/social-sharing-with-text.jpg"
+          />
+        </Head>
+        {/* <ResponsiveAppBar /> */}
+        <div itemScope itemType="https://schema.org/WebSite">
+          <meta itemProp="url" content="https://turbodetailers.com/" />
+          <meta itemProp="name" content="Turbo Detailers" />
+          <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
+        </div>
 
-          <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait" initial={false}>
+          <SessionProvider>
+            <Navbar />
+
             <Layout key={router.route}>
               <Component {...pageProps} />
               {/* </motion.div> */}
             </Layout>
-          </AnimatePresence>
-
-          <Footer />
-        </main>
-        <Analytics />
-      </SessionProvider>
+          </SessionProvider>
+        </AnimatePresence>
+        <Footer />
+      </main>
+      <Analytics />
     </>
   );
 }

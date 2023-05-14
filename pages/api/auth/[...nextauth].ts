@@ -4,18 +4,6 @@ import { FirestoreAdapter, initFirestore } from "@next-auth/firebase-adapter";
 import { cert } from "firebase-admin/app";
 
 export const authOptions: AuthOptions = {
-  debug: true,
-  logger: {
-    error(code, metadata) {
-      console.error(code, metadata);
-    },
-    warn(code) {
-      console.warn(code);
-    },
-    debug(code, metadata) {
-      console.debug(code, metadata);
-    },
-  },
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({
@@ -33,13 +21,9 @@ export const authOptions: AuthOptions = {
     }),
   }),
   callbacks: {
-    session: async ({ session, token, user }) => {
+    session: async ({ session, user }) => {
       session.user.id = user.id;
       return session;
-    },
-    jwt: async ({ token, user }) => {
-      if (user) token.user = user;
-      return token;
     },
   },
   pages: {
