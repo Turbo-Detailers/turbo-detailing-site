@@ -2,10 +2,8 @@ import Head from "next/head";
 import AccentedTitle from "../components/titles/AccentedTitle";
 import PricingSection from "../sections/Home/PricingSection";
 import homeStyles from "../styles/Gallery.module.scss";
-import { withAuthUserTokenSSR } from "next-firebase-auth";
 
-export default function Pricing({ ...props }) {
-  const userData = JSON.parse(props.AuthUserSerialized);
+export default function Pricing() {
   return (
     <>
       <Head>
@@ -19,16 +17,7 @@ export default function Pricing({ ...props }) {
       <div className={homeStyles.main}>
         <AccentedTitle>Pricing</AccentedTitle>
       </div>
-      {userData.id ? (
-        <p style={{ textAlign: "center" }}>
-          {"You're eligible for a maintenance plan! Check them out below."}
-        </p>
-      ) : (
-        <></>
-      )}
       <PricingSection />
     </>
   );
 }
-
-export const getServerSideProps = withAuthUserTokenSSR()();
