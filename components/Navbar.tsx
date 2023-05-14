@@ -16,7 +16,6 @@ import Avatar from "@mui/material/Avatar";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { signOut, useSession } from "next-auth/react";
-import Image from "next/image";
 import { Session } from "next-auth";
 
 const settings: {
@@ -32,12 +31,12 @@ const settings: {
   },
   {
     label: "Account",
-    href: "/account",
+    href: "/",
     conditional: (session: Session) => (session ? true : false),
   },
   {
     label: "Dashboard",
-    href: "/dashboard",
+    href: "/",
     conditional: () => true,
   },
   {
@@ -49,8 +48,6 @@ const settings: {
 ];
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-
   const { data: session } = useSession();
 
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
@@ -72,38 +69,38 @@ function Navbar() {
     setAnchorElUser(null);
   };
 
-  const iconVariants = {
-    opened: {
-      rotate: 135,
-    },
-    closed: {
-      rotate: 0,
-    },
-  };
+  // const iconVariants = {
+  //   opened: {
+  //     rotate: 135,
+  //   },
+  //   closed: {
+  //     rotate: 0,
+  //   },
+  // };
 
-  const menuVariants = {
-    opened: {
-      top: 0,
-      transition: {
-        when: "beforeChildren",
-        staggerChildren: 0.5,
-      },
-    },
-    closed: {
-      top: "-90vh",
-    },
-  };
+  // const menuVariants = {
+  //   opened: {
+  //     top: 0,
+  //     transition: {
+  //       when: "beforeChildren",
+  //       staggerChildren: 0.5,
+  //     },
+  //   },
+  //   closed: {
+  //     top: "-90vh",
+  //   },
+  // };
 
-  const linkVariants = {
-    opened: {
-      opacity: 1,
-      y: 50,
-    },
-    closed: {
-      opacity: 0,
-      y: 0,
-    },
-  };
+  // const linkVariants = {
+  //   opened: {
+  //     opacity: 1,
+  //     y: 50,
+  //   },
+  //   closed: {
+  //     opacity: 0,
+  //     y: 0,
+  //   },
+  // };
 
   return (
     <motion.nav
