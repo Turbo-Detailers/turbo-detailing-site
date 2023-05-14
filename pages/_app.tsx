@@ -11,36 +11,15 @@ import Router from "next/router";
 
 import { Analytics } from "@vercel/analytics/react";
 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { SessionProvider } from "next-auth/react";
+import { Session } from "next-auth";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
-  apiKey: "AIzaSyBJ0p1s-PgwuOxyBtU2lDfEa_wvmf4tle8",
-  authDomain: "turbo-detailing.firebaseapp.com",
-  projectId: "turbo-detailing",
-  storageBucket: "turbo-detailing.appspot.com",
-  messagingSenderId: "776045317969",
-  appId: "1:776045317969:web:7225f18dcf4c874df00d70",
-  measurementId: "G-2RJP2Z5G2C",
-};
 
-// ./pages/_app.js
-import initAuth from "../bin/initAuth"; // the module you created above
+export default function App(
+  { Component, pageProps, router }: AppProps,
+  session: Session
+) {
 
-initAuth();
-
-export default function App({ Component, pageProps, router }: AppProps) {
-  // Initialize Firebase
-  const app = initializeApp(firebaseConfig);
-  let analytics;
-  if (app.name && typeof window !== "undefined") {
-    analytics = getAnalytics(app);
-  }
   return (
     <>
       <main>
@@ -60,25 +39,22 @@ export default function App({ Component, pageProps, router }: AppProps) {
             content="/images/og/social-sharing-with-text.jpg"
           />
         </Head>
-        <Navbar />
+        {/* <ResponsiveAppBar /> */}
         <div itemScope itemType="https://schema.org/WebSite">
           <meta itemProp="url" content="https://turbodetailers.com/" />
           <meta itemProp="name" content="Turbo Detailers" />
           <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
         </div>
+
         <AnimatePresence mode="wait" initial={false}>
-          <Layout key={router.route}>
-            {/* <GoogleAnalytics trackPageViews gaMeasurementId="G-EC18NFWZEX" /> */}
-            {/* <motion.div
-            key={router.route}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ opacity: { duration: 2 } }}
-          > */}
-            <Component {...pageProps} />
-            {/* </motion.div> */}
-          </Layout>
+          <SessionProvider>
+            <Navbar />
+
+            <Layout key={router.route}>
+              <Component {...pageProps} />
+              {/* </motion.div> */}
+            </Layout>
+          </SessionProvider>
         </AnimatePresence>
         <Footer />
       </main>

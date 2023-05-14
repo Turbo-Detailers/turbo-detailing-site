@@ -3,10 +3,74 @@ import Link from "next/link";
 import { Fonts } from "../bin/fonts";
 import styles from "../styles/components/Navbar.module.scss";
 import linkStyles from "../styles/components/Text/Link.module.css";
-import { useState } from "react";
+import { useState, MouseEvent } from "react";
+
+import Box from "@mui/material/Box";
+
+import IconButton from "@mui/material/IconButton";
+import Typography from "@mui/material/Typography";
+import Menu from "@mui/material/Menu";
+
+import Avatar from "@mui/material/Avatar";
+
+import Tooltip from "@mui/material/Tooltip";
+import MenuItem from "@mui/material/MenuItem";
+import { signOut, useSession } from "next-auth/react";
+import Image from "next/image";
+import { Session } from "next-auth";
+
+const settings: {
+  label: string;
+  href: string;
+  onClick?: Function;
+  conditional: Function;
+}[] = [
+  {
+    label: "Login",
+    href: "/login",
+    conditional: (session: Session) => (session ? false : true),
+  },
+  {
+    label: "Account",
+    href: "/account",
+    conditional: (session: Session) => (session ? true : false),
+  },
+  {
+    label: "Dashboard",
+    href: "/dashboard",
+    conditional: () => true,
+  },
+  {
+    label: "Logout",
+    href: "/logout",
+    onClick: () => signOut(),
+    conditional: (session: Session) => (session ? true : false),
+  },
+];
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+
+  const { data: session } = useSession();
+
+  const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
+  const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
+
+  const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
+    setAnchorElNav(event.currentTarget);
+  };
+  const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
+    console.log(session);
+    setAnchorElUser(event.currentTarget);
+  };
+
+  const handleCloseNavMenu = () => {
+    setAnchorElNav(null);
+  };
+
+  const handleCloseUserMenu = () => {
+    setAnchorElUser(null);
+  };
 
   const iconVariants = {
     opened: {
@@ -55,31 +119,77 @@ function Navbar() {
       </Link>
 
       <a></a>
-      <div className={`flex-row ${styles.link_row}`}>
-        <Link
-          href="/pricing"
-          className={linkStyles["hover-animation"]}
-          // style={{ marginRight: "2.5rem" }}
-        >
-          Pricing
-        </Link>
-        <Link
-          href="/faq"
-          className={linkStyles["hover-animation"]}
-          // style={{ marginRight: "2.5rem" }}
-        >
-          FAQ
-        </Link>
-        <Link
-          href="/gallery"
-          className={linkStyles["hover-animation"]}
-          // style={{ marginRight: "2.5rem" }}
-        >
-          Gallery
-        </Link>
-        <Link href="/contact" className={linkStyles["hover-animation"]}>
-          Contact
-        </Link>
+      <div className="flex-row">
+        <div className={`flex-row ${styles.link_row}`}>
+          <Link
+            href="/pricing"
+            className={linkStyles["hover-animation"]}
+            // style={{ marginRight: "2.5rem" }}
+          >
+            Pricing
+          </Link>
+          <Link
+            href="/faq"
+            className={linkStyles["hover-animation"]}
+            // style={{ marginRight: "2.5rem" }}
+          >
+            FAQ
+          </Link>
+          <Link
+            href="/gallery"
+            className={linkStyles["hover-animation"]}
+            // style={{ marginRight: "2.5rem" }}
+          >
+            Gallery
+          </Link>
+          <Link href="/contact" className={linkStyles["hover-animation"]}>
+            Contact
+          </Link>
+        </div>
+        <Box sx={{ flexGrow: 0 }}>
+          <Tooltip title="Open settings">
+            <IconButton
+              onClick={handleOpenUserMenu}
+              sx={{ p: 0, marginLeft: "0.95rem" }}
+            >
+              <Avatar
+                src={session?.user?.image ? session.user?.image : ""}
+                alt={session?.user?.name ? session.user?.name : ""}
+                sx={{ width: "30px", height: "30px" }}
+              />
+            </IconButton>
+          </Tooltip>
+          <Menu
+            sx={{ mt: "45px" }}
+            id="menu-appbar"
+            anchorEl={anchorElUser}
+            anchorOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            keepMounted
+            transformOrigin={{
+              vertical: "top",
+              horizontal: "right",
+            }}
+            open={Boolean(anchorElUser)}
+            onClose={handleCloseUserMenu}
+          >
+            {settings.map((setting) => {
+              return !setting.conditional(session) ? null : (
+                <MenuItem key={setting.label} onClick={handleCloseUserMenu}>
+                  <Typography
+                    textAlign="center"
+                    component={Link}
+                    href={setting.href}
+                  >
+                    {setting.label}
+                  </Typography>
+                </MenuItem>
+              );
+            })}
+          </Menu>
+        </Box>
       </div>
     </motion.nav>
   );

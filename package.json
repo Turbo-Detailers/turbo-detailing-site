@@ -7,9 +7,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "full": "npm run build && npm run start"
   },
   "dependencies": {
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.11.16",
+    "@mui/material": "^5.13.0",
+    "@next-auth/firebase-adapter": "^2.0.1",
     "@next/bundle-analyzer": "^13.2.4",
     "@next/font": "^13.0.6",
     "@types/node": "18.11.10",
@@ -24,8 +29,9 @@
     "firebase": "^9.21.0",
     "firebase-admin": "^11.8.0",
     "framer-motion": "^7.6.18",
+    "logging-service": "^1.0.1",
     "next": "^13.0.5",
-    "next-firebase-auth": "^1.0.0-canary.19",
+    "next-auth": "^4.22.1",
     "next-images": "^1.8.4",
     "next-videos": "^1.4.1",
     "nextjs-google-analytics": "^2.3.3",
@@ -35,11 +41,13 @@
     "react-dom": "18.2.0",
     "react-flickity": "^1.0.8",
     "react-flickity-component": "^4.0.5",
+    "react-google-button": "^0.7.2",
     "react-multi-carousel": "^2.8.3",
     "react-photo-album": "^2.0.4",
     "react-responsive-carousel": "^3.2.23",
     "react-toastify": "^9.1.2",
     "sass": "^1.58.0",
+    "sharp": "^0.32.1",
     "typescript": "4.9.3",
     "update": "^0.7.4"
   }
