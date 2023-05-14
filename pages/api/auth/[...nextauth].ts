@@ -21,12 +21,12 @@ export const authOptions: AuthOptions = {
         process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/gm, "\n") || "",
     }),
   }),
-  callbacks: {
-    session: async ({ session, user }): Promise<Session> => {
-      session.user.id = user.id;
-      return Promise.resolve(session);
-    },
-  },
+  // callbacks: {
+  //   session: async ({ session, user }): Promise<Session> => {
+  //     session.user.id = user.id;
+  //     return Promise.resolve(session);
+  //   },
+  // },
 };
 
 export const firestore = initFirestore({
