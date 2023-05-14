@@ -37,10 +37,9 @@ export const authOptions: AuthOptions = {
       session.user.id = user.id;
       return session;
     },
-    jwt: async ({ token }) => {
-      token.userRole = "admin";
-      return token;
-    },
+  },
+  pages: {
+    signIn: "/login",
   },
 };
 
