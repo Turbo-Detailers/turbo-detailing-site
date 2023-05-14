@@ -24,14 +24,14 @@ export const authOptions: AuthOptions = {
     }),
     // ...add more providers here
   ],
-  adapter: FirestoreAdapter({
-    credential: cert({
-      projectId: process.env.FIREBASE_PROJECT_ID || "",
-      clientEmail: process.env.FIREBASE_CLIENT_EMAIL || "",
-      privateKey:
-        process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/gm, "\n") || "",
-    }),
-  }),
+  // adapter: FirestoreAdapter({
+  //   credential: cert({
+  //     projectId: process.env.FIREBASE_PROJECT_ID || "",
+  //     clientEmail: process.env.FIREBASE_CLIENT_EMAIL || "",
+  //     privateKey:
+  //       process.env.FIREBASE_PRIVATE_KEY?.replace(/\\n/gm, "\n") || "",
+  //   }),
+  // }),
   // callbacks: {
   //   session: async ({ session, user }): Promise<Session> => {
   //     session.user.id = user.id;
