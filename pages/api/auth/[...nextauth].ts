@@ -37,6 +37,10 @@ export const authOptions: AuthOptions = {
       session.user.id = user.id;
       return session;
     },
+    jwt: async ({ token, user }) => {
+      if (user) token.user = user;
+      return token;
+    },
   },
   pages: {
     signIn: "/login",
