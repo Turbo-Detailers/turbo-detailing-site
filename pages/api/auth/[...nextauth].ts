@@ -5,6 +5,17 @@ import { cert } from "firebase-admin/app";
 
 export const authOptions: AuthOptions = {
   debug: true,
+  logger: {
+    error(code, metadata) {
+      console.error(code, metadata);
+    },
+    warn(code) {
+      console.warn(code);
+    },
+    debug(code, metadata) {
+      console.debug(code, metadata);
+    },
+  },
   // Configure one or more authentication providers
   providers: [
     GoogleProvider({

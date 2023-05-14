@@ -28,6 +28,7 @@
     "firebase": "^9.21.0",
     "firebase-admin": "^11.8.0",
     "framer-motion": "^7.6.18",
+    "logging-service": "^1.0.1",
     "next": "^13.0.5",
     "next-auth": "^4.22.1",
     "next-images": "^1.8.4",
