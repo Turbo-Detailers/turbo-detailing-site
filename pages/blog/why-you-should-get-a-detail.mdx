@@ -1,0 +1,18 @@
+import PricingSection from "../../sections/Home/PricingSection";
+import BlogLayout from "../../components/BlogLayout";
+
+export const meta = {
+  author: "Dhairya Gupta",
+  title: "So why should I even get a detail?",
+  subtitle: "tl;dr: It's good for your car.",
+};
+
+# So why should I even get a detail?
+
+<strong>Learn what makes a detailing so important</strong>
+
+<PricingSection />
+
+export default ({ children }) => (
+  <BlogLayout meta={meta}>{children}</BlogLayout>
+);
