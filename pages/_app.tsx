@@ -14,10 +14,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SessionProvider } from "next-auth/react";
 import { Session } from "next-auth";
 
-export default function App(
-  { Component, pageProps, router }: AppProps,
-  session: Session
-) {
+export default function App({ Component, pageProps, router }: AppProps) {
   return (
     <>
       <main>
