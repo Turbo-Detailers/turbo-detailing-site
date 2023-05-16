@@ -40,8 +40,12 @@
     "react-dom": "18.2.0",
     "react-photo-album": "^2.0.4",
     "react-toastify": "^9.1.2",
+    "react-wrap-balancer": "^0.5.0",
     "sass": "^1.58.0",
     "sharp": "^0.32.1",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "eslint-plugin-mdx": "^2.1.0"
   }
 }
