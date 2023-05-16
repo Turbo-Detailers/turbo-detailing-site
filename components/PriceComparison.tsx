@@ -43,13 +43,13 @@ function PriceComparisonSection(props: PricingData) {
         <a href={props.link}>{props.name}</a>
         <div className={styles.description}>{props.description}</div>
       </div>
-      <ul className={fixedStyles.benefits}>
+      <div className={fixedStyles.benefits}>
         {props.benefits.map((item) => (
-          <li key={item} className={fixedStyles.benefit}>
+          <div key={item} className={fixedStyles.benefit}>
             {item}
-          </li>
+          </div>
         ))}
-      </ul>
+      </div>
       <div className={fixedStyles.price}>
         <div className={styles.booking}>
           <div>${props.price}</div>
