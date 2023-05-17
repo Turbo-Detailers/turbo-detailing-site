@@ -48,7 +48,12 @@ function ServiceAreas() {
           />
         </Balancer>
 
-        <Image src={serviceMap} alt={"Service Areas Map"} quality={100} />
+        <Image
+          src={serviceMap}
+          alt={"Service Areas Map"}
+          quality={100}
+          style={{ width: "100%", objectFit: "contain" }}
+        />
       </div>
     </>
   );
