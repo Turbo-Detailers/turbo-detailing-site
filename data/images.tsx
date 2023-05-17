@@ -48,6 +48,8 @@ export const localImages = [
   ml350Indicator,
   mdx2023SteeringCloseUp,
   modelYRearClean,
+  x5Indicator,
+  x5DriverSideInstrumentCluster,
   a4SteeringWheel,
   modelYIsometricClean,
   mdx2023PassengerDoorCloseUp,
@@ -56,6 +58,7 @@ export const localImages = [
   ml350SteeringClose,
   mdx2023BroadDashboard,
   ml350CenterConsole,
+  x5FrontSeatsRear,
 ];
 
 function getPhotosObject(images: StaticImageData[]): PhotoData[] {
