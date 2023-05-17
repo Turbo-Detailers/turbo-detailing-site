@@ -3,6 +3,7 @@ import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import serviceMap from "../../public/images/service-area-map.jpg";
 import Link from "next/link";
+import Spacer from "../../components/Spacer";
 
 function ServiceAreas() {
   return (
@@ -48,13 +49,13 @@ function ServiceAreas() {
             isBackgroundImage={false}
           />
         </Balancer>
-
+        <Spacer height={1} />
         <Link href={`/gallery/images/service-area-map.jpg`}>
           <Image
             src={serviceMap}
             alt={"Service Areas Map"}
             quality={100}
-            style={{ width: "100%", objectFit: "contain" }}
+            style={{ width: "100%", objectFit: "contain", height: "100%" }}
           />
         </Link>
       </div>
