@@ -27,7 +27,7 @@ function ServiceAreas() {
     //   </div>
     // </section>
     <ContentSection
-      text="We provide services throughout the West-Metro of the Twin Cities area. This includes Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, and more! Please note that we only detail SUVs and Sedans"
+      text="We proudly serve the West-Metro area of the Twin Cities, including Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, Eden Prairie, Prior Lake and more! Kindly note that our detailing services are exclusively tailored for sedans/coupes and SUVs."
       //   title="Why Turbo?"
       image="/images/home/2.png"
       imageAlt="none"
