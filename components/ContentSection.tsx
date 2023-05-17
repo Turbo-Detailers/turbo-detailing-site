@@ -43,14 +43,14 @@ function ContentSection({
               </div>
               <div className={`${styles.paragraph} ${Fonts.body}`}>{text}</div>
             </div>
-            <Image
+            {/* <Image
               src={image}
               alt={imageAlt}
               key={image}
               fill={true}
               quality={100}
               style={{ objectFit: "cover", zIndex: -2 }}
-            />
+            /> */}
           </div>
         </motion.div>
       </div>

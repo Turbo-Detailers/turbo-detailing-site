@@ -25,6 +25,11 @@ import mdx2023BroadDashboard from "../public/images/details/mdx-2023/mdx-broad-d
 import mdx2023PassengerDoorCloseUp from "../public/images/details/mdx-2023/mdx-passenger-door-close.jpg";
 import mdx2023SteeringCloseUp from "../public/images/details/mdx-2023/mdx-steering-close.jpg";
 
+// Mercedes ML350
+import ml350CenterConsole from "../public/images/details/ml350/ml350-center-console.jpg";
+import ml350Indicator from "../public/images/details/ml350/ml350-indicator.jpg";
+import ml350SteeringClose from "../public/images/details/ml350/ml350-steering-close.jpg";
+
 import { StaticImageData } from "next/image";
 
 type PhotoData = {
@@ -40,15 +45,17 @@ export const localImages = [
   mdx2023BroadDashboardDriverSide,
   modelYFrontSoap,
   a4InteriorDoorPanel,
+  ml350Indicator,
   mdx2023SteeringCloseUp,
   modelYRearClean,
   a4SteeringWheel,
   modelYIsometricClean,
   mdx2023PassengerDoorCloseUp,
   a4InteriorDoorPanelSide,
-  modelYSideRearClean,
   a4InteriorRear,
+  ml350SteeringClose,
   mdx2023BroadDashboard,
+  ml350CenterConsole,
 ];
 
 function getPhotosObject(images: StaticImageData[]): PhotoData[] {
