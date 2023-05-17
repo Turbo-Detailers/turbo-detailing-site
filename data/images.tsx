@@ -19,6 +19,12 @@ import x5DriverSideInstrumentCluster from "../public/images/details/x5-interior/
 import x5FrontSeatsRear from "../public/images/details/x5-interior/x5-front-seats-rear.jpg";
 import x5Indicator from "../public/images/details/x5-interior/x5-indicator.jpg";
 
+// 2023 Acura MDX
+import mdx2023BroadDashboardDriverSide from "../public/images/details/mdx-2023/mdx-broad-dashboard-driver-side.jpg";
+import mdx2023BroadDashboard from "../public/images/details/mdx-2023/mdx-broad-dashboard.jpg";
+import mdx2023PassengerDoorCloseUp from "../public/images/details/mdx-2023/mdx-passenger-door-close-up.jpg";
+import mdx2023SteeringCloseUp from "../public/images/details/mdx-2023/mdx-steering-close-up.jpg";
+
 import { StaticImageData } from "next/image";
 
 type PhotoData = {
@@ -31,14 +37,18 @@ export const localImages = [
   x5DoorPanelButtons,
   modelYWheelClean,
   a4InteriorWheel,
+  mdx2023BroadDashboardDriverSide,
   modelYFrontSoap,
   a4InteriorDoorPanel,
+  mdx2023SteeringCloseUp,
   modelYRearClean,
   a4SteeringWheel,
   modelYIsometricClean,
+  mdx2023PassengerDoorCloseUp,
   a4InteriorDoorPanelSide,
   modelYSideRearClean,
   a4InteriorRear,
+  mdx2023BroadDashboard,
 ];
 
 // function getPhotosObject(images: StaticImageData[]): PhotoData[] {
