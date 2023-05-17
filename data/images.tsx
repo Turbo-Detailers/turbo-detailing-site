@@ -20,10 +20,10 @@ import x5FrontSeatsRear from "../public/images/details/x5-interior/x5-front-seat
 import x5Indicator from "../public/images/details/x5-interior/x5-indicator.jpg";
 
 // 2023 Acura MDX
-import mdx2023BroadDashboardDriverSide from "../public/images/details/mdx-2023/mdx-broad-dashboard-driver-side.jpg";
-import mdx2023BroadDashboard from "../public/images/details/mdx-2023/mdx-broad-dashboard.jpg";
-import mdx2023PassengerDoorCloseUp from "../public/images/details/mdx-2023/mdx-passenger-door-close-up.jpg";
-import mdx2023SteeringCloseUp from "../public/images/details/mdx-2023/mdx-steering-close-up.jpg";
+import mdx2023BroadDashboardDriverSide from "../public/images/details/mdx-2023/mdx-broad-dashboard-driver.jpg";
+import mdx2023BroadDashboard from "../public/images/details/mdx-2023/mdx-broad-dashboard-passenger.jpg";
+import mdx2023PassengerDoorCloseUp from "../public/images/details/mdx-2023/mdx-passenger-door-close.jpg";
+import mdx2023SteeringCloseUp from "../public/images/details/mdx-2023/mdx-steering-close.jpg";
 
 import { StaticImageData } from "next/image";
 
