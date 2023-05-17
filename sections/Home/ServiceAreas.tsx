@@ -32,7 +32,11 @@ function ServiceAreas() {
     <>
       <div
         className={"flex-row-responsive"}
-        style={{ width: "100vw", backgroundColor: "#1a1a1a" }}
+        style={{
+          width: "100vw",
+          backgroundColor: "#1a1a1a",
+          maxWidth: "100vw",
+        }}
       >
         <Balancer>
           <ContentSection
@@ -46,7 +50,6 @@ function ServiceAreas() {
 
         <Image src={serviceMap} alt={"Service Areas Map"} quality={100} />
       </div>
-      <div className={"flex-row-center"} style={{ width: "100vw" }}></div>
     </>
   );
 }

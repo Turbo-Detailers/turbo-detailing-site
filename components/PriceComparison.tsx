@@ -107,15 +107,7 @@ function PriceComparison() {
         defaultIndex={0}
         controlRef={undefined}
       />
-      <Balancer>
-        <ContentSection
-          text="Kindly note that our detailing services are exclusively tailored for sedans/coupes and SUVs."
-          //   title="Why Turbo?"
-          image="/images/home/2.png"
-          imageAlt="none"
-          isBackgroundImage={false}
-        />
-      </Balancer>
+
       <div className={`${styles.div} ${Fonts.body}`}>
         <PriceComparisonSection
           name={pricingData.interior.name}
