@@ -15,7 +15,7 @@ export default function GalleryImagePage() {
         fill
         src={`/${url}`}
         alt={"Detail Image"}
-        style={{ objectFit: "cover", maxHeight: "100vh" }}
+        style={{ objectFit: "contain", maxHeight: "100vh" }}
         quality={100}
       ></Image>
     </>

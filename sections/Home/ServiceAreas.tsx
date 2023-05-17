@@ -2,6 +2,7 @@ import ContentSection from "../../components/ContentSection";
 import Balancer from "react-wrap-balancer";
 import Image from "next/image";
 import serviceMap from "../../public/images/service-area-map.jpg";
+import Link from "next/link";
 
 function ServiceAreas() {
   return (
@@ -48,12 +49,14 @@ function ServiceAreas() {
           />
         </Balancer>
 
-        <Image
-          src={serviceMap}
-          alt={"Service Areas Map"}
-          quality={100}
-          style={{ width: "100%", objectFit: "contain" }}
-        />
+        <Link href={`/gallery/images/service-area-map.jpg`}>
+          <Image
+            src={serviceMap}
+            alt={"Service Areas Map"}
+            quality={100}
+            style={{ width: "100%", objectFit: "contain" }}
+          />
+        </Link>
       </div>
     </>
   );
