@@ -43,7 +43,7 @@ export const localImages = [
   modelYWheelClean,
   a4InteriorWheel,
   mdx2023BroadDashboardDriverSide,
-  modelYFrontSoap,
+  // modelYFrontSoap,
   a4InteriorDoorPanel,
   ml350Indicator,
   mdx2023SteeringCloseUp,
