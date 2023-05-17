@@ -11,13 +11,15 @@ export default function GalleryImagePage() {
 
   return (
     <>
-      <Image
-        fill
-        src={`/${url}`}
-        alt={"Detail Image"}
-        style={{ objectFit: "contain", maxHeight: "100vh" }}
-        quality={100}
-      ></Image>
+      <div style={{ height: "100vh" }}>
+        <Image
+          fill
+          src={`/${url}`}
+          alt={"Detail Image"}
+          style={{ objectFit: "contain", maxHeight: "100vh" }}
+          quality={100}
+        ></Image>
+      </div>
     </>
   );
 }
