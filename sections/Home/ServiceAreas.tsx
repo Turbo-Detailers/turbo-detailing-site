@@ -31,7 +31,7 @@ function ServiceAreas() {
     // </section>
     <>
       <div
-        className={"flex-row-center"}
+        className={"flex-row-responsive"}
         style={{ width: "100vw", backgroundColor: "#1a1a1a" }}
       >
         <Balancer>
@@ -44,17 +44,9 @@ function ServiceAreas() {
           />
         </Balancer>
 
-        <Image src={serviceMap} alt={"Service Areas Map"} />
+        <Image src={serviceMap} alt={"Service Areas Map"} quality={100} />
       </div>
-      <div className={"flex-row-responsive"} style={{ width: "100vw" }}>
-        <ContentSection
-          text="Kindly note that our detailing services are exclusively tailored for sedans/coupes and SUVs."
-          //   title="Why Turbo?"
-          image="/images/home/2.png"
-          imageAlt="none"
-          isBackgroundImage={false}
-        />
-      </div>
+      <div className={"flex-row-center"} style={{ width: "100vw" }}></div>
     </>
   );
 }
