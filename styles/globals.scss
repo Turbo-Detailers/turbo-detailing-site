@@ -69,6 +69,19 @@ body {
   align-items: center;
 }
 
+.flex-row-responsive {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.flex-row-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -78,6 +91,15 @@ body {
 @media (prefers-color-scheme: dark) {
   img {
     filter: brightness(0.8) contrast(1.1);
+  }
+}
+
+@media (max-width: 600px) {
+  .flex-row-responsive {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
