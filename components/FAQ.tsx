@@ -75,6 +75,10 @@ const FAQ = ({ faqList, limit }: FAQProps) => {
                       <p>{faq.answer}</p>
                     </motion.div>
                   )}
+
+                  <div style={{ opacity: 0, height: 0 }}>
+                    <p>{faq.answer}</p>
+                  </div>
                 </AnimatePresence>
               </motion.div>
             </motion.div>

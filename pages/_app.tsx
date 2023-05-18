@@ -44,7 +44,7 @@ export default function App(
           <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
         </div>
 
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait" initial={true}>
           <SessionProvider>
             <Navbar />
             <Layout key={router.route}>
