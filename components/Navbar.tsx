@@ -44,7 +44,7 @@ const settings: {
   },
   {
     label: "Logout",
-    href: "/",
+    href: "/login",
     onClick: function logout() {
       signOut();
     },
