@@ -30,7 +30,7 @@
     "firebase": "^9.21.0",
     "firebase-admin": "^11.8.0",
     "framer-motion": "^7.6.18",
-    "next": "^13.0.5",
+    "next": "^13.4.3",
     "next-auth": "^4.22.1",
     "next-images": "^1.8.4",
     "nextjs-google-analytics": "^2.3.3",
