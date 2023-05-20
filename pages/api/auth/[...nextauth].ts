@@ -30,9 +30,9 @@ export const authOptions: AuthOptions = {
       session.user.role = token.role || "user";
       return session;
     },
-    jwt: async ({ token, user }) => {
+    jwt: async ({ token, user, account }) => {
       if (user) token.id = user.id;
-      token.role = await getUserRole(token.id);
+      if (account) token.role = await getUserRole(token.id);
       return token;
     },
   },
