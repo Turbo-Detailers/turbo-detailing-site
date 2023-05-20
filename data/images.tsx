@@ -115,11 +115,7 @@ function randomizeAmount(
   amount: number
 ): StaticImageData[] {
   images = shuffle(images);
-  var returnArray: StaticImageData[] = [];
-  for (var i = 0; i <= amount; i++) {
-    returnArray.push(images[i]);
-  }
-  return returnArray;
+  return images.splice(amount, images.length - amount);
 }
 
 export const photos = shuffle(getPhotosObject(localImages));
