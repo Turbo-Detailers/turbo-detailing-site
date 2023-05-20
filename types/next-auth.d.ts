@@ -8,6 +8,7 @@ declare module "next-auth" {
     user: {
       /** The user's postal address. */
       id: string;
+      role: string;
     } & DefaultSession["user"];
   }
 }
@@ -19,6 +20,7 @@ import "next-auth/jwt";
 declare module "next-auth/jwt" {
   interface JWT {
     /** The user's role. */
-    userRole?: "admin" | "user" | "maintenance";
+    role: "admin" | "user" | "maintenance";
+    id: string;
   }
 }

@@ -1,5 +1,6 @@
 import { getServerSession } from "next-auth";
-import { Router } from "next/router";
+import { authOptions } from "../../pages/api/auth/[...nextauth]";
+import { redirect } from "next/navigation";
 
 export default async function AdminLayout({
   // Layouts must accept a children prop.
@@ -8,17 +9,16 @@ export default async function AdminLayout({
 }: {
   children: React.ReactNode;
 }) {
-  await getData();
+  const data = await getData();
+  if (data?.user.role !== "admin") return redirect("/login");
   return (
     <div className="page-content-main main" style={{ backgroundColor: "gray" }}>
       {children}
     </div>
   );
-  // else return <>not authorized</>;
 }
 
 async function getData() {
-  const dataSession = await getServerSession();
-  console.log(dataSession);
-  return;
+  const dataSession = await getServerSession(authOptions);
+  return dataSession;
 }
