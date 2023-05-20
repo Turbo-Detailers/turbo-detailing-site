@@ -115,7 +115,7 @@ function randomizeAmount(
   amount: number
 ): StaticImageData[] {
   var returnArray: StaticImageData[] = [];
-  for (var i = 0; i <= amount && i < images.length; i++) {
+  for (var i = 0; i <= amount; i++) {
     var randomIndex = Math.floor(Math.random() * images.length);
     returnArray.push(images[randomIndex]);
     images.splice(randomIndex);
