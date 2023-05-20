@@ -19,6 +19,29 @@ import x5DriverSideInstrumentCluster from "../public/images/details/x5-interior/
 import x5FrontSeatsRear from "../public/images/details/x5-interior/x5-front-seats-rear.jpg";
 import x5Indicator from "../public/images/details/x5-interior/x5-indicator.jpg";
 
+// 2023 Acura MDX
+import mdx2023BroadDashboardDriverSide from "../public/images/details/mdx-2023/mdx-broad-dashboard-driver.jpg";
+import mdx2023BroadDashboard from "../public/images/details/mdx-2023/mdx-broad-dashboard-passenger.jpg";
+import mdx2023PassengerDoorCloseUp from "../public/images/details/mdx-2023/mdx-passenger-door-close.jpg";
+import mdx2023SteeringCloseUp from "../public/images/details/mdx-2023/mdx-steering-close.jpg";
+
+// Mercedes ML350
+import ml350CenterConsole from "../public/images/details/ml350/ml350-center-console.jpg";
+import ml350Indicator from "../public/images/details/ml350/ml350-indicator.jpg";
+import ml350SteeringClose from "../public/images/details/ml350/ml350-steering-close.jpg";
+
+// Audi Q5
+import q5 from "../public/images/details/q5-interior/q5_0053.jpg";
+import q52 from "../public/images/details/q5-interior/q5_0054.jpg";
+import q53 from "../public/images/details/q5-interior/q5_0056.jpg";
+import q54 from "../public/images/details/q5-interior/q5_0060.jpg";
+import q55 from "../public/images/details/q5-interior/q5_0064.jpg";
+import q56 from "../public/images/details/q5-interior/q5_0077.jpg";
+import q57 from "../public/images/details/q5-interior/q5_0102.jpg";
+import q58 from "../public/images/details/q5-interior/q5_0118.jpg";
+import q59 from "../public/images/details/q5-interior/q5_0122.jpg";
+import q510 from "../public/images/details/q5-interior/q5_0138.jpg";
+
 import { StaticImageData } from "next/image";
 
 type PhotoData = {
@@ -27,114 +50,162 @@ type PhotoData = {
   height: number;
 };
 
-export const localImages = [
+const q5Images = [q5, q52, q53, q54, q55, q56, q57, q58, q59, q510];
+
+export const localImages: StaticImageData[] = [
   x5DoorPanelButtons,
   modelYWheelClean,
   a4InteriorWheel,
-  modelYFrontSoap,
+  mdx2023BroadDashboardDriverSide,
+  // modelYFrontSoap,
   a4InteriorDoorPanel,
+  ml350Indicator,
+  mdx2023SteeringCloseUp,
   modelYRearClean,
+  x5Indicator,
+  x5DriverSideInstrumentCluster,
   a4SteeringWheel,
   modelYIsometricClean,
+  mdx2023PassengerDoorCloseUp,
   a4InteriorDoorPanelSide,
-  modelYSideRearClean,
   a4InteriorRear,
+  ml350SteeringClose,
+  mdx2023BroadDashboard,
+  ml350CenterConsole,
+  x5FrontSeatsRear,
+  ...randomizeAmount(q5Images, 5),
 ];
 
-// function getPhotosObject(images: StaticImageData[]): PhotoData[] {
-//   var photosObject: PhotoData[] = [];
+function getPhotosObject(images: StaticImageData[]): PhotoData[] {
+  var photosObject: PhotoData[] = [];
 
-//   for (var image in images) {
-//     photosObject.push({
-//       src: image.src,
-//       width: image.width,
-//       height: image.height,
-//     });
-//   }
+  for (var i = 0; i < images.length; i++) {
+    photosObject.push({
+      src: images[i].src,
+      width: images[i].width,
+      height: images[i].height,
+    });
+  }
 
-//   return photosObject;
-// }
+  return photosObject;
+}
 
-export const photos: PhotoData[] = [
-  {
-    src: x5DoorPanelButtons.src,
-    width: x5DoorPanelButtons.width,
-    height: x5DoorPanelButtons.height,
-  },
-  {
-    src: modelYWheelClean.src,
-    width: modelYWheelClean.width,
-    height: modelYWheelClean.height,
-  },
+function shuffle(array: any[]) {
+  let currentIndex = array.length,
+    randomIndex;
 
-  {
-    src: a4InteriorWheel.src,
-    width: a4InteriorWheel.width,
-    height: a4InteriorWheel.height,
-  },
-  {
-    src: x5FrontSeatsRear.src,
-    width: x5FrontSeatsRear.width,
-    height: x5FrontSeatsRear.height,
-  },
-  {
-    src: modelYSideRearClean.src,
-    width: modelYSideRearClean.width,
-    height: modelYSideRearClean.height,
-  },
+  // While there remain elements to shuffle.
+  while (currentIndex != 0) {
+    // Pick a remaining element.
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
 
-  {
-    src: x5Indicator.src,
-    width: x5Indicator.width,
-    height: x5Indicator.height,
-  },
-  {
-    src: a4InteriorDoorPanel.src,
-    width: a4InteriorDoorPanel.width,
-    height: a4InteriorDoorPanel.height,
-  },
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
 
-  {
-    src: modelYFrontClean.src,
-    width: modelYFrontClean.width,
-    height: modelYFrontClean.height,
-  },
-  {
-    src: a4SteeringWheel.src,
-    width: a4SteeringWheel.width,
-    height: a4SteeringWheel.height,
-  },
-  {
-    src: modelYIsometricClean.src,
-    width: modelYIsometricClean.width,
-    height: modelYIsometricClean.height,
-  },
+  return array;
+}
 
-  {
-    src: a4InteriorDoorPanelSide.src,
-    width: a4InteriorDoorPanelSide.width,
-    height: a4InteriorDoorPanelSide.height,
-  },
-  {
-    src: modelYFrontSoap.src,
-    width: modelYFrontSoap.width,
-    height: modelYFrontSoap.height,
-  },
+function randomizeAmount(
+  images: StaticImageData[],
+  amount: number
+): StaticImageData[] {
+  var returnArray: StaticImageData[] = [];
+  for (var i = 0; i <= amount && i < images.length; i++) {
+    var randomIndex = Math.floor(Math.random() * images.length);
+    returnArray.push(images[randomIndex]);
+    images.splice(randomIndex);
+  }
+  console.log(returnArray);
+  return returnArray;
+}
 
-  {
-    src: modelYRearClean.src,
-    width: modelYRearClean.width,
-    height: modelYRearClean.height,
-  },
+export const photos = shuffle(getPhotosObject(localImages));
 
-  {
-    src: a4InteriorRear.src,
-    width: a4InteriorRear.width,
-    height: a4InteriorRear.height,
-  },
-  {
-    src: x5DriverSideInstrumentCluster.src,
-    width: x5DriverSideInstrumentCluster.width,
-    height: x5DriverSideInstrumentCluster.height,
-  },
-];
+// export const photos: PhotoData[] = [
+//   {
+//     src: x5DoorPanelButtons.src,
+//     width: x5DoorPanelButtons.width,
+//     height: x5DoorPanelButtons.height,
+//   },
+//   {
+//     src: modelYWheelClean.src,
+//     width: modelYWheelClean.width,
+//     height: modelYWheelClean.height,
+//   },
+
+//   {
+//     src: a4InteriorWheel.src,
+//     width: a4InteriorWheel.width,
+//     height: a4InteriorWheel.height,
+//   },
+//   {
+//     src: x5FrontSeatsRear.src,
+//     width: x5FrontSeatsRear.width,
+//     height: x5FrontSeatsRear.height,
+//   },
+//   {
+//     src: modelYSideRearClean.src,
+//     width: modelYSideRearClean.width,
+//     height: modelYSideRearClean.height,
+//   },
+
+//   {
+//     src: x5Indicator.src,
+//     width: x5Indicator.width,
+//     height: x5Indicator.height,
+//   },
+//   {
+//     src: a4InteriorDoorPanel.src,
+//     width: a4InteriorDoorPanel.width,
+//     height: a4InteriorDoorPanel.height,
+//   },
+
+//   {
+//     src: modelYFrontClean.src,
+//     width: modelYFrontClean.width,
+//     height: modelYFrontClean.height,
+//   },
+//   {
+//     src: a4SteeringWheel.src,
+//     width: a4SteeringWheel.width,
+//     height: a4SteeringWheel.height,
+//   },
+//   {
+//     src: modelYIsometricClean.src,
+//     width: modelYIsometricClean.width,
+//     height: modelYIsometricClean.height,
+//   },
+
+//   {
+//     src: a4InteriorDoorPanelSide.src,
+//     width: a4InteriorDoorPanelSide.width,
+//     height: a4InteriorDoorPanelSide.height,
+//   },
+//   {
+//     src: modelYFrontSoap.src,
+//     width: modelYFrontSoap.width,
+//     height: modelYFrontSoap.height,
+//   },
+
+//   {
+//     src: modelYRearClean.src,
+//     width: modelYRearClean.width,
+//     height: modelYRearClean.height,
+//   },
+
+//   {
+//     src: a4InteriorRear.src,
+//     width: a4InteriorRear.width,
+//     height: a4InteriorRear.height,
+//   },
+//   {
+//     src: x5DriverSideInstrumentCluster.src,
+//     width: x5DriverSideInstrumentCluster.width,
+//     height: x5DriverSideInstrumentCluster.height,
+//   },
+// ];

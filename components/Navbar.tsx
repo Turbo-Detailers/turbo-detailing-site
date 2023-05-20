@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Fonts } from "../bin/fonts";
 import styles from "../styles/components/Navbar.module.scss";
 import linkStyles from "../styles/components/Text/Link.module.css";
-import { useState, MouseEvent } from "react";
+import { useState, MouseEvent, MouseEventHandler } from "react";
 
 import Box from "@mui/material/Box";
 
@@ -21,28 +21,33 @@ import { Session } from "next-auth";
 const settings: {
   label: string;
   href: string;
-  onClick?: Function;
+  onClick: MouseEventHandler<HTMLElement>;
   conditional: Function;
 }[] = [
   {
     label: "Login",
     href: "/login",
+    onClick: function doNothing() {},
     conditional: (session: Session) => (session ? false : true),
   },
   {
     label: "Account",
     href: "/",
+    onClick: function doNothing() {},
     conditional: (session: Session) => (session ? true : false),
   },
   {
     label: "Dashboard",
     href: "/",
+    onClick: function doNothing() {},
     conditional: () => true,
   },
   {
     label: "Logout",
-    href: "/logout",
-    onClick: () => signOut(),
+    href: "/login",
+    onClick: function logout() {
+      signOut();
+    },
     conditional: (session: Session) => (session ? true : false),
   },
 ];
@@ -175,13 +180,26 @@ function Navbar() {
             {settings.map((setting) => {
               return !setting.conditional(session) ? null : (
                 <MenuItem key={setting.label} onClick={handleCloseUserMenu}>
-                  <Typography
-                    textAlign="center"
-                    component={Link}
-                    href={setting.href}
+                  <button
+                    style={{
+                      background: "none",
+                      color: "inherit",
+                      border: "none",
+                      padding: 0,
+                      font: "inherit",
+                      cursor: "pointer",
+                      outline: "inherit",
+                    }}
+                    onClick={setting.onClick}
                   >
-                    {setting.label}
-                  </Typography>
+                    <Typography
+                      textAlign="center"
+                      component={Link}
+                      href={setting.href}
+                    >
+                      {setting.label}
+                    </Typography>
+                  </button>
                 </MenuItem>
               );
             })}

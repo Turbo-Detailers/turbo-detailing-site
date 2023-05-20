@@ -44,15 +44,15 @@ function Carousel() {
       mouseTracking
       infinite
       disableButtonsControls
-      responsive={{
-        0: {
-          items: 1,
-        },
-        1024: {
-          items: 3,
-          itemsFit: "contain",
-        },
-      }}
+      // responsive={{
+      //   0: {
+      //     items: 1,
+      //   },
+      //   1024: {
+      //     items: 3,
+      //     itemsFit: "contain",
+      //   },
+      // }}
       items={items}
     />
   );

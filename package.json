@@ -5,18 +5,21 @@
   "type": "commonjs",
   "scripts": {
     "dev": "next dev",
+    "full": "npm run build && npm run start",
+    "dev-turbo": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "full": "npm run build && npm run start"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/styled": "^11.11.0",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.0",
     "@next-auth/firebase-adapter": "^2.0.1",
     "@next/bundle-analyzer": "^13.2.4",
-    "@next/font": "^13.0.6",
+    "@next/mdx": "^13.4.2",
     "@types/node": "18.11.10",
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.9",
@@ -27,7 +30,7 @@
     "firebase": "^9.21.0",
     "firebase-admin": "^11.8.0",
     "framer-motion": "^7.6.18",
-    "next": "^13.0.5",
+    "next": "^13.4.3",
     "next-auth": "^4.22.1",
     "next-images": "^1.8.4",
     "nextjs-google-analytics": "^2.3.3",
@@ -37,8 +40,12 @@
     "react-dom": "18.2.0",
     "react-photo-album": "^2.0.4",
     "react-toastify": "^9.1.2",
+    "react-wrap-balancer": "^0.5.0",
     "sass": "^1.58.0",
     "sharp": "^0.32.1",
     "typescript": "4.9.3"
+  },
+  "devDependencies": {
+    "eslint-plugin-mdx": "^2.1.0"
   }
 }

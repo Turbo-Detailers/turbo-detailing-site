@@ -14,12 +14,10 @@ import { Analytics } from "@vercel/analytics/react";
 import { SessionProvider } from "next-auth/react";
 import { Session } from "next-auth";
 
-
 export default function App(
   { Component, pageProps, router }: AppProps,
   session: Session
 ) {
-
   return (
     <>
       <main>
@@ -46,13 +44,11 @@ export default function App(
           <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
         </div>
 
-        <AnimatePresence mode="wait" initial={false}>
+        <AnimatePresence mode="wait" initial={true}>
           <SessionProvider>
             <Navbar />
-
             <Layout key={router.route}>
               <Component {...pageProps} />
-              {/* </motion.div> */}
             </Layout>
           </SessionProvider>
         </AnimatePresence>

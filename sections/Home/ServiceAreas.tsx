@@ -1,4 +1,9 @@
 import ContentSection from "../../components/ContentSection";
+import Balancer from "react-wrap-balancer";
+import Image from "next/image";
+import serviceMap from "../../public/images/service-area-map.jpg";
+import Link from "next/link";
+import Spacer from "../../components/Spacer";
 
 function ServiceAreas() {
   return (
@@ -26,13 +31,35 @@ function ServiceAreas() {
     //     </div>
     //   </div>
     // </section>
-    <ContentSection
-      text="We provide services throughout the West-Metro of the Twin Cities area. This includes Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, and more! Please note that we only detail SUVs and Sedans"
-      //   title="Why Turbo?"
-      image="/images/home/2.png"
-      imageAlt="none"
-      isBackgroundImage={false}
-    />
+    <>
+      <div
+        className={"flex-row-responsive"}
+        style={{
+          width: "100vw",
+          backgroundColor: "#1a1a1a",
+          maxWidth: "100vw",
+        }}
+      >
+        <Balancer>
+          <ContentSection
+            text="We proudly serve the West-Metro area of the Twin Cities, including Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, Eden Prairie, Prior Lake and more!"
+            //   title="Why Turbo?"
+            image="/images/home/2.png"
+            imageAlt="none"
+            isBackgroundImage={false}
+          />
+        </Balancer>
+        <Spacer height={1} />
+        <Link href={`/gallery/images/service-area-map.jpg`}>
+          <Image
+            src={serviceMap}
+            alt={"Service Areas Map"}
+            quality={100}
+            style={{ width: "100%", objectFit: "contain", height: "100%" }}
+          />
+        </Link>
+      </div>
+    </>
   );
 }
 

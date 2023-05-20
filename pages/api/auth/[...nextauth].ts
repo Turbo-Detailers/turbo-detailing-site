@@ -2,6 +2,7 @@ import NextAuth, { AuthOptions, Session } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import { FirestoreAdapter, initFirestore } from "@next-auth/firebase-adapter";
 import { cert } from "firebase-admin/app";
+import { getUserRole } from "../../../bin/firebase";
 
 export const authOptions: AuthOptions = {
   // Configure one or more authentication providers
@@ -12,6 +13,9 @@ export const authOptions: AuthOptions = {
     }),
     // ...add more providers here
   ],
+  session: {
+    strategy: "jwt",
+  },
   adapter: FirestoreAdapter({
     credential: cert({
       projectId: process.env.FIREBASE_PROJECT_ID || "",
@@ -21,9 +25,15 @@ export const authOptions: AuthOptions = {
     }),
   }),
   callbacks: {
-    session: async ({ session, user }) => {
-      session.user.id = user.id;
+    session: async ({ session, token }) => {
+      session.user.id = token.id;
+      session.user.role = token.role || "user";
       return session;
+    },
+    jwt: async ({ token, user, account }) => {
+      if (user) token.id = user.id;
+      if (account) token.role = await getUserRole(token.id);
+      return token;
     },
   },
   pages: {
