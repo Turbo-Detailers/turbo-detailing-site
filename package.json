@@ -5,11 +5,11 @@
   "type": "commonjs",
   "scripts": {
     "dev": "next dev",
+    "full": "npm run build && npm run start",
     "dev-turbo": "next dev --turbo",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "full": "npm run build && npm run start"
+    "lint": "next lint"
   },
   "dependencies": {
     "@emotion/styled": "^11.11.0",
