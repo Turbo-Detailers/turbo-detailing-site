@@ -5,7 +5,7 @@ import {
   Roboto_Mono,
   Source_Code_Pro,
 } from "next/font/google";
-import { NextFont } from "@next/font/dist/types";
+import { NextFont } from "next/dist/compiled/@next/font";
 
 const josefin_sans: NextFont = Josefin_Sans({
   subsets: ["latin"],
