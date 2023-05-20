@@ -30,6 +30,18 @@ import ml350CenterConsole from "../public/images/details/ml350/ml350-center-cons
 import ml350Indicator from "../public/images/details/ml350/ml350-indicator.jpg";
 import ml350SteeringClose from "../public/images/details/ml350/ml350-steering-close.jpg";
 
+// Audi Q5
+import q5 from "../public/images/details/q5-interior/q5_0053.jpg";
+import q52 from "../public/images/details/q5-interior/q5_0054.jpg";
+import q53 from "../public/images/details/q5-interior/q5_0056.jpg";
+import q54 from "../public/images/details/q5-interior/q5_0060.jpg";
+import q55 from "../public/images/details/q5-interior/q5_0064.jpg";
+import q56 from "../public/images/details/q5-interior/q5_0077.jpg";
+import q57 from "../public/images/details/q5-interior/q5_0102.jpg";
+import q58 from "../public/images/details/q5-interior/q5_0118.jpg";
+import q59 from "../public/images/details/q5-interior/q5_0122.jpg";
+import q510 from "../public/images/details/q5-interior/q5_0138.jpg";
+
 import { StaticImageData } from "next/image";
 
 type PhotoData = {
@@ -37,6 +49,8 @@ type PhotoData = {
   width: number;
   height: number;
 };
+
+const q5Images = [q5, q52, q53, q54, q55, q56, q57, q58, q59, q510];
 
 export const localImages = [
   x5DoorPanelButtons,
@@ -59,6 +73,7 @@ export const localImages = [
   mdx2023BroadDashboard,
   ml350CenterConsole,
   x5FrontSeatsRear,
+  ...randomizeAmount(q5Images, 5),
 ];
 
 function getPhotosObject(images: StaticImageData[]): PhotoData[] {
@@ -93,6 +108,19 @@ function shuffle(array: any[]) {
   }
 
   return array;
+}
+
+function randomizeAmount(
+  images: StaticImageData[],
+  amount: number
+): StaticImageData[] {
+  var returnArray: StaticImageData[] = [];
+  for (var i = 0; i < amount && i < images.length; i++) {
+    var randomIndex = Math.floor(Math.random() * images.length);
+    returnArray.push(images[randomIndex]);
+    delete images[randomIndex];
+  }
+  return returnArray;
 }
 
 export const photos = shuffle(getPhotosObject(localImages));
