@@ -52,7 +52,7 @@ type PhotoData = {
 
 const q5Images = [q5, q52, q53, q54, q55, q56, q57, q58, q59, q510];
 
-export const localImages = [
+export const localImages: StaticImageData[] = [
   x5DoorPanelButtons,
   modelYWheelClean,
   a4InteriorWheel,
@@ -115,11 +115,12 @@ function randomizeAmount(
   amount: number
 ): StaticImageData[] {
   var returnArray: StaticImageData[] = [];
-  for (var i = 0; i < amount && i < images.length; i++) {
+  for (var i = 0; i <= amount && i < images.length; i++) {
     var randomIndex = Math.floor(Math.random() * images.length);
     returnArray.push(images[randomIndex]);
-    delete images[randomIndex];
+    images.splice(randomIndex);
   }
+  console.log(returnArray);
   return returnArray;
 }
 
