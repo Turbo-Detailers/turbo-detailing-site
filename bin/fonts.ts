@@ -4,7 +4,7 @@ import {
   Poppins,
   Roboto_Mono,
   Source_Code_Pro,
-} from "@next/font/google";
+} from "next/font/google";
 import { NextFont } from "@next/font/dist/types";
 
 const josefin_sans: NextFont = Josefin_Sans({
