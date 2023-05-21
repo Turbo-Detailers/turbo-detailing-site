@@ -41,6 +41,7 @@ import q57 from "../public/images/details/q5-interior/q5_0102.jpg";
 import q58 from "../public/images/details/q5-interior/q5_0118.jpg";
 import q59 from "../public/images/details/q5-interior/q5_0122.jpg";
 import q510 from "../public/images/details/q5-interior/q5_0138.jpg";
+import q511 from "../public/images/details/q5-interior/q5_0160.jpg";
 
 import { StaticImageData } from "next/image";
 
@@ -73,6 +74,7 @@ export const localImages: StaticImageData[] = [
   mdx2023BroadDashboard,
   ml350CenterConsole,
   x5FrontSeatsRear,
+q511,
   ...randomizeAmount(q5Images, 5),
 ];
 
