@@ -30,7 +30,7 @@ export default function App(
           <meta property="og:type" content="website" />
           <meta
             name="description"
-            content="Turbo Mobile Auto Detailing: Low price, high quality luxury detailing in the Twin Cities area."
+            content="Turbo Mobile Auto Detailing: High quality luxury detailing in the West Metro of the Twin Cities area."
           />
           <meta
             property="og:image"
