@@ -5,8 +5,8 @@
     "name": "Interior",
     "description": "Leave your car feeling brand new.",
     "note": "",
-    "link": "https://turbodetailers.zohobookings.com/#/customer/4495603000000031078",
-    "suvLink": "https://turbodetailers.zohobookings.com/#/customer/4495603000000135022",
+    "link": "https://book.turbodetailers.com/#/customer/interior-sedan",
+    "suvLink": "https://book.turbodetailers.com/#/customer/interior-suv",
     "benefits": [
       "Thorough vacuuming",
       "Deep disinfection",
@@ -25,8 +25,8 @@
     "name": "Exterior",
     "description": "Stand out with a fresh exterior finish.",
     "note": "",
-    "link": "https://turbodetailers.zohobookings.com/#/customer/4495603000000031094",
-    "suvLink": "https://turbodetailers.zohobookings.com/#/customer/4495603000000135192",
+    "link": "https://book.turbodetailers.com/#/customer/exterior-sedan",
+    "suvLink": "https://book.turbodetailers.com/#/customer/exterior-suv",
     "benefits": [
       "Cleaning of rims, tires, and wheel wells",
       "Hand wash with premium products",
@@ -45,8 +45,8 @@
     "name": "Turbo",
     "description": "The best of both worlds.",
     "note": "Most Popular",
-    "link": "https://turbodetailers.zohobookings.com/#/customer/4495603000000031054",
-    "suvLink": "https://turbodetailers.zohobookings.com/#/customer/4495603000000135106",
+    "link": "https://book.turbodetailers.com/#/customer/turbo-sedan",
+    "suvLink": "https://book.turbodetailers.com/#/customer/turbo-suv",
     "benefits": [
       "High-pressure wash",
       "Surface degreasing",
