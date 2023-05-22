@@ -21,7 +21,7 @@ export default function Home() {
         <title>Turbo Mobile Auto Detailing - Turbo Detailers</title>
         <meta
           name="description"
-          content="Get high quality, low price luxury detailing directly in the comfort of your own home. Located in the Twin Cities Area, we come to you!"
+          content="Get high quality luxury detailing directly in the comfort of your own home. Located in the West Metro of the Twin Cities Area, we come to you! Book a detailing appointment today."
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
