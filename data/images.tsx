@@ -74,7 +74,7 @@ export const localImages: StaticImageData[] = [
   mdx2023BroadDashboard,
   ml350CenterConsole,
   x5FrontSeatsRear,
-q511,
+  q511,
   ...randomizeAmount(q5Images, 5),
 ];
 
@@ -121,6 +121,10 @@ function randomizeAmount(
 }
 
 export const photos = shuffle(getPhotosObject(localImages));
+
+export function getShuffledPhotos(): StaticImageData[] {
+  return shuffle(getPhotosObject(localImages));
+}
 
 // export const photos: PhotoData[] = [
 //   {

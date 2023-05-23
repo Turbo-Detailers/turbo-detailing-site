@@ -1,9 +1,10 @@
 import PhotoAlbum from "react-photo-album";
+import { GetServerSideProps, InferGetServerSidePropsType } from "next";
 
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import type { RenderPhotoProps } from "react-photo-album";
 
-import { photos } from "../data/images";
+import { getShuffledPhotos } from "../data/images";
 
 import styles from "../styles/Gallery.module.scss";
 import Spacer from "../components/Spacer";
@@ -30,7 +31,9 @@ function NextJsImage({
   );
 }
 
-export default function Gallery() {
+export default function Gallery({
+  images,
+}: InferGetServerSidePropsType<typeof getServerSideProps>) {
   return (
     <>
       <Head>
@@ -45,8 +48,26 @@ export default function Gallery() {
         <Spacer height={1.75} />
         <AccentedTitle>Gallery</AccentedTitle>
         <Spacer height={3} />
-        <PhotoAlbum layout="rows" photos={photos} renderPhoto={NextJsImage} />
+        <PhotoAlbum layout="rows" photos={images} renderPhoto={NextJsImage} />
       </main>
     </>
   );
 }
+
+export const getServerSideProps: GetServerSideProps<{
+  images: StaticImageData[];
+}> = async () => {
+  return {
+    props: {
+      images: await getShuffledPhotos(),
+    },
+  };
+};
+
+// export const getServerSideProps: GetServerSideProps<{
+//   repo: Repo;
+// }> = async () => {
+//   const res = await fetch("https://api.github.com/repos/vercel/next.js");
+//   const repo = await res.json();
+//   return { props: { repo } };
+// };
