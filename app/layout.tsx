@@ -1,5 +1,5 @@
 "use client";
-import "../styles/globals.scss";
+import "../styles/globals.css";
 
 import Navbar from "../components/Navbar";
 

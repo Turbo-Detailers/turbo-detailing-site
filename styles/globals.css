@@ -1,9 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
-  // --page-background-color: #060606;
+  /* // --page-background-color: #060606; */
   --title-color: #ffff;
   --text-accent-color: #e93f33;
 
-  $mobile-screen-width: 676px;
+  /* $mobile-screen-width: 676px; */
   --main-01-dp: #1e1e1e;
   --main-navbar-elevation-color: #2e2e2e;
   --navbar-text-color: white;
@@ -32,11 +36,11 @@ body {
 }
 
 .page-content-main {
-  // padding-top: calc(100vh - 60px);
+  /* // padding-top: calc(100vh - 60px); */
   padding-top: 60px;
 }
 .blog-content-main {
-  // padding-top: calc(100vh - 60px);
+  /* // padding-top: calc(100vh - 60px); */
   padding-left: 1.2rem;
   padding-right: 1.2rem;
 }
