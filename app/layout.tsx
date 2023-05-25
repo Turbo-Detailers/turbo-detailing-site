@@ -48,24 +48,24 @@ const Dynamic = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body>
-        <main>
-          <div itemScope itemType="https://schema.org/WebSite">
-            <meta itemProp="url" content="https://turbodetailers.com/" />
-            <meta itemProp="name" content="Turbo Detailers" />
-            <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
-          </div>
+        <div itemScope itemType="https://schema.org/WebSite">
+          <meta itemProp="url" content="https://turbodetailers.com/" />
+          <meta itemProp="name" content="Turbo Detailers" />
+          <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
+        </div>
 
-          <SessionProvider>
-            {hasMounted ? <Navbar /> : null}
+        <SessionProvider>
+          {hasMounted ? <Navbar /> : null}
+          <main className="page-content-main">
             {hasMounted ? (
               <AnimatePresence>{children}</AnimatePresence>
             ) : (
               children
             )}
-          </SessionProvider>
+          </main>
+        </SessionProvider>
 
-          <Footer />
-        </main>
+        <Footer />
         <Analytics />
       </body>
     </html>

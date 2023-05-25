@@ -1,5 +1,12 @@
-import PricingSection from "../../sections/Home/PricingSection";
-import BlogLayout from "../../components/BlogLayout";
+---
+title: So why should I even get a detail?
+date: 2021-12-24
+author: Dhairya Gupta
+subtitle: "tl;dr: It's good for your car."
+---
+
+import PricingSection from "../sections/Home/PricingSection";
+import BlogLayout from "../components/BlogLayout";
 import Balancer from "react-wrap-balancer";
 
 export const meta = {
@@ -11,9 +18,4 @@ export const meta = {
 # <Balancer>So why should I even get a detail?</Balancer>
 
 <strong>Learn what makes a detailing so important</strong>
-
 <PricingSection />
-
-export default ({ children }) => (
-  <BlogLayout meta={meta}>{children}</BlogLayout>
-);
