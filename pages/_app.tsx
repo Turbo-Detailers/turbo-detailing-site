@@ -13,6 +13,7 @@ import { Analytics } from "@vercel/analytics/react";
 
 import { SessionProvider } from "next-auth/react";
 import { Session } from "next-auth";
+import { Fonts, poppins } from "bin/fonts";
 
 export default function App(
   { Component, pageProps, router }: AppProps,
@@ -20,7 +21,7 @@ export default function App(
 ) {
   return (
     <>
-      <main>
+      <main className={`${poppins.variable}`}>
         <Head>
           <meta content-language="en-us" />
           <meta httpEquiv="content-language" content="en-us" />

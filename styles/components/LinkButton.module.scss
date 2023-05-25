@@ -1,16 +1,17 @@
 .button {
+  margin-top: 0.75rem;
   background-color: black;
-  border-color: #e93f33;
+  border-color: #3b3b3b;
   border-width: 2px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   border-radius: 15px;
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   &:hover {
-    background-color: #fff;
+    background-color: #d52424;
     color: #000;
   }
 }
