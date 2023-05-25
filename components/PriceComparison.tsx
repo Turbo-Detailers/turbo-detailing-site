@@ -4,8 +4,6 @@ import pricingData from "../data/pricing.json";
 import DiagonalFadeButton from "./buttons/DiagonalFadeButton";
 import { useRef, useState } from "react";
 import SegmentedControl from "./SegmentedControl";
-import ContentSection from "./ContentSection";
-import Balancer from "react-wrap-balancer";
 
 export interface PricingData {
   price: number;
