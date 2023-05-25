@@ -1,0 +1,29 @@
+---
+title: So why should I even get a detail?
+date: 2023-3-25
+author: Dhairya Gupta
+subtitle: "tl;dr: It's good for your car."
+---
+
+Detailing. It's a word that gets thrown around a lot in the car community. But what does it mean? And why should you get it done? Let's find out.
+
+## What is detailing?
+
+Detailing is the process of cleaning and restoring a car to its original condition. It involves a lot of steps, and is a very time consuming process. It is not to be confused with washing your car, which is a much simpler process.
+
+## Why should I get my car detailed?
+
+There are many reasons why you should get your car detailed. Here are some of them:
+
+- It makes your car look good
+- It makes your car feel good
+- It makes your car smell good
+- It makes your car last longer
+- It makes your car easier to sell
+- It makes your car easier to maintain
+- It makes your car easier to clean
+- It makes your car easier to drive
+
+## How much does it cost?
+
+You can find our pricing at [this link](/pricing).
