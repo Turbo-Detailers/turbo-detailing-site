@@ -21,27 +21,27 @@ export const Post = defineDocumentType(() => ({
       resolve: (post) => `/blog/${post._raw.flattenedPath}`,
     },
   },
-  mdx: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [
-      rehypeSlug,
-      [
-        rehypeAutolinkHeadings,
-        {
-          behavior: "wrap",
-          properties: {
-            className: ["anchor"],
-          },
-        },
-      ],
-    ],
-  },
+  // mdx: {
+  //   remarkPlugins: [remarkGfm],
+  //   rehypePlugins: [
+  //     rehypeSlug,
+  //     [
+  //       rehypeAutolinkHeadings,
+  //       {
+  //         behavior: "wrap",
+  //         properties: {
+  //           className: ["anchor"],
+  //         },
+  //       },
+  //     ],
+  //   ],
+  // },
 }));
 
 export default makeSource({
   contentDirPath: "posts",
   documentTypes: [Post],
-  mdx: {
-    rehypePlugins: [rehypeSlug],
-  },
+  // mdx: {
+  //   rehypePlugins: [rehypeSlug],
+  // },
 });

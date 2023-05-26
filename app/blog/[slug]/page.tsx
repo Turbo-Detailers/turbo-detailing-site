@@ -23,11 +23,11 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         </time>
         <h1 className="text-3xl font-bold">{post.title}</h1>
       </div>
-      {/* <div
+      <div
         className="blog-post [&>*]:mb-3 [&>*:last-child]:mb-0"
-        dangerouslySetInnerHTML={{ __html: post.body }}
-      /> */}
-      <MDXComponents code={post.body.code} />
+        dangerouslySetInnerHTML={{ __html: post.body.html }}
+      />
+      {/* <MDXComponents code={post.body.code} /> */}
     </article>
   );
 };
