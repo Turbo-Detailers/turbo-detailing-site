@@ -14,7 +14,7 @@ export default function Pricing() {
         />
       </Head>
       <div className={homeStyles.main}>
-        <AccentedTitle>Book Appointment</AccentedTitle>
+        <AccentedTitle>Book</AccentedTitle>
       </div>
       <main style={{ textAlign: "center" }}>
         <p>
