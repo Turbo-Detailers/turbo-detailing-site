@@ -14,11 +14,11 @@ const nextConfig = {
 
     return config;
   },
-  // Configure pageExtensions to include md and mdx
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
-  experimental: {
-    mdxRs: true,
-  },
+  // // Configure pageExtensions to include md and mdx
+  // pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  // experimental: {
+  //   mdxRs: true,
+  // },
 };
 
 const withMDX = require("@next/mdx")({

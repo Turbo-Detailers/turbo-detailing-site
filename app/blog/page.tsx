@@ -6,10 +6,7 @@ function PostCard(post: Post) {
   return (
     <div className="mb-8">
       <h2 className="mb-1 text-xl">
-        <Link
-          href={post.url}
-          className="text-blue-700 hover:text-blue-900 dark:text-blue-400"
-        >
+        <Link href={post.url} className="text-blue-700 hover:text-blue-900">
           {post.title}
         </Link>
       </h2>
@@ -20,7 +17,7 @@ function PostCard(post: Post) {
       <div
         className="text-sm [&>*]:mb-3 [&>*:last-child]:mb-0"
         dangerouslySetInnerHTML={{
-          __html: post.body.html.substring(0, 250) + "...",
+          __html: post.body.raw.substring(0, 250) + "...",
         }}
       />
     </div>

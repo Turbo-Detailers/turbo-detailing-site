@@ -18,7 +18,7 @@ function Top() {
             animate="show"
           >
             <Subtitle>Luxury Detailing</Subtitle>
-            <LinkButton href="/book" text="Book today" />
+            {/* <LinkButton href="/book" text="Book today" /> */}
           </motion.div>
           <p className={styles.scrollSign}>
             SCROLL <a className={styles.scrollSignBar}>━━━</a>

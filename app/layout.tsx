@@ -12,6 +12,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SessionProvider } from "next-auth/react";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import { poppins } from "bin/fonts";
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -30,7 +31,7 @@ const Dynamic = ({ children }: { children: React.ReactNode }) => {
     setHasMounted(true);
   }, []);
   return (
-    <html lang="en">
+    <html lang="en" className={`${poppins.variable}`}>
       <head>
         <meta content-language="en-us" />
         <meta httpEquiv="content-language" content="en-us" />

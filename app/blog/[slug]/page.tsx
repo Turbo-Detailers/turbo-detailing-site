@@ -1,13 +1,14 @@
 import { format, parseISO } from "date-fns";
 import { allPosts } from "contentlayer/generated";
+import { MDXComponents } from "components/blog/mdx-components";
 
 export const generateStaticParams = async () =>
   allPosts.map((post) => ({ slug: post._raw.flattenedPath }));
 
 export const generateMetadata = ({ params }: { params: { slug: string } }) => {
   const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
-  if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
-  return { title: post.title };
+  if (!post) throw new Error(`Post not found`);
+  return { title: post.title + " - Turbo Detailers" };
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
@@ -22,10 +23,11 @@ const PostLayout = ({ params }: { params: { slug: string } }) => {
         </time>
         <h1 className="text-3xl font-bold">{post.title}</h1>
       </div>
-      <div
-        className="[&>*]:mb-3 [&>*:last-child]:mb-0"
-        dangerouslySetInnerHTML={{ __html: post.body.html }}
-      />
+      {/* <div
+        className="blog-post [&>*]:mb-3 [&>*:last-child]:mb-0"
+        dangerouslySetInnerHTML={{ __html: post.body }}
+      /> */}
+      <MDXComponents code={post.body.code} />
     </article>
   );
 };

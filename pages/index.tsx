@@ -29,7 +29,7 @@ export default function Home() {
       <Top />
       {/* <SectionBreak /> */}
       <div className={styles.backgroundVidContainer}>
-        {/* <video
+        <video
           autoPlay={true}
           muted
           loop
@@ -39,7 +39,7 @@ export default function Home() {
           src={"/videos/audi-a4.mp4"}
         >
           <source src={"/videos/audi-a4.mp4"} type="video/mp4" />
-        </video> */}
+        </video>
         <AboutSection />
       </div>
 
