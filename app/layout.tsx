@@ -1,5 +1,5 @@
 "use client";
-import "../styles/globals.scss";
+import "../styles/globals.css";
 
 import Navbar from "../components/Navbar";
 
@@ -12,6 +12,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { SessionProvider } from "next-auth/react";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
+import { poppins } from "bin/fonts";
 
 export default function RootLayout({
   // Layouts must accept a children prop.
@@ -30,7 +31,7 @@ const Dynamic = ({ children }: { children: React.ReactNode }) => {
     setHasMounted(true);
   }, []);
   return (
-    <html lang="en">
+    <html lang="en" className={`${poppins.variable}`}>
       <head>
         <meta content-language="en-us" />
         <meta httpEquiv="content-language" content="en-us" />
@@ -48,24 +49,24 @@ const Dynamic = ({ children }: { children: React.ReactNode }) => {
         />
       </head>
       <body>
-        <main>
-          <div itemScope itemType="https://schema.org/WebSite">
-            <meta itemProp="url" content="https://turbodetailers.com/" />
-            <meta itemProp="name" content="Turbo Detailers" />
-            <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
-          </div>
+        <div itemScope itemType="https://schema.org/WebSite">
+          <meta itemProp="url" content="https://turbodetailers.com/" />
+          <meta itemProp="name" content="Turbo Detailers" />
+          <meta itemProp="alternateName" content="Turbo Mobile Detailing" />
+        </div>
 
-          <SessionProvider>
-            {hasMounted ? <Navbar /> : null}
+        <SessionProvider>
+          {hasMounted ? <Navbar /> : null}
+          <main className="page-content-main">
             {hasMounted ? (
               <AnimatePresence>{children}</AnimatePresence>
             ) : (
               children
             )}
-          </SessionProvider>
+          </main>
+        </SessionProvider>
 
-          <Footer />
-        </main>
+        <Footer />
         <Analytics />
       </body>
     </html>

@@ -1,6 +1,9 @@
+const { withContentlayer } = require("next-contentlayer");
+
 /** @type {import('next').NextConfig} */
 const withImages = require("next-images");
 
+/** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -11,8 +14,11 @@ const nextConfig = {
 
     return config;
   },
-  // Configure pageExtensions to include md and mdx
-  pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  // // Configure pageExtensions to include md and mdx
+  // pageExtensions: ["ts", "tsx", "js", "jsx", "md", "mdx"],
+  // experimental: {
+  //   mdxRs: true,
+  // },
 };
 
 const withMDX = require("@next/mdx")({
@@ -28,4 +34,4 @@ const withMDX = require("@next/mdx")({
   },
 });
 
-module.exports = withMDX(nextConfig);
+module.exports = withContentlayer(withMDX(nextConfig));

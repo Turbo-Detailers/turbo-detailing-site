@@ -11,9 +11,10 @@ const josefin_sans: NextFont = Josefin_Sans({
   subsets: ["latin"],
 });
 
-const poppins: NextFont = Poppins({
+export const poppins = Poppins({
   weight: "300",
   subsets: ["latin"],
+  variable: "--font-body",
 });
 const poppins_bold: NextFont = Poppins({
   weight: "800",

@@ -1,3 +1,4 @@
+"use-client";
 import { Fonts } from "../../bin/fonts";
 import { motion } from "framer-motion";
 import styles from "../../styles/components/AccentedTitle.module.scss";

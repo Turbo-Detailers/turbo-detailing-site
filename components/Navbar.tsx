@@ -52,6 +52,26 @@ const settings: {
   },
 ];
 
+const moreMenu: {
+  label: string;
+  href: string;
+  onClick: MouseEventHandler<HTMLElement>;
+  conditional: Function;
+}[] = [
+  {
+    label: "Blog",
+    href: "/blog",
+    onClick: () => {},
+    conditional: () => true,
+  },
+  {
+    label: "FAQ",
+    href: "/faq",
+    onClick: () => {},
+    conditional: () => true,
+  },
+];
+
 function Navbar() {
   const { data: session } = useSession();
 
@@ -62,7 +82,6 @@ function Navbar() {
     setAnchorElNav(event.currentTarget);
   };
   const handleOpenUserMenu = (event: MouseEvent<HTMLElement>) => {
-    console.log(session);
     setAnchorElUser(event.currentTarget);
   };
 
@@ -130,13 +149,7 @@ function Navbar() {
           >
             Pricing
           </Link>
-          <Link
-            href="/faq"
-            className={linkStyles["hover-animation"]}
-            // style={{ marginRight: "2.5rem" }}
-          >
-            FAQ
-          </Link>
+
           <Link
             href="/gallery"
             className={linkStyles["hover-animation"]}
@@ -146,6 +159,63 @@ function Navbar() {
           </Link>
           <Link href="/contact" className={linkStyles["hover-animation"]}>
             Contact
+          </Link>
+          <Link
+            href=""
+
+            // style={{ marginRight: "2.5rem" }}
+          >
+            <Tooltip title="More options">
+              <p
+                className={linkStyles["hover-animation"]}
+                onClick={handleOpenNavMenu}
+              >
+                More
+              </p>
+            </Tooltip>
+            <Menu
+              sx={{ mt: "45px" }}
+              id="menu-appbar"
+              anchorEl={anchorElNav}
+              anchorOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              keepMounted
+              transformOrigin={{
+                vertical: "top",
+                horizontal: "right",
+              }}
+              open={Boolean(anchorElNav)}
+              onClose={handleCloseNavMenu}
+            >
+              {moreMenu.map((menuItem) => {
+                return !menuItem.conditional(session) ? null : (
+                  <MenuItem key={menuItem.label} onClick={handleCloseUserMenu}>
+                    <button
+                      style={{
+                        background: "none",
+                        color: "inherit",
+                        border: "none",
+                        padding: 0,
+                        font: "inherit",
+                        cursor: "pointer",
+                        outline: "inherit",
+                      }}
+                      onClick={menuItem.onClick}
+                    >
+                      <Typography
+                        textAlign="center"
+                        component={Link}
+                        href={menuItem.href}
+                      >
+                        {menuItem.label}
+                      </Typography>
+                    </button>
+                  </MenuItem>
+                );
+              })}
+            </Menu>
           </Link>
         </div>
         <Box sx={{ flexGrow: 0 }}>
