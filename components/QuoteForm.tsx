@@ -65,73 +65,75 @@ export default function ContactForm() {
       </div>
     );
   return (
-    <form onSubmit={handleOnSubmit} className={styles.form}>
-      <input
-        onChange={handleOnChange}
-        value={inputs.name}
-        id="name"
-        type="text"
-        name="name"
-        placeholder="Name"
-      />
-      <input
-        onChange={handleOnChange}
-        value={inputs.email}
-        id="email"
-        type="email"
-        name="email"
-        placeholder="Email"
-      />
-      <input
-        onChange={handleOnChange}
-        value={inputs.number}
-        id="number"
-        type="tel"
-        name="number"
-        placeholder="Phone Number"
-      />
-      <input
-        onChange={handleOnChange}
-        value={inputs.make}
-        id="make"
-        type="text"
-        name="make"
-        placeholder="Make"
-      />
-      <input
-        onChange={handleOnChange}
-        value={inputs.model}
-        id="model"
-        type="text"
-        name="model"
-        placeholder="Model"
-      />
-      <input
-        onChange={handleOnChange}
-        value={inputs.year}
-        id="year"
-        type="text"
-        name="year"
-        placeholder="Year"
-      />
+    <div className={styles.container}>
+      <form onSubmit={handleOnSubmit} className={styles.form}>
+        <input
+          onChange={handleOnChange}
+          value={inputs.name}
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Name"
+        />
+        <input
+          onChange={handleOnChange}
+          value={inputs.email}
+          id="email"
+          type="email"
+          name="email"
+          placeholder="Email"
+        />
+        <input
+          onChange={handleOnChange}
+          value={inputs.number}
+          id="number"
+          type="tel"
+          name="number"
+          placeholder="Phone Number"
+        />
+        <input
+          onChange={handleOnChange}
+          value={inputs.make}
+          id="make"
+          type="text"
+          name="make"
+          placeholder="Make"
+        />
+        <input
+          onChange={handleOnChange}
+          value={inputs.model}
+          id="model"
+          type="text"
+          name="model"
+          placeholder="Model"
+        />
+        <input
+          onChange={handleOnChange}
+          value={inputs.year}
+          id="year"
+          type="text"
+          name="year"
+          placeholder="Year"
+        />
 
-      <input
-        onChange={handleOnChange}
-        value={inputs.condition}
-        id="condition"
-        type="text"
-        name="condition"
-        placeholder="Condition"
-      />
+        <input
+          onChange={handleOnChange}
+          value={inputs.condition}
+          id="condition"
+          type="text"
+          name="condition"
+          placeholder="Condition"
+        />
 
-      <textarea
-        onChange={handleOnChange}
-        value={inputs.notes}
-        id="notes"
-        name="notes"
-        placeholder="Please describe any damage or anything you'd like to share about your vehicle"
-      />
-      <button type="submit"> Send Message </button>
-    </form>
+        <textarea
+          onChange={handleOnChange}
+          value={inputs.notes}
+          id="notes"
+          name="notes"
+          placeholder="Please describe any damage or anything you'd like to share about your vehicle"
+        />
+        <button type="submit"> Send Message </button>
+      </form>
+    </div>
   );
 }
