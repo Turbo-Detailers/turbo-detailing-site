@@ -27,23 +27,13 @@ export default function Home() {
       </Head>
 
       <Top />
-      {/* <SectionBreak /> */}
-      <div className={styles.backgroundVidContainer}>
-        <video
-          autoPlay={true}
-          muted
-          loop
-          controls={false}
-          playsInline
-          className={styles.backgroundVid}
-          src={"/videos/audi-a4.mp4"}
-        >
-          <source src={"/videos/audi-a4.mp4"} type="video/mp4" />
-        </video>
-        <AboutSection />
-      </div>
 
       <div className="withBackground">
+        <div className="withBackgroundDark">
+          <AboutSection />
+          <Spacer height={4} />
+        </div>
+
         {/* <WhyUs /> */}
         <SectionBreak>Our Pricing</SectionBreak>
         <PricingSection />

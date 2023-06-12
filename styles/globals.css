@@ -64,6 +64,7 @@ body {
 
 .flex-row {
   display: flex;
+
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
@@ -200,4 +201,18 @@ body {
   bottom: 8px;
   left: 0;
   z-index: 0;
+}
+
+#backgroundimage {
+  height: auto;
+  left: 0;
+  margin: 0;
+  min-height: 100%;
+  object-fit: cover;
+  /* min-width: 674px; */
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
 }

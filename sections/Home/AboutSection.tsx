@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Fonts } from "../../bin/fonts";
 import variants from "../../bin/variants";
 import styles from "../../styles/components/Home/AboutSection.module.scss";
+import SectionBreak from "components/SectionBreak";
 
 function AboutSection() {
   return (
@@ -13,20 +14,14 @@ function AboutSection() {
         viewport={{ once: true }}
         className={styles.wrapper}
       >
-        <div className={"flex-row"}>
+        <div className={"flex-row-center"}>
           <div className={styles.textDiv}>
             <div className={styles.title}>
               <h1 className={`${styles.title} ${Fonts.body}`}>
-                <b>About Us</b>
+                <SectionBreak>About Us</SectionBreak>
               </h1>
             </div>
-            <div
-              className={`${styles.paragraph} ${Fonts.body}`}
-              // initial={{ x: -75, opacity: 0 }}
-              // animate={{ x: 0, opacity: 1 }}
-              // whileInView={"show"}
-              // viewport={{ once: true }}
-            >
+            <div className={`${styles.paragraph} ${Fonts.body}`}>
               Welcome to Turbo Luxury Auto Detailing, where we tailor our
               services to meet the unique needs of your vehicle. Our full
               interior and exterior detailing services use only the best
@@ -36,15 +31,6 @@ function AboutSection() {
               care to tire shining. Experience the Turbo difference.
             </div>
           </div>
-
-          {/* <Image
-            src={"/images/home/bugatti.JPG"}
-            alt="Bugatti"
-            key="/images/home/bugatti.JPG"
-            fill={true}
-            quality={100}
-            style={{ objectFit: "cover", zIndex: -2 }}
-          /> */}
         </div>
       </motion.div>
     </div>

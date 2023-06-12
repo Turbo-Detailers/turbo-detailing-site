@@ -1,0 +1,64 @@
+.container {
+  padding-right: 7.5rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 0;
+    justify-content: center;
+  }
+}
+
+.scrollSign {
+  position: absolute;
+  bottom: 6rem;
+  font-size: 0.75rem;
+  left: 10%;
+  transform: translateX(-55%);
+  width: 100%;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+  animation: scroll 2s infinite;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  color: rgb(255, 255, 255);
+  user-select: none;
+}
+
+.main {
+  min-height: calc(100vh - 60px);
+  padding: 4rem 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.116);
+}
+
+.description {
+  margin: 4rem 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .container {
+    padding: 0;
+  }
+
+  .scrollSign {
+    font-size: 0.2rem;
+  }
+}

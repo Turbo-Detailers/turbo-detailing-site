@@ -1,12 +1,11 @@
 .paragraph {
   font-size: 1.25rem;
   line-height: 1.5;
-  padding: 3rem 1.5rem;
+  // padding: 3rem 1.5rem;
   color: #fff;
-  text-align: left;
+  text-align: center;
   font-weight: 400;
-  margin: 0rem 0;
-  margin-right: 50%;
+  margin: 0rem 4rem;
 }
 
 .textDiv {
@@ -22,6 +21,7 @@
   overflow-wrap: break-word;
   // height: 50vh;
   // display: flex;
+  align-items: center;
 }
 .title {
   padding-top: 1.5rem;

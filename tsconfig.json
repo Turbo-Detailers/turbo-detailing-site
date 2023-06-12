@@ -2,7 +2,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -16,7 +20,9 @@
     "jsx": "preserve",
     "incremental": true,
     "paths": {
-      "contentlayer/generated": ["./.contentlayer/generated"]
+      "contentlayer/generated": [
+        "./.contentlayer/generated"
+      ]
     },
     "plugins": [
       {
@@ -31,10 +37,22 @@
     "components/NavigationBar/MenuItem.jsx",
     "components/Carousel/ImageByIndex.jsx",
     ".next/types/**/*.ts",
-    ".contentlayer/generated"
+    ".contentlayer/generated",
+    "build/types/**/*.ts"
   ],
-  "exclude": ["node_modules"],
+  "exclude": [
+    "node_modules"
+  ],
   "mdx": {
-    "plugins": [["remark-frontmatter", ["toml", "yaml"]], "remark-gfm"]
+    "plugins": [
+      [
+        "remark-frontmatter",
+        [
+          "toml",
+          "yaml"
+        ]
+      ],
+      "remark-gfm"
+    ]
   }
 }
