@@ -35,7 +35,7 @@ function ServiceAreas() {
       <div
         className={"flex-row-responsive"}
         style={{
-          width: "100vw",
+          width: "100%",
           backgroundColor: "#1a1a1a",
           maxWidth: "100vw",
         }}

@@ -16,11 +16,8 @@ function AboutSection() {
       >
         <div className={"flex-row-center"}>
           <div className={styles.textDiv}>
-            <div className={styles.title}>
-              <h1 className={`${styles.title} ${Fonts.body}`}>
-                <SectionBreak>About Us</SectionBreak>
-              </h1>
-            </div>
+            <SectionBreak>About Us</SectionBreak>
+
             <div className={`${styles.paragraph} ${Fonts.body}`}>
               Welcome to Turbo Luxury Auto Detailing, where we tailor our
               services to meet the unique needs of your vehicle. Our full

@@ -98,9 +98,9 @@
 
 @media screen and (max-width: 512px) {
   .nav {
-    width: 100vw;
+    width: 100%;
   }
   .background {
-    width: 100vw;
+    width: 100%;
   }
 }
