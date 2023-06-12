@@ -5,14 +5,21 @@ import Subtitle from "../../components/titles/Subtitle";
 import styles from "../../styles/Home.module.scss";
 import topStyles from "../../styles/components/Home/Top.module.scss";
 import LinkButton from "components/buttons/LinkButton";
+import Image from "next/image";
+import bgimg from "../../public/images/cover-img.jpg";
+
 // import backgroundVid from "../../public/videos/a4-detail.mp4";
 
 function Top() {
   return (
     <>
       <main className={topStyles.main}>
-        <img id="backgroundimage" src="images/cover-img.jpg" alt="" />
-
+        {/* <img id="backgroundimage" src="images/cover-img.jpg" alt="" /> */}
+        <Image
+          id="backgroundimage"
+          src={bgimg}
+          alt="audi a4 with a clean exterior"
+        ></Image>
         <div className={topStyles.container}>
           <div
             style={{
