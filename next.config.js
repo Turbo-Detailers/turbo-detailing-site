@@ -19,7 +19,6 @@ const nextConfig = {
   // experimental: {
   //   mdxRs: true,
   // },
-  distDir: "build",
 };
 
 const withMDX = require("@next/mdx")({
