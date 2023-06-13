@@ -10,7 +10,11 @@ import faqList from "../data/faq.json";
 import Spacer from "../components/Spacer";
 import Carousel from "../components/Carousel/Carousel";
 import ServiceAreas from "../sections/Home/ServiceAreas";
+import ImageCarousel from "components/Carousel/ImageCarousel";
 // import WhyUs from "../sections/Home/WhyUs";
+
+import { localImages } from "../data/images";
+import Image from "next/image";
 
 export default function Home() {
   const SLIDE_COUNT = 5;
@@ -46,7 +50,16 @@ export default function Home() {
         </div>
 
         <SectionBreak>Gallery</SectionBreak>
-        <Carousel />
+        {/* <Carousel /> */}
+        <ImageCarousel>
+          {localImages.map((src, i) => {
+            return (
+              <div className="relative h-64 carousel-flex" key={i}>
+                <Image src={src} fill className="object-cover" alt="alt" />
+              </div>
+            );
+          })}
+        </ImageCarousel>
         <Spacer height={3} />
         <SectionBreak>Turbo FAQs</SectionBreak>
         <FAQ faqList={faqList} />

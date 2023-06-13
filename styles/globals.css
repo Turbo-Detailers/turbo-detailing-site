@@ -44,6 +44,27 @@ body {
 .bg-img {
   z-index: -100;
 }
+.flex {
+  display: flex;
+}
+
+.object-cover {
+  object-fit: cover;
+}
+
+.carousel-flex {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+.relative {
+  position: relative;
+}
+
+.h-64 {
+  height: calc(100vw / 6 * 4);
+  max-height: 80%;
+}
 
 a {
   color: inherit;

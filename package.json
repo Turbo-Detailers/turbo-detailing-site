@@ -28,6 +28,7 @@
     "axios": "^1.3.4",
     "contentlayer": "^0.3.2",
     "date-fns": "^2.30.0",
+    "embla-carousel-react": "^8.0.0-rc07",
     "eslint": "8.28.0",
     "eslint-config-next": "13.0.5",
     "firebase": "^9.21.0",
