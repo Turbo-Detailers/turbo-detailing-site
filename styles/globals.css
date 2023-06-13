@@ -143,6 +143,7 @@ body {
   display: flex;
   position: sticky;
   top: 75px;
+  z-index: 3;
 }
 
 .controls {

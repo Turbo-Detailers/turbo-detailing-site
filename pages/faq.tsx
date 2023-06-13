@@ -1,5 +1,4 @@
 import Head from "next/head";
-import ContactForm from "../components/ContactForm";
 import Spacer from "../components/Spacer";
 import AccentedTitle from "../components/titles/AccentedTitle";
 import styles from "../styles/Home.module.scss";
@@ -23,7 +22,7 @@ function FAQPage() {
         <AccentedTitle>FAQ</AccentedTitle>
         <Spacer height={3} />
 
-        <FAQ faqList={faqList} />
+        <FAQ faqList={faqList} limit={3} />
       </main>
     </>
   );

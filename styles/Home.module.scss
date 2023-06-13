@@ -10,7 +10,7 @@
 
 .scrollSign {
   position: absolute;
-  bottom: 6rem;
+  bottom: 4.5rem;
   font-size: 0.75rem;
   left: 10%;
   transform: translateX(-55%);
@@ -103,10 +103,6 @@
   .container {
     padding: 0;
   }
-
-  .scrollSign {
-    font-size: 0.85rem;
-  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -139,4 +135,11 @@
 
 .covered {
   background-color: black;
+}
+
+@media screen and (max-width: 676px) {
+  .scrollSign {
+    font-size: 0.6rem;
+    bottom: 3rem;
+  }
 }

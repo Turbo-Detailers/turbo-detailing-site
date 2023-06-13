@@ -50,7 +50,7 @@ const FAQ = ({ faqList, limit }: FAQProps) => {
                     style={{
                       listStyle: "none",
                       maxWidth: "1.5rem",
-                      maxHeight: "1.5rem",
+                      // maxHeight: "1.5rem",
                       userSelect: "none",
                       width: "auto",
                     }}
