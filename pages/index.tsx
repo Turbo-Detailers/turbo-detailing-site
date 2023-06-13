@@ -51,7 +51,7 @@ export default function Home() {
 
         <SectionBreak>Gallery</SectionBreak>
         {/* <Carousel /> */}
-        <ImageCarousel>
+        <ImageCarousel loop>
           {localImages.map((src, i) => {
             return (
               <div className="relative h-64 carousel-flex" key={i}>
