@@ -218,7 +218,7 @@ function Navbar() {
             </Menu>
           </Link>
         </div>
-        <Box sx={{ flexGrow: 0 }}>
+        {/* <Box sx={{ flexGrow: 0 }}>
           <Tooltip title="Open settings">
             <IconButton
               onClick={handleOpenUserMenu}
@@ -274,7 +274,7 @@ function Navbar() {
               );
             })}
           </Menu>
-        </Box>
+        </Box> */}
       </div>
     </motion.nav>
   );
