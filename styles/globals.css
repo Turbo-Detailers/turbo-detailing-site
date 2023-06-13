@@ -216,3 +216,9 @@ body {
   width: 100%;
   z-index: -1;
 }
+
+@media (max-width: 676px) {
+  .alice-carousel__dots {
+    display: none;
+  }
+}
