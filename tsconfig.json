@@ -38,7 +38,8 @@
     "components/Carousel/ImageByIndex.jsx",
     ".next/types/**/*.ts",
     ".contentlayer/generated",
-    "build/types/**/*.ts"
+    "build/types/**/*.ts",
+    "builds/types/**/*.ts"
   ],
   "exclude": [
     "node_modules"
