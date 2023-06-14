@@ -7,12 +7,16 @@ import topStyles from "../../styles/components/Home/Top.module.scss";
 import LinkButton from "components/buttons/LinkButton";
 import Image from "next/image";
 import bgimg from "../../public/images/cover-img.jpg";
+import Head from "next/head";
 
 // import backgroundVid from "../../public/videos/a4-detail.mp4";
 
 function Top() {
   return (
     <>
+      <Head>
+        <link rel="preload" href={bgimg.src} as="image" />
+      </Head>
       <main className={topStyles.main}>
         {/* <img id="backgroundimage" src="images/cover-img.jpg" alt="" /> */}
         <img
