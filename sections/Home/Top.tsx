@@ -15,11 +15,11 @@ function Top() {
     <>
       <main className={topStyles.main}>
         {/* <img id="backgroundimage" src="images/cover-img.jpg" alt="" /> */}
-        <Image
+        <img
           id="backgroundimage"
-          src={bgimg}
+          src={bgimg.src}
           alt="audi a4 with a clean exterior"
-        ></Image>
+        ></img>
         <div className={topStyles.container}>
           <div
             style={{
