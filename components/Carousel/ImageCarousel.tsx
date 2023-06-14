@@ -2,6 +2,8 @@
 // import the hook and options type
 import useEmblaCarousel, { EmblaOptionsType } from "embla-carousel-react";
 import { PropsWithChildren } from "react";
+import Autoplay from "embla-carousel-autoplay";
+import { useRef } from "react";
 
 // Define the props
 type Props = PropsWithChildren & EmblaOptionsType;
@@ -9,7 +11,9 @@ type Props = PropsWithChildren & EmblaOptionsType;
 const ImageCarousel = ({ children, ...options }: Props) => {
   // 1. useEmblaCarousel returns a emblaRef and we must attach the ref to a container.
   // EmblaCarousel will use that ref as basis for swipe and other functionality.
-  const [emblaRef] = useEmblaCarousel(options);
+
+  const autoplay = useRef(Autoplay({ delay: 3000, stopOnInteraction: false }));
+  const [emblaRef] = useEmblaCarousel(options, [autoplay.current]);
 
   return (
     // Attach ref to a div

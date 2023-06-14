@@ -43,6 +43,7 @@ function Top() {
           priority
           fetchPriority="high"
           src={bgimg.src}
+          fill
           id="backgroundimage"
           alt="audi a4 with a clean exterior"
         />
