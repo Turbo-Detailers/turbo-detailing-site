@@ -15,15 +15,37 @@ function Top() {
   return (
     <>
       <Head>
-        <link rel="preload" href={bgimg.src} as="image" />
+        {/* <link
+          rel="preload"
+          href={`/_next/image?url=${bgimg.src}`}
+          imageSrcSet={`/_next/image?url=${bgimg.src} 1200w,
+     /_next/image?url=${bgimg.src}?w=200 200w, 
+     /_next/image?url=${bgimg.src}?w=400 400w, 
+     /_next/image?url=${bgimg.src}?w=800 800w, 
+     /_next/image?url=${bgimg.src}?w=1024 1024w`}
+          as="image"
+        /> */}
       </Head>
       <main className={topStyles.main}>
         {/* <img id="backgroundimage" src="images/cover-img.jpg" alt="" /> */}
-        <img
+        {/* <img
           id="backgroundimage"
           src={bgimg.src}
+          srcSet={`/_next/image?url=${bgimg.src} 1200w,
+     /_next/image?url=${bgimg.src}?w=200 200w, 
+     /_next/image?url=${bgimg.src}?w=400 400w, 
+     /_next/image?url=${bgimg.src}?w=800 800w, 
+     /_next/image?url=${bgimg.src}?w=1024 1024w`}
           alt="audi a4 with a clean exterior"
-        ></img>
+        ></img> */}
+
+        <Image
+          priority
+          fetchPriority="high"
+          src={bgimg.src}
+          id="backgroundimage"
+          alt="audi a4 with a clean exterior"
+        />
         <div className={topStyles.container}>
           <div
             style={{
