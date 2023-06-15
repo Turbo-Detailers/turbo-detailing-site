@@ -44,7 +44,6 @@ export default function Home() {
         <PricingSection />
         <Spacer height={4} />
 
-        <Brands />
         <div className="withBackgroundDark">
           <SectionBreak>Service Areas</SectionBreak>
           <ServiceAreas />
@@ -62,7 +61,11 @@ export default function Home() {
             );
           })}
         </ImageCarousel>
-        <Spacer height={3} />
+        <Spacer height={2} />
+        <SectionBreak>Brands we use</SectionBreak>
+
+        <Brands />
+        {/* <Spacer height={3} /> */}
         <SectionBreak>Turbo FAQs</SectionBreak>
         <FAQ faqList={faqList} />
       </div>

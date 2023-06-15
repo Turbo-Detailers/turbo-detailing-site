@@ -1,6 +1,9 @@
 export default function Brands() {
   return (
-    <div style={{ width: "100%", display: "flex" }}>
+    <div
+      className="flex-row-responsive flex-space-evenly"
+      style={{ width: "100%", display: "flex" }}
+    >
       <img
         loading="lazy"
         src="/images/brands/lm.png"
