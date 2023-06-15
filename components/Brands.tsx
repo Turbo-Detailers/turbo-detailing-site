@@ -1,39 +1,44 @@
+import Image from "next/image";
+import lmLogo from "../public/images/brands/lm.png";
+import carproLogo from "../public/images/brands/carpro.png";
+import kcLogo from "../public/images/brands/kc.png";
+import gyeonLogo from "../public/images/brands/gyeon.png";
+
 export default function Brands() {
   return (
     <div className="flex-row-responsive flex-space-evenly wrap brands">
-      <img
+      <Image
         loading="lazy"
-        src="/images/brands/lm.png"
-        style={{ filter: "invert()" }}
+        src={lmLogo}
+        style={{ filter: "invert()", objectFit: "contain" }}
         alt="Luxury Microfiber Logo"
-      ></img>
-      <img
+        width={lmLogo.width}
+        height={lmLogo.height > 100 ? 100 : lmLogo.height}
+      />
+      <Image
         loading="lazy"
-        src="/images/brands/carpro.png"
-        style={{
-          filter: "invert()",
-          //   maxWidth: "30%",
-          //   objectFit: "contain",
-          //   width: "300px",
-        }}
+        src={carproLogo}
+        style={{ filter: "invert()", objectFit: "contain" }}
         alt="CarPro Logo"
-      ></img>
-      <img
+        width={carproLogo.width}
+        height={carproLogo.height > 100 ? 100 : carproLogo.height}
+      />
+      <Image
         loading="lazy"
-        src="/images/brands/kc.png"
-        style={{
-          filter: "invert()",
-          // width: "300px",
-          // objectFit: "contain"
-        }}
+        src={kcLogo}
+        style={{ filter: "invert()", objectFit: "contain" }}
         alt="KochChemie Logo"
-      ></img>
-      <img
+        width={kcLogo.width}
+        height={kcLogo.height > 100 ? 100 : kcLogo.height}
+      />
+      <Image
         loading="lazy"
-        src="/images/brands/gyeon.png"
-        // style={{ width: "250px", objectFit: "contain" }}
+        src={gyeonLogo}
+        style={{ objectFit: "contain" }}
         alt="Gyeon Logo"
-      ></img>
+        width={gyeonLogo.width}
+        height={gyeonLogo.height > 100 ? 100 : gyeonLogo.height}
+      />
     </div>
   );
 }
