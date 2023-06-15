@@ -29,6 +29,7 @@ async function generateSitemap() {
   const pages = await globby([
     "pages/**/*{.js,.mdx,.ts,.tsx}",
     "!pages/_*{.js,.ts,.tsx}",
+    "!pages/**/*.xml{.js,.ts,.tsx}",
     "!pages/api",
   ]);
 
