@@ -7,6 +7,7 @@ import topStyles from "../../styles/components/Home/Top.module.scss";
 import LinkButton from "components/buttons/LinkButton";
 import Image from "next/image";
 import bgimg from "../../public/images/cover-img.jpg";
+import bgimgShort from "../../public/images/cover-img-shortened.jpg";
 import Head from "next/head";
 
 // import backgroundVid from "../../public/videos/a4-detail.mp4";
@@ -42,7 +43,7 @@ function Top() {
         <Image
           priority
           fetchPriority="high"
-          src={bgimg.src}
+          src={bgimgShort.src}
           fill
           id="backgroundimage"
           alt="audi a4 with a clean exterior"
