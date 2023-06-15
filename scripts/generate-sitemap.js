@@ -32,13 +32,11 @@ async function generateSitemap() {
     "!pages/api",
   ]);
 
-  // pages = [...allPosts.map((post) => `/blog/${post._raw.flattenedPath}`)];
-
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(addPage).join("\n")}
 </urlset>`;
 
-  // fs.writeFileSync("public/sitemap.xml", sitemap);
+  fs.writeFileSync("public/sitemap.xml", sitemap);
 }
 
 generateSitemap();
