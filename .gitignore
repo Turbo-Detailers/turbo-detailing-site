@@ -39,6 +39,7 @@ node_modules
 
 # buildtime generated files
 sitemap.xml
+sitemap_index.xml
 
 # environment variables
 .env

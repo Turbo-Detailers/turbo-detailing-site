@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://www.turbodetailers.com/sitemap.xml
+Sitemap: https://www.turbodetailers.com/sitemap_index.xml
