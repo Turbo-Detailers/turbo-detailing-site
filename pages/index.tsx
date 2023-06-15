@@ -36,7 +36,6 @@ export default function Home() {
       <div className="withBackground">
         <div className="withBackgroundDark">
           <AboutSection />
-          <Spacer height={4} />
         </div>
 
         {/* <WhyUs /> */}
