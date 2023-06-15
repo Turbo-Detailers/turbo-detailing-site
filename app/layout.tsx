@@ -1,5 +1,6 @@
 "use client";
 import "../styles/globals.css";
+import "../styles/tailwind.css";
 
 import Navbar from "../components/Navbar";
 
