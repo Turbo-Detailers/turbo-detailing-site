@@ -12,6 +12,16 @@ export default function Brands() {
       <img
         loading="lazy"
         src="/images/brands/carpro.png"
+        style={{
+          filter: "invert()",
+          //   maxWidth: "30%",
+          objectFit: "contain",
+          width: "300px",
+        }}
+      ></img>
+      <img
+        loading="lazy"
+        src="/images/brands/kc.png"
         style={{ filter: "invert()", maxWidth: "30%", objectFit: "contain" }}
       ></img>
     </div>
