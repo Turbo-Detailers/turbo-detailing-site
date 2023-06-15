@@ -1,7 +1,7 @@
 export default function Brands() {
   return (
     <div
-      className="flex-row-responsive flex-space-evenly"
+      className="flex-row-responsive flex-space-evenly wrap"
       style={{ width: "100%", display: "flex" }}
     >
       <img

@@ -248,3 +248,8 @@ body {
 .flex-space-evenly {
   justify-content: space-evenly;
 }
+
+.wrap {
+  flex-wrap: wrap;
+  overflow-wrap: break-word;
+}
