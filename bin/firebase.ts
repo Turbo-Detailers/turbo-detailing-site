@@ -1,4 +1,5 @@
 import { firestore } from "../pages/api/auth/[...nextauth]";
+import { getBookingData, isBookingError } from "./zoho";
 
 export async function getUserRole(
   userId: string
@@ -10,4 +11,10 @@ export async function getUserRole(
   ).data();
 
   return req?.role || "user";
+}
+
+export async function addBookingToFirestore(bookingId: string) {
+  const data = await getBookingData(bookingId);
+  if (isBookingError(data)) return;
+  firestore.collection("details").doc(bookingId).set(data);
 }
