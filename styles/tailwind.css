@@ -1,3 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  ul,
+  ol {
+    list-style: revert;
+  }
+}
+
+article a {
+  color: rgb(211, 211, 211);
+  text-decoration: underline;
+}
