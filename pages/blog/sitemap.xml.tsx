@@ -48,7 +48,6 @@ async function generateSitemap() {
       </url>`
       )
       .join("\n")}
-      ${pages.map(addPage).join("\n")}
     </urlset>`;
 
   return sitemap;
