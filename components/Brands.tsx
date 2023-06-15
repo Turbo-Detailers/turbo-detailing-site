@@ -24,6 +24,11 @@ export default function Brands() {
         src="/images/brands/kc.png"
         style={{ filter: "invert()", width: "300px", objectFit: "contain" }}
       ></img>
+      <img
+        loading="lazy"
+        src="/images/brands/gyeon.png"
+        style={{ width: "250px", objectFit: "contain" }}
+      ></img>
     </div>
   );
 }
