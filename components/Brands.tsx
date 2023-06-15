@@ -1,9 +1,6 @@
 export default function Brands() {
   return (
-    <div
-      className="flex-row-responsive flex-space-evenly wrap"
-      style={{ width: "100%", display: "flex" }}
-    >
+    <div className="flex-row-responsive flex-space-evenly wrap brands">
       <img
         loading="lazy"
         src="/images/brands/lm.png"
@@ -15,19 +12,23 @@ export default function Brands() {
         style={{
           filter: "invert()",
           //   maxWidth: "30%",
-          objectFit: "contain",
-          width: "300px",
+          //   objectFit: "contain",
+          //   width: "300px",
         }}
       ></img>
       <img
         loading="lazy"
         src="/images/brands/kc.png"
-        style={{ filter: "invert()", width: "300px", objectFit: "contain" }}
+        style={{
+          filter: "invert()",
+          // width: "300px",
+          // objectFit: "contain"
+        }}
       ></img>
       <img
         loading="lazy"
         src="/images/brands/gyeon.png"
-        style={{ width: "250px", objectFit: "contain" }}
+        // style={{ width: "250px", objectFit: "contain" }}
       ></img>
     </div>
   );

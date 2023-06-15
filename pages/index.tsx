@@ -63,7 +63,6 @@ export default function Home() {
         </ImageCarousel>
         <Spacer height={2} />
         <SectionBreak>Brands we use</SectionBreak>
-
         <Brands />
         {/* <Spacer height={3} /> */}
         <SectionBreak>Turbo FAQs</SectionBreak>

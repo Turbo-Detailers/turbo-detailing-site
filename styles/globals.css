@@ -256,3 +256,10 @@ body {
   flex-wrap: wrap;
   overflow-wrap: break-word;
 }
+
+.brands img {
+  width: 30%;
+  min-width: 150px;
+  max-width: 300px;
+  margin-bottom: 2.5rem;
+}
