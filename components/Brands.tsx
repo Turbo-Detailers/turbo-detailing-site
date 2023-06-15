@@ -5,6 +5,7 @@ export default function Brands() {
         loading="lazy"
         src="/images/brands/lm.png"
         style={{ filter: "invert()" }}
+        alt="Luxury Microfiber Logo"
       ></img>
       <img
         loading="lazy"
@@ -15,6 +16,7 @@ export default function Brands() {
           //   objectFit: "contain",
           //   width: "300px",
         }}
+        alt="CarPro Logo"
       ></img>
       <img
         loading="lazy"
@@ -24,11 +26,13 @@ export default function Brands() {
           // width: "300px",
           // objectFit: "contain"
         }}
+        alt="KochChemie Logo"
       ></img>
       <img
         loading="lazy"
         src="/images/brands/gyeon.png"
         // style={{ width: "250px", objectFit: "contain" }}
+        alt="Gyeon Logo"
       ></img>
     </div>
   );
