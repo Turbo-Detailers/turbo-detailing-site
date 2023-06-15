@@ -1,5 +1,6 @@
 const fs = require("fs");
 const globby = require("globby");
+// import { allPosts } from "contentlayer/generated";
 
 function addPage(page) {
   const path = page
@@ -7,8 +8,8 @@ function addPage(page) {
     .replace(".js", "")
     .replace(".mdx", "")
     .replace(".tsx", "")
-    .replace(".ts", "");
-  // .replace("/index", "");
+    .replace(".ts", "")
+    .replace("/index", "");
 
   const route = path === "/index" ? "/" : path;
   if (typeof route == "string") {
@@ -30,11 +31,14 @@ async function generateSitemap() {
     "!pages/_*{.js,.ts,.tsx}",
     "!pages/api",
   ]);
+
+  // pages = [...allPosts.map((post) => `/blog/${post._raw.flattenedPath}`)];
+
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(addPage).join("\n")}
 </urlset>`;
 
-  fs.writeFileSync("public/sitemap.xml", sitemap);
+  // fs.writeFileSync("public/sitemap.xml", sitemap);
 }
 
 generateSitemap();
