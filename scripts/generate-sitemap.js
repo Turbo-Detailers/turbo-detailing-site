@@ -8,6 +8,8 @@ function addPage(page) {
     .replace(".mdx", "")
     .replace(".tsx", "")
     .replace(".ts", "");
+  // .replace("/index", "");
+
   const route = path === "/index" ? "/" : path;
   if (typeof route == "string") {
     if (route.includes("[")) return;

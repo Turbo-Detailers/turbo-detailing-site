@@ -15,6 +15,7 @@ import ImageCarousel from "components/Carousel/ImageCarousel";
 
 import { localImages } from "../data/images";
 import Image from "next/image";
+import Brands from "components/Brands";
 
 export default function Home() {
   const SLIDE_COUNT = 5;
@@ -43,6 +44,7 @@ export default function Home() {
         <PricingSection />
         <Spacer height={4} />
 
+        <Brands />
         <div className="withBackgroundDark">
           <SectionBreak>Service Areas</SectionBreak>
           <ServiceAreas />
