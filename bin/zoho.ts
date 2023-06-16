@@ -22,9 +22,10 @@ export function isBookingError(data: BookingData | BookingError) {
 }
 
 export async function getBookingData(
-  bookingId: string,
-  depth?: number
+  bookingId: string
 ): Promise<BookingData | BookingError> {
+  if (bookingId == undefined) return { error: "Pass a booking ID" };
+  await checkAndRefreshToken();
   const request = await axios.get(
     "https://www.zohoapis.com/bookings/v1/json/getappointment",
     {
@@ -36,13 +37,10 @@ export async function getBookingData(
       },
     }
   );
-
   if (request.data.response.returnvalue.status == "failure")
     return { error: "Invalid request" };
   if (request.status == 401) {
-    if (depth) return { error: "Couldn't fetch data" };
-    await refreshToken();
-    return await getBookingData(bookingId, 2);
+    return { error: "Couldn't fetch data" };
   }
 
   const data = request.data.response.returnvalue;
@@ -71,4 +69,15 @@ export async function refreshToken() {
         res.data.access_token || process.env.ZOHO_ACCESS_TOKEN;
     })
     .catch((error) => console.log(error));
+}
+
+async function checkAndRefreshToken() {
+  if (
+    Date.now() - parseInt(process.env.ZOHO_LAST_REFRESHED || "0") >
+    1000 * 60 * 30
+  ) {
+    process.env.ZOHO_LAST_REFRESHED = Date.now().toString();
+    return refreshToken();
+  }
+  return;
 }

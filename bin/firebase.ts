@@ -15,6 +15,8 @@ export async function getUserRole(
 
 export async function addBookingToFirestore(bookingId: string) {
   const data = await getBookingData(bookingId);
-  if (isBookingError(data)) return;
+  console.log(data);
+  if (isBookingError(data)) return false;
   firestore.collection("details").doc(bookingId).set(data);
+  return true;
 }

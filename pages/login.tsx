@@ -1,5 +1,6 @@
 import { useSession, signIn, signOut } from "next-auth/react";
 import styles from "../styles/Gallery.module.scss";
+import GoogleButton from "react-google-button";
 
 export default function Component() {
   const { data: session } = useSession();
@@ -12,9 +13,11 @@ export default function Component() {
     );
   }
   return (
-    <div className={styles.main}>
+    <div className={`${styles.main} flex-column flex-center`}>
       Not signed in <br />
-      <button onClick={() => signIn("google")}>Sign in</button>
+      <GoogleButton onClick={() => signIn("google")}>
+        Sign in with Google
+      </GoogleButton>
     </div>
   );
 }
