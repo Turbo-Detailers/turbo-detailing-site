@@ -8,13 +8,14 @@ export async function getServerSideProps({
   query,
 }: GetServerSidePropsContext) {
   const sessionToken =
-    req.cookies["next-auth.session-token"] ||
-    req.cookies["_Secure-next-auth.session-token"];
+    req.cookies["_Secure-next-auth.session-token"] ||
+    req.cookies["next-auth.session-token"];
   const { booking_id } = query;
   const decoded = await decode({
     token: sessionToken,
     secret: process.env.NEXTAUTH_SECRET || "",
   });
+
   console.log(decoded);
   if (!decoded || !booking_id) return { props: { completed: false } };
 
