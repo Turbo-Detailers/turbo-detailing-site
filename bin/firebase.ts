@@ -17,6 +17,6 @@ export async function addBookingToFirestore(bookingId: string) {
   const data = await getBookingData(bookingId);
   console.log(data);
   if (isBookingError(data)) return false;
-  firestore.collection("details").doc(bookingId).set(data);
+  await firestore.collection("details").doc(bookingId).set(data);
   return true;
 }
