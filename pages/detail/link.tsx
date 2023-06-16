@@ -42,7 +42,7 @@ export default function ConfirmationPage({
       {booking_id ? (
         <div className="blog-post [&>*]:mb-3 [&>*:last-child]:mb-0">
           {!completed
-            ? "There was an error linking this service with your account. It is possible someone has already linked the service."
+            ? "There was an error linking this service with your account. It is possible someone has already linked the service. If you believe this is a mistake, please reach out to us at contact@turbodetailers.com. Regardless, your service has been scheduled, please check your email for confirmation."
             : "Successfully linked, be on the look out for deals!"}
         </div>
       ) : (
