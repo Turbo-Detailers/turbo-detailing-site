@@ -15,7 +15,7 @@ export default async function AdminPage() {
     <div className="">
       <h1>Welcome to the Admin Page</h1>
       {bookingData.map((document) => (
-        <Card className="mt-6 w-96">
+        <Card key={document.booking_id} className="mt-6 w-96">
           <CardBody>
             <Typography variant="h5" color="blue-gray" className="mb-2">
               {document.customer_name} - {document.service_name}
