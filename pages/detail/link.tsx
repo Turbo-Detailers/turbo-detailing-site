@@ -7,7 +7,9 @@ export async function getServerSideProps({
   req,
   query,
 }: GetServerSidePropsContext) {
-  const sessionToken = req.cookies["next-auth.session-token"];
+  const sessionToken =
+    req.cookies["next-auth.session-token"] ||
+    req.cookies["_Secure-next-auth.session-token"];
   const { booking_id } = query;
   const decoded = await decode({
     token: sessionToken,
