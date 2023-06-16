@@ -13,6 +13,7 @@ export async function getServerSideProps({
     token: sessionToken,
     secret: process.env.NEXTAUTH_SECRET || "",
   });
+  console.log(decoded);
   if (!decoded || !booking_id) return { props: { completed: false } };
 
   return {
