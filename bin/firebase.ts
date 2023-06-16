@@ -1,5 +1,5 @@
 import { firestore } from "../pages/api/auth/[...nextauth]";
-import { getBookingData, isBookingError } from "./zoho";
+import { BookingData, getBookingData, isBookingError } from "./zoho";
 
 export async function getUserRole(
   userId: string
@@ -18,5 +18,26 @@ export async function addBookingToFirestore(bookingId: string) {
   console.log(data);
   if (isBookingError(data)) return false;
   await firestore.collection("details").doc(bookingId).set(data);
+  return true;
+}
+
+export async function getBookingDataFromFirestore(bookingId: string) {
+  return firestore.collection("details").doc(bookingId).get();
+}
+
+export async function linkUserToBooking(userId: string, bookingId: string) {
+  const data = (await getBookingDataFromFirestore(bookingId))
+    .data as unknown as BookingData;
+  if (data.userId) return false;
+  await firestore
+    .collection("details")
+    .doc(bookingId)
+    .update({ userId: userId });
+  await firestore
+    .collection("users")
+    .doc(userId)
+    .collection("details")
+    .doc(bookingId)
+    .set({ linked: true });
   return true;
 }

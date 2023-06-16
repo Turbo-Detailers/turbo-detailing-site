@@ -50,7 +50,13 @@ export default function ConfirmationPage({
         )}
         <div className="flex-row flex-center justify-center">
           {booked ? (
-            <GoogleButton onClick={() => signIn("google")}>
+            <GoogleButton
+              onClick={() =>
+                signIn("google", {
+                  callbackUrl: `/detail/link?booking_id=${booking_id}`,
+                })
+              }
+            >
               Sign in with Google
             </GoogleButton>
           ) : (

@@ -7,10 +7,11 @@ export interface BookingData {
   year: string;
   date: Date;
   customer_name: string;
-  customer_number: string;
+  customer_number?: string;
   customer_email: string;
   service_name: string;
   address: string;
+  userId?: string;
 }
 
 export interface BookingError {
@@ -53,7 +54,7 @@ export async function getBookingData(
     customer_name: data.customer_name,
     date: new Date(data.customer_booking_start_time),
     customer_email: data.customer_email,
-    customer_number: data.customer_contact_no,
+    customer_number: data.customer_contact_no || "",
     service_name: data.service_name,
     address: data["customer_more_info"].Address,
   };
