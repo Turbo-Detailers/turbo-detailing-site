@@ -22,7 +22,7 @@ function FAQPage() {
         <AccentedTitle>FAQ</AccentedTitle>
         <Spacer height={3} />
 
-        <FAQ faqList={faqList} limit={3} />
+        <FAQ faqList={faqList} />
       </main>
     </>
   );

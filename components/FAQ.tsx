@@ -44,8 +44,16 @@ const FAQ = ({ faqList, limit }: FAQProps) => {
                 transition={{ duration: 0.2 }}
                 className={`${styles.heading} ${Fonts.body}`}
               >
-                <div className="flex-row">
-                  <h4>{faq.question}</h4>
+                <div className="flex-row font-bold">
+                  <h4
+                    className={
+                      selectedQuestionIndex === index
+                        ? " underline decoration-red-400"
+                        : undefined
+                    }
+                  >
+                    {faq.question}
+                  </h4>
                   <motion.li
                     style={{
                       listStyle: "none",
