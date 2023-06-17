@@ -56,7 +56,7 @@ export default function Home() {
         <ImageCarousel loop>
           {localImages.map((src, i) => {
             return (
-              <div className="relative h-64 carousel-flex" key={i}>
+              <div className="relative h-64-custom carousel-flex" key={i}>
                 <Image src={src} fill className="object-cover" alt="alt" />
               </div>
             );

@@ -64,7 +64,7 @@ body {
   position: relative;
 }
 
-.h-64 {
+.h-64-custom {
   height: calc(100vw / 6 * 4);
   max-height: 80%;
 }
