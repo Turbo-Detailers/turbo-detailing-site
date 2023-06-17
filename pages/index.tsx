@@ -36,6 +36,8 @@ export default function Home() {
       <div className="withBackground">
         <div className="withBackgroundDark">
           <AboutSection />
+
+          <Brands />
         </div>
 
         {/* <WhyUs /> */}
@@ -61,8 +63,8 @@ export default function Home() {
           })}
         </ImageCarousel>
         <Spacer height={2} />
-        <SectionBreak>Brands we use</SectionBreak>
-        <Brands />
+        {/* <SectionBreak>Brands we use</SectionBreak> */}
+        {/* <Brands /> */}
         {/* <Spacer height={3} /> */}
         <SectionBreak>Turbo FAQs</SectionBreak>
         <FAQ faqList={faqList} />
