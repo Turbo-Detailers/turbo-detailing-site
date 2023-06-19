@@ -13,7 +13,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <a
+            <Link
               href="https://www.turbodetailers.com/"
               className="flex items-center"
             >
@@ -25,7 +25,7 @@ export default function Footer() {
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
                 Turbo
               </span>
-            </a>
+            </Link>
           </div>
           <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
             <div>
@@ -34,17 +34,17 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a
+                  <Link
                     href="https://book.turbodetailers.com/"
                     className="hover:underline"
                   >
-                    Book a Service
-                  </a>
+                    Book Link Service
+                  </Link>
                 </li>
                 <li>
-                  <a href="/pricing" className="hover:underline">
+                  <Link href="/pricing" className="hover:underline">
                     Pricing
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -54,14 +54,14 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="/blog" className="hover:underline ">
+                  <Link href="/blog" className="hover:underline ">
                     Blog
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="/" className="hover:underline">
+                  <Link href="/" className="hover:underline">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -71,14 +71,14 @@ export default function Footer() {
               </h2>
               <ul className="text-gray-400 font-medium">
                 <li className="mb-4">
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:underline">
+                  <Link href="#" className="hover:underline">
                     Terms &amp; Conditions
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -88,16 +88,16 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center text-gray-400">
             © 2023{" "}
-            <a
+            <Link
               href="https://www.turbodetailers.com/"
               className="hover:underline"
             >
               Turbo Detailers LLC
-            </a>
+            </Link>
             . All Rights Reserved.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
-            <a
+            <Link
               href="https://www.facebook.com/TurboAutoDetailers"
               className="text-gray-500 hover:text-white"
             >
@@ -114,8 +114,8 @@ export default function Footer() {
                 />
               </svg>
               <span className="sr-only">Facebook page</span>
-            </a>
-            <a
+            </Link>
+            <Link
               href="https://www.instagram.com/turbodetailersmn"
               className="text-gray-500 hover:text-white"
             >
@@ -132,7 +132,7 @@ export default function Footer() {
                 />
               </svg>
               <span className="sr-only">Instagram page</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
