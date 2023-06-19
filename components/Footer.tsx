@@ -21,8 +21,8 @@ export default function Footer() {
               <Image
                 src="/images/logo-rounded.png"
                 className="h-8 mr-3"
-                width={36}
-                height={128}
+                width={32}
+                height={32}
                 alt="Turbo Logo"
               />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
