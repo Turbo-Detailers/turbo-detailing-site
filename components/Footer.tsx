@@ -32,7 +32,7 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase text-white">
                 Get Started
               </h2>
-              <ul className="text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium list-none">
                 <li className="mb-4">
                   <Link
                     href="https://book.turbodetailers.com/"
@@ -52,7 +52,7 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                 Learn More
               </h2>
-              <ul className="text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium list-none">
                 <li className="mb-4">
                   <Link href="/blog" className="hover:underline ">
                     Blog
@@ -69,7 +69,7 @@ export default function Footer() {
               <h2 className="mb-6 text-sm font-semibold uppercase text-white">
                 Legal
               </h2>
-              <ul className="text-gray-400 font-medium">
+              <ul className="text-gray-400 font-medium list-none">
                 <li className="mb-4">
                   <Link href="#" className="hover:underline">
                     Privacy Policy
