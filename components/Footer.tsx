@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "../styles/components/Footer.module.scss";
 
 export default function Footer() {
@@ -17,11 +18,13 @@ export default function Footer() {
               href="https://www.turbodetailers.com/"
               className="flex items-center"
             >
-              {/* <img
-                src="https://flowbite.com/docs/images/logo.svg"
+              <Image
+                src="/images/logo-rounded.png"
                 className="h-8 mr-3"
-                alt="FlowBite Logo"
-              /> */}
+                width={36}
+                height={128}
+                alt="Turbo Logo"
+              />
               <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">
                 Turbo
               </span>
