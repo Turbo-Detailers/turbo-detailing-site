@@ -8,12 +8,11 @@ import PricingSection from "../sections/Home/PricingSection";
 import FAQ from "../components/FAQ";
 import faqList from "../data/faq.json";
 import Spacer from "../components/Spacer";
-// import Carousel from "../components/Carousel/Carousel";
+import Carousel from "../components/Carousel/AliceCarousel";
 import ServiceAreas from "../sections/Home/ServiceAreas";
-import ImageCarousel from "components/Carousel/ImageCarousel";
+// import ImageCarousel from "components/Carousel/ImageCarousel";
 // import WhyUs from "../sections/Home/WhyUs";
 
-import { localImages } from "../data/images";
 import Image from "next/image";
 import Brands from "components/Brands";
 
@@ -52,16 +51,8 @@ export default function Home() {
         </div>
 
         <SectionBreak>Gallery</SectionBreak>
-        {/* <Carousel /> */}
-        <ImageCarousel loop>
-          {localImages.map((src, i) => {
-            return (
-              <div className="relative h-64-custom carousel-flex" key={i}>
-                <Image src={src} fill className="object-cover" alt="alt" />
-              </div>
-            );
-          })}
-        </ImageCarousel>
+        <Carousel />
+
         <Spacer height={2} />
         {/* <SectionBreak>Brands we use</SectionBreak> */}
         {/* <Brands /> */}

@@ -14,10 +14,7 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
-            <Link
-              href="https://www.turbodetailers.com/"
-              className="flex items-center"
-            >
+            <Link href="/" className="flex items-center">
               <Image
                 src="/images/logo-rounded.png"
                 className="h-8 mr-3"
@@ -62,7 +59,7 @@ export default function Footer() {
                   </Link>
                 </li>
                 <li>
-                  <Link href="/" className="hover:underline">
+                  <Link href="/contact" className="hover:underline">
                     Contact
                   </Link>
                 </li>
@@ -91,10 +88,7 @@ export default function Footer() {
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm sm:text-center text-gray-400">
             © 2023{" "}
-            <Link
-              href="https://www.turbodetailers.com/"
-              className="hover:underline"
-            >
+            <Link href="/" className="hover:underline">
               Turbo Detailers LLC
             </Link>
             . All Rights Reserved.
