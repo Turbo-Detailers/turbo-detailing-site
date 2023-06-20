@@ -8,7 +8,7 @@ import PricingSection from "../sections/Home/PricingSection";
 import FAQ from "../components/FAQ";
 import faqList from "../data/faq.json";
 import Spacer from "../components/Spacer";
-import Carousel from "../components/Carousel/AliceCarousel";
+import Carousel from "../components/Carousel/Carousel";
 import ServiceAreas from "../sections/Home/ServiceAreas";
 // import ImageCarousel from "components/Carousel/ImageCarousel";
 // import WhyUs from "../sections/Home/WhyUs";
