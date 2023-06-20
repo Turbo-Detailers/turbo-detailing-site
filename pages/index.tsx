@@ -59,6 +59,7 @@ export default function Home() {
         {/* <Spacer height={3} /> */}
         <SectionBreak>Turbo FAQs</SectionBreak>
         <FAQ faqList={faqList} />
+        <Spacer height={2} />
       </div>
     </div>
   );
