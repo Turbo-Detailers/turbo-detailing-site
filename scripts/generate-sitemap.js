@@ -2,6 +2,9 @@ const fs = require("fs");
 const globby = require("globby");
 // import { allPosts } from "contentlayer/generated";
 
+var yourDate = new Date();
+yourDate = yourDate.toISOString().split("T")[0];
+
 function addPage(page) {
   const path = page
     .replace("pages", "")
@@ -15,8 +18,7 @@ function addPage(page) {
   if (typeof route == "string") {
     if (route.includes("[")) return;
   }
-  let yourDate = new Date();
-  yourDate = yourDate.toISOString().split("T")[0];
+
   return `<url>
     <loc>${`${process.env.WEBSITE_URL}${route}`}</loc>
     <changefreq>hourly</changefreq>
@@ -35,8 +37,11 @@ async function generateSitemap() {
 
   const sitemap = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${pages.map(addPage).join("\n")}
-
-
+<url>
+    <loc>${`${process.env.WEBSITE_URL}/blog`}</loc>
+    <changefreq>hourly</changefreq>
+    <lastmod>${yourDate}</lastmod>
+  </url>
 </urlset>`;
 
   fs.writeFileSync("public/sitemap.xml", sitemap);
