@@ -13,6 +13,12 @@
   font-size: 1rem;
 }
 
+.form input,
+.form textarea,
+.form button {
+  border-radius: 8px;
+}
+
 .form input[type="text"]:focus,
 .form input[type="email"]:focus,
 .form textarea:focus {
