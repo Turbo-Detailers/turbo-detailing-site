@@ -2,6 +2,7 @@ import Head from "next/head";
 import AccentedTitle from "../components/titles/AccentedTitle";
 import PricingSection from "../sections/Home/PricingSection";
 import homeStyles from "../styles/Gallery.module.scss";
+import Spacer from "components/Spacer";
 
 export default function Pricing() {
   return (
@@ -23,6 +24,7 @@ export default function Pricing() {
         </p>
         <br />
         <PricingSection />
+        <Spacer height={2} />
       </main>
     </>
   );
