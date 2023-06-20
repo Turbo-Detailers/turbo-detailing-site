@@ -35,7 +35,8 @@ export default function Home() {
       <div className="withBackground">
         <div className="withBackgroundDark">
           <AboutSection />
-
+          <hr style={{ borderTop: "dashed 1px" }} />
+          <Spacer height={2} />
           <Brands />
         </div>
 
@@ -44,16 +45,15 @@ export default function Home() {
         <PricingSection />
         <Spacer height={4} />
 
+        <SectionBreak>Gallery</SectionBreak>
+        <Carousel />
+        <Spacer height={2} />
+
         <div className="withBackgroundDark">
           <SectionBreak>Service Areas</SectionBreak>
           <ServiceAreas />
           <Spacer height={2} />
         </div>
-
-        <SectionBreak>Gallery</SectionBreak>
-        <Carousel />
-
-        <Spacer height={2} />
         {/* <SectionBreak>Brands we use</SectionBreak> */}
         {/* <Brands /> */}
         {/* <Spacer height={3} /> */}

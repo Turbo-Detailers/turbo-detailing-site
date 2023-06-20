@@ -38,7 +38,7 @@ export default function Footer() {
                     href="https://book.turbodetailers.com/"
                     className="hover:underline"
                   >
-                    Book Link Service
+                    Book Service
                   </Link>
                 </li>
                 <li>
