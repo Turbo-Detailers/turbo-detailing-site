@@ -8,7 +8,7 @@ export default function Brands() {
   return (
     <div className="flex-row-responsive flex-space-evenly wrap brands">
       <Image
-        loading="lazy"
+        priority
         src={lmLogo}
         style={{ filter: "invert()", objectFit: "contain" }}
         alt="Luxury Microfiber Logo"
@@ -16,7 +16,7 @@ export default function Brands() {
         height={lmLogo.height > 100 ? 100 : lmLogo.height}
       />
       <Image
-        loading="lazy"
+        priority
         src={carproLogo}
         style={{ filter: "invert()", objectFit: "contain" }}
         alt="CarPro Logo"
@@ -24,7 +24,7 @@ export default function Brands() {
         height={carproLogo.height > 100 ? 100 : carproLogo.height}
       />
       <Image
-        loading="lazy"
+        priority
         src={kcLogo}
         style={{ filter: "invert()", objectFit: "contain" }}
         alt="KochChemie Logo"
@@ -32,7 +32,7 @@ export default function Brands() {
         height={kcLogo.height > 100 ? 100 : kcLogo.height}
       />
       <Image
-        loading="lazy"
+        priority
         src={gyeonLogo}
         style={{ objectFit: "contain" }}
         alt="Gyeon Logo"
