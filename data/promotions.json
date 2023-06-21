@@ -1,0 +1,72 @@
+{
+  "instagram-local": {
+    "interior": {
+      "price": 165,
+      "suvPrice": 190,
+      "ogPrice": 175,
+      "ogSuvPrice": 200,
+      "name": "Interior",
+      "description": "Leave your car feeling brand new.",
+      "note": "Free Exterior Handwash Included!",
+      "link": "https://book.turbodetailers.com/#/customer/interior-sedan",
+      "suvLink": "https://book.turbodetailers.com/#/customer/interior-suv",
+      "benefits": [
+        "Thorough vacuuming",
+        "Deep disinfection",
+        "Shampooing of all fabrics and carpets",
+        "Cleaning and conditioning of leather",
+        "Detailed cleaning of hard surfaces",
+        "Deep cleaning of air vents & crevices",
+        "Odor elimination",
+        "Protectant applied to plastic surfaces",
+        "Hand washing of windows & mirrors"
+      ]
+    },
+    "exterior": {
+      "price": 125,
+      "suvPrice": 150,
+      "ogPrice": 150,
+      "ogSuvPrice": 175,
+      "name": "Exterior",
+      "description": "Stand out with a fresh exterior finish.",
+      "note": "Enjoy $25 Off Your Detail",
+      "link": "https://book.turbodetailers.com/#/customer/exterior-sedan",
+      "suvLink": "https://book.turbodetailers.com/#/customer/exterior-suv",
+      "benefits": [
+        "Cleaning of rims, tires, and wheel wells",
+        "Hand wash with premium products",
+        "Spray wax/sealant application",
+        "Tar and bug removal",
+        "Paint decontamination",
+        "Drying with warm air and microfiber",
+        "Tire dressing application",
+        "Specialized touch-up and detail sprays",
+        "Final inspection and touch-ups"
+      ]
+    },
+    "full": {
+      "price": 275,
+      "suvPrice": 300,
+      "ogPrice": 300,
+      "ogSuvPrice": 325,
+      "name": "Turbo",
+      "description": "The best of both worlds.",
+      "note": "Most Popular, Enjoy $25 Off Your Detail",
+      "link": "https://book.turbodetailers.com/#/customer/turbo-sedan",
+      "suvLink": "https://book.turbodetailers.com/#/customer/turbo-suv",
+      "benefits": [
+        "High-pressure wash",
+        "Surface degreasing",
+        "Tar and bug removal",
+        "Iron decontamination",
+        "Sealant or wax application",
+        "Cleaning of rims, tires, and wheel wells",
+        "Vacuuming of interior",
+        "Interior surface cleaning",
+        "Fabric and upholstery cleaning",
+        "Cleaning of windows and mirrors",
+        "Leather cleaning and conditioning"
+      ]
+    }
+  }
+}
