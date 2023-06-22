@@ -43,6 +43,17 @@ import q59 from "../public/images/details/q5-interior/q5_0122.jpg";
 import q510 from "../public/images/details/q5-interior/q5_0138.jpg";
 import q511 from "../public/images/details/q5-interior/q5_0160.jpg";
 
+// Range Rover Velar
+import velar1 from "details/images/velar/DSC_0611.jpg";
+import velar2 from "details/images/velar/DSC_0638.jpg";
+import velar3 from "details/images/velar/DSC_0642.jpg";
+import velar4 from "details/images/velar/DSC_0673.jpg";
+import velar5 from "details/images/velar/DSC_0675.jpg";
+import velar6 from "details/images/velar/DSC_0686.jpg";
+import velar7 from "details/images/velar/DSC_0712.jpg";
+import velar8 from "details/images/velar/DSC_0718.jpg";
+import velar9 from "details/images/velar/DSC_0723.jpg";
+
 import { StaticImageData } from "next/image";
 
 type PhotoData = {
@@ -52,6 +63,17 @@ type PhotoData = {
 };
 
 const q5Images = [q5, q52, q53, q54, q55, q56, q57, q58, q59, q510];
+const velarImages = [
+  velar1,
+  velar2,
+  velar3,
+  velar4,
+  velar5,
+  velar6,
+  velar7,
+  velar8,
+  velar9,
+];
 
 export const localImages: StaticImageData[] = [
   x5DoorPanelButtons,
@@ -76,6 +98,7 @@ export const localImages: StaticImageData[] = [
   x5FrontSeatsRear,
   q511,
   ...randomizeAmount(q5Images, 5),
+  ...randomizeAmount(velarImages, 5),
 ];
 
 function getPhotosObject(images: StaticImageData[]): PhotoData[] {
