@@ -10,11 +10,11 @@ export default function Brands() {
     <div className="flex-row-responsive flex-space-evenly wrap brands">
       <Image
         priority
-        src={lmLogo}
-        style={{ filter: "invert()", objectFit: "contain" }}
-        alt="Luxury Microfiber Logo"
-        width={lmLogo.width}
-        height={lmLogo.height > 100 ? 100 : lmLogo.height}
+        src={psLogo}
+        style={{ objectFit: "contain", filter: "invert() grayscale(100%)" }}
+        alt="P&S Logo"
+        width={psLogo.width - 80}
+        height={psLogo.height > 100 ? 80 : psLogo.height}
       />
       <Image
         priority
@@ -40,13 +40,14 @@ export default function Brands() {
         width={gyeonLogo.width}
         height={gyeonLogo.height > 100 ? 100 : gyeonLogo.height}
       />
+
       <Image
         priority
-        src={psLogo}
-        style={{ objectFit: "contain", filter: "invert() grayscale(100%)" }}
-        alt="P&S Logo"
-        width={psLogo.width}
-        height={psLogo.height > 100 ? 80 : psLogo.height}
+        src={lmLogo}
+        style={{ filter: "invert()", objectFit: "contain" }}
+        alt="Luxury Microfiber Logo"
+        width={lmLogo.width}
+        height={lmLogo.height > 100 ? 100 : lmLogo.height}
       />
     </div>
   );
