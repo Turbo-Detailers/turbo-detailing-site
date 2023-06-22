@@ -258,7 +258,7 @@ body {
 }
 
 .brands img {
-  width: 30%;
+  width: 27.5%;
   min-width: 150px;
   max-width: 300px;
   margin-bottom: 2rem;
@@ -266,4 +266,8 @@ body {
 
 .brands:last-child {
   margin-bottom: 0;
+}
+.psLogo {
+  max-width: 175px !important;
+  margin-right: 0.25rem;
 }

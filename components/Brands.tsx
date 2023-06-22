@@ -13,6 +13,7 @@ export default function Brands() {
         src={psLogo}
         style={{ objectFit: "contain", filter: "invert() grayscale(100%)" }}
         alt="P&S Logo"
+        className="psLogo"
         width={psLogo.width - 80}
         height={psLogo.height > 100 ? 80 : psLogo.height}
       />
