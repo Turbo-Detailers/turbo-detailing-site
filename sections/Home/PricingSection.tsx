@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import variants from "../../bin/variants";
 import PriceComparison from "../../components/PriceComparison";
+import PromotionalPriceComparison from "../../components/PromotionalComparison";
 import sectionThreeStyles from "../../styles/components/Home/SectionThree.module.scss";
 
 function PricingSection() {
@@ -12,7 +13,9 @@ function PricingSection() {
       viewport={{ once: true }}
       className={sectionThreeStyles.container}
     >
-      <PriceComparison />
+      <PromotionalPriceComparison />
+
+      {/* <PriceComparison /> */}
     </motion.div>
   );
 }
