@@ -26,6 +26,17 @@ export default function Brands() {
         width={carproLogo.width}
         height={carproLogo.height > 100 ? 100 : carproLogo.height}
       />
+      <Link href={"https://luxurymicrofiberstore.com/jrjqabo8"} target="_blank">
+        <Image
+          priority
+          src={lmLogo}
+          style={{ filter: "invert()", objectFit: "contain" }}
+          alt="Luxury Microfiber Logo"
+          className="lmLogo"
+          width={lmLogo.width}
+          height={lmLogo.height > 100 ? 100 : lmLogo.height}
+        />
+      </Link>
       <Image
         priority
         src={kcLogo}
@@ -42,17 +53,6 @@ export default function Brands() {
         width={gyeonLogo.width}
         height={gyeonLogo.height > 100 ? 100 : gyeonLogo.height}
       />
-      <Link href={"https://luxurymicrofiberstore.com/jrjqabo8"} target="_blank">
-        <Image
-          priority
-          src={lmLogo}
-          style={{ filter: "invert()", objectFit: "contain" }}
-          alt="Luxury Microfiber Logo"
-          className="lmLogo"
-          width={lmLogo.width}
-          height={lmLogo.height > 100 ? 100 : lmLogo.height}
-        />
-      </Link>
     </div>
   );
 }
