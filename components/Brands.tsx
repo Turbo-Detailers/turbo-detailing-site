@@ -3,6 +3,7 @@ import lmLogo from "../public/images/brands/lm.png";
 import carproLogo from "../public/images/brands/carpro.png";
 import kcLogo from "../public/images/brands/kc.png";
 import gyeonLogo from "../public/images/brands/gyeon.png";
+import psLogo from "../public/images/brands/ps.png";
 
 export default function Brands() {
   return (
@@ -38,6 +39,14 @@ export default function Brands() {
         alt="Gyeon Logo"
         width={gyeonLogo.width}
         height={gyeonLogo.height > 100 ? 100 : gyeonLogo.height}
+      />
+      <Image
+        priority
+        src={psLogo}
+        style={{ objectFit: "contain", filter: "invert() grayscale(100%)" }}
+        alt="P&S Logo"
+        width={psLogo.width}
+        height={psLogo.height > 100 ? 80 : psLogo.height}
       />
     </div>
   );
