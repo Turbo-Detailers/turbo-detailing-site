@@ -42,7 +42,7 @@ export default function Brands() {
         width={gyeonLogo.width}
         height={gyeonLogo.height > 100 ? 100 : gyeonLogo.height}
       />
-      <a href={"https://luxurymicrofiberstore.com/jrjqabo8"}>
+      <Link href={"https://luxurymicrofiberstore.com/jrjqabo8"} target="_blank">
         <Image
           priority
           src={lmLogo}
@@ -52,7 +52,7 @@ export default function Brands() {
           width={lmLogo.width}
           height={lmLogo.height > 100 ? 100 : lmLogo.height}
         />
-      </a>
+      </Link>
     </div>
   );
 }
