@@ -264,6 +264,19 @@ body {
   margin-bottom: 2rem;
 }
 
+.brands a {
+  display: flex;
+  justify-content: center;
+  flex-basis: 27.5vw;
+  /* align-items: center; */
+}
+
+.lmLogo:hover {
+  filter: invert(37%) sepia(50%) saturate(2421%) hue-rotate(337deg)
+    brightness(89%) contrast(105%) !important;
+  transition: 0.7s;
+}
+
 .brands:last-child {
   margin-bottom: 0;
 }

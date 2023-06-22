@@ -4,6 +4,7 @@ import carproLogo from "../public/images/brands/carpro.png";
 import kcLogo from "../public/images/brands/kc.png";
 import gyeonLogo from "../public/images/brands/gyeon.png";
 import psLogo from "../public/images/brands/ps.png";
+import Link from "next/link";
 
 export default function Brands() {
   return (
@@ -41,15 +42,17 @@ export default function Brands() {
         width={gyeonLogo.width}
         height={gyeonLogo.height > 100 ? 100 : gyeonLogo.height}
       />
-
-      <Image
-        priority
-        src={lmLogo}
-        style={{ filter: "invert()", objectFit: "contain" }}
-        alt="Luxury Microfiber Logo"
-        width={lmLogo.width}
-        height={lmLogo.height > 100 ? 100 : lmLogo.height}
-      />
+      <a href={"https://luxurymicrofiberstore.com/jrjqabo8"}>
+        <Image
+          priority
+          src={lmLogo}
+          style={{ filter: "invert()", objectFit: "contain" }}
+          alt="Luxury Microfiber Logo"
+          className="lmLogo"
+          width={lmLogo.width}
+          height={lmLogo.height > 100 ? 100 : lmLogo.height}
+        />
+      </a>
     </div>
   );
 }
