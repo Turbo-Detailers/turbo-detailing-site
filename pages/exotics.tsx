@@ -1,6 +1,5 @@
 import Head from "next/head";
-import ContactForm from "../components/ContactForm";
-import Layout from "../components/Layout";
+import ExoticInquiryForm from "../components/forms/ExoticInquiryForm";
 import Spacer from "../components/Spacer";
 import AccentedTitle from "../components/titles/AccentedTitle";
 import styles from "../styles/Home.module.scss";
@@ -23,7 +22,7 @@ function ExoticInquiries() {
         <AccentedTitle>Inquiries</AccentedTitle>
         <Spacer height={3} />
 
-        <ContactForm />
+        <ExoticInquiryForm />
         <Spacer height={2} />
 
         <section className="mb-32">
