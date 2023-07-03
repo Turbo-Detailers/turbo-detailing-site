@@ -75,7 +75,7 @@ export default function ContactForm() {
         </h2>
         <p className="mb-8 lg:mb-16 font-light text-center text-gray-400 sm:text-xl">
           Get personalized service that works with your schedule. Let us know
-          what you'd like below.
+          what you&apos;d like below.
         </p>
         <form onSubmit={handleOnSubmit} className="space-y-8">
           <div>
