@@ -63,6 +63,11 @@ export default function Footer() {
                     Contact
                   </Link>
                 </li>
+                <li>
+                  <Link href="/exotics" className="hover:underline">
+                    Exotics
+                  </Link>
+                </li>
               </ul>
             </div>
             <div>
