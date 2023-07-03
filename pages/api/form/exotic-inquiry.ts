@@ -29,16 +29,15 @@ export default async function handler(
 
     await request
       .then((result) => {
-        console.log(result[0].body);
         return res.status(200).json({ success: "Quote Request Sent" });
       })
       .catch((err) => {
-        // console.log(err);
+        console.log(err);
         return res.status(400).json({
           error:
             "Failed to send message, please try again or contact us directly at contact@turbodetailers.com",
         });
       });
   }
-  return res.status(400).json({ error: "An error occurred" });
+  //   return res.status(400).json({ error: "An error occurred" });
 }
