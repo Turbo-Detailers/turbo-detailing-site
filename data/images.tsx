@@ -54,6 +54,18 @@ import velar7 from "details/images/velar/DSC_0712.jpg";
 import velar8 from "details/images/velar/DSC_0718.jpg";
 import velar9 from "details/images/velar/DSC_0723.jpg";
 
+// Exotic images
+
+// Lamborghini Aventador SVJ
+import svj1 from "exotics/lamborghini-svj/svj-interior.jpg";
+import svj2 from "exotics/lamborghini-svj/svj-logo.jpg";
+import svj3 from "exotics/lamborghini-svj/svj-seat.jpg";
+
+// Lamborghini Aventador Roaster S
+import roadster1 from "exotics/lamborghini-roadster-s/roadster.jpg";
+
+// Lamborghini Tractor
+
 import { StaticImageData } from "next/image";
 
 type PhotoData = {
@@ -100,6 +112,8 @@ export const localImages: StaticImageData[] = [
   ...randomizeAmount(q5Images, 5),
   ...randomizeAmount(velarImages, 5),
 ];
+
+export const exoticImages: StaticImageData[] = [svj2, svj1, svj3, roadster1];
 
 function getPhotosObject(images: StaticImageData[]): PhotoData[] {
   var photosObject: PhotoData[] = [];
