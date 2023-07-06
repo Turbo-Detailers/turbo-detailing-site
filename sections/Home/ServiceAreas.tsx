@@ -40,8 +40,8 @@ function ServiceAreas() {
           maxWidth: "100vw",
         }}
       >
-        <Balancer>
-          <div style={{ marginTop: "1rem" }}>
+        <div style={{ marginTop: "1rem" }}>
+          <Balancer>
             <ContentSection
               text="We proudly serve the West-Metro area of the Twin Cities, including Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, Eden Prairie, Prior Lake and more!"
               //   title="Why Turbo?"
@@ -49,8 +49,9 @@ function ServiceAreas() {
               imageAlt="none"
               isBackgroundImage={false}
             />
-          </div>
-        </Balancer>
+          </Balancer>
+        </div>
+
         <Spacer height={1} />
         <Link href={`/gallery/images/service-area-map.jpg`}>
           <Image
