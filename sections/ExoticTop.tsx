@@ -27,7 +27,7 @@ function ExoticTop() {
               textAlign: "center",
             }}
           >
-            <div style={{ letterSpacing: "1.5ch" }}>
+            <div style={{ letterSpacing: "1.2ch" }}>
               <AccentedTitle>Exotics</AccentedTitle>
             </div>
             <motion.div
