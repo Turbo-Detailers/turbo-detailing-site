@@ -41,13 +41,15 @@ function ServiceAreas() {
         }}
       >
         <Balancer>
-          <ContentSection
-            text="We proudly serve the West-Metro area of the Twin Cities, including Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, Eden Prairie, Prior Lake and more!"
-            //   title="Why Turbo?"
-            image="/images/home/2.png"
-            imageAlt="none"
-            isBackgroundImage={false}
-          />
+          <div style={{ marginTop: "1rem" }}>
+            <ContentSection
+              text="We proudly serve the West-Metro area of the Twin Cities, including Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, Eden Prairie, Prior Lake and more!"
+              //   title="Why Turbo?"
+              image="/images/home/2.png"
+              imageAlt="none"
+              isBackgroundImage={false}
+            />
+          </div>
         </Balancer>
         <Spacer height={1} />
         <Link href={`/gallery/images/service-area-map.jpg`}>
