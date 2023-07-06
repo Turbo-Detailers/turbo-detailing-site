@@ -32,3 +32,9 @@
     font-size: 3.75rem;
   }
 }
+@media (max-width: 360px) {
+  .title {
+    font-size: 3rem;
+    letter-spacing: 0.25ch;
+  }
+}
