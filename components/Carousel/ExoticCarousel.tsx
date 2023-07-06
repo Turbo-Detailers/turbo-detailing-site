@@ -1,5 +1,5 @@
 import ImageCarousel from "./ImageCarousel";
-import { exoticImages } from "../../data/images";
+import { exoticImages } from "../../data/exotic-images";
 import Image from "next/image";
 
 export default function ExoticCarousel() {
