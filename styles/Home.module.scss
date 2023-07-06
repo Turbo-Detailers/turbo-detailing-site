@@ -25,6 +25,23 @@
   user-select: none;
   z-index: 4;
 }
+.scrollSign-fixed {
+  position: absolute;
+  bottom: 4.5rem;
+  font-size: 0.75rem;
+  left: 10%;
+  transform: translateX(-55%);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: scroll 2s infinite;
+  writing-mode: vertical-rl;
+  text-orientation: sideways;
+  color: rgb(255, 255, 255);
+  user-select: none;
+  z-index: 4;
+}
 
 .main {
   min-height: calc(100vh - 60px);

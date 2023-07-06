@@ -25,12 +25,10 @@ function ExoticInquiries() {
         <ExoticTop />
         <div className="page-content-main">
           {/* <AccentedTitle>Inquiries</AccentedTitle> */}
-          <SectionBreak>Inquiries</SectionBreak>
-          <Spacer height={1} />
 
-          <ExoticCarousel />
-          <Spacer height={1} />
           <div className={styles.main}>
+            <SectionBreak>Inquiries</SectionBreak>
+
             <ExoticInquiryForm />
             <Spacer height={2} />
             <section className="mb-32">
@@ -116,6 +114,7 @@ function ExoticInquiries() {
               </div>
             </section>
           </div>
+          <ExoticCarousel />
         </div>
       </main>
     </>
