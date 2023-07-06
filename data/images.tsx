@@ -175,5 +175,5 @@ function randomizeAmount(
 export const photos = shuffle(getPhotosObject(allImages));
 
 export function getShuffledPhotos(): StaticImageData[] {
-  return shuffle(getPhotosObject(carouselImages));
+  return shuffle(getPhotosObject(allImages));
 }
