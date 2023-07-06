@@ -6,8 +6,17 @@
   justify-content: flex-end;
 }
 
+.exotic-container {
+  padding-left: 4rem;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+}
+
 @media screen and (max-width: 1024px) {
-  .container {
+  .container,
+  .exotic-container {
     padding: 0;
     justify-content: center;
   }
@@ -54,7 +63,8 @@
     flex-direction: column;
   }
 
-  .container {
+  .container,
+  .exotic-container {
     padding: 0;
   }
 

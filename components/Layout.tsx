@@ -13,6 +13,7 @@ function Layout({ children }: Props) {
           stiffness: 260,
           damping: 20,
           duration: 0.5,
+          delayChildren: 1,
         }}
       >
         <div className="page-content-main">{children}</div>
