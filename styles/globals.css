@@ -291,3 +291,7 @@ body {
   max-width: 150px !important;
   margin-right: 1rem;
 }
+
+.padding-4-rem {
+  /* padding: 0 4rem; */
+}

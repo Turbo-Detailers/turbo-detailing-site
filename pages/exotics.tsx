@@ -26,14 +26,15 @@ function ExoticInquiries() {
         <div className="page-content-main">
           {/* <AccentedTitle>Inquiries</AccentedTitle> */}
 
-          <div className={styles.main}>
+          <div className="padding-4-rem">
             <SectionBreak>Inquiries</SectionBreak>
 
             <ExoticInquiryForm />
             <Spacer height={2} />
+            <ExoticCarousel />
             <section className="mb-32">
               <div className="block rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-gray-900">
-                <p className="pt-6 px-3">
+                <p className="pt-6 px-3 text-center">
                   Having trouble reaching us or have a specific request? You can
                   also use the contact details below.
                 </p>
@@ -114,7 +115,6 @@ function ExoticInquiries() {
               </div>
             </section>
           </div>
-          <ExoticCarousel />
         </div>
       </main>
     </>
