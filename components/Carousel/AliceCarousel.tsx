@@ -1,4 +1,4 @@
-import { localImages } from "../../data/images";
+import { carouselImages } from "../../data/images";
 
 import "pure-react-carousel/dist/react-carousel.es.css";
 
@@ -9,7 +9,7 @@ import Image from "next/image";
 
 const handleDragStart = (e: any) => e.preventDefault();
 var isFirst = true;
-const items = localImages.map((image: any) => {
+const items = carouselImages.map((image: any) => {
   var isPriority;
   if (isFirst) isPriority = true;
   else isPriority = false;

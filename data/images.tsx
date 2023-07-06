@@ -77,7 +77,33 @@ const velarImages = [
   velar9,
 ];
 
-export const localImages: StaticImageData[] = [
+export const carouselImages: StaticImageData[] = [
+  x5DoorPanelButtons,
+  modelYWheelClean,
+  a4InteriorWheel,
+  mdx2023BroadDashboardDriverSide,
+  // modelYFrontSoap,
+  a4InteriorDoorPanel,
+  ml350Indicator,
+  mdx2023SteeringCloseUp,
+  modelYRearClean,
+  x5Indicator,
+  x5DriverSideInstrumentCluster,
+  a4SteeringWheel,
+  modelYIsometricClean,
+  mdx2023PassengerDoorCloseUp,
+  a4InteriorDoorPanelSide,
+  a4InteriorRear,
+  ml350SteeringClose,
+  mdx2023BroadDashboard,
+  ml350CenterConsole,
+  x5FrontSeatsRear,
+  q511,
+  ...randomizeAmount(q5Images, 5),
+  ...randomizeAmount(velarImages, 5),
+];
+
+export const allImages = [
   x5DoorPanelButtons,
   modelYWheelClean,
   a4InteriorWheel,
@@ -146,8 +172,8 @@ function randomizeAmount(
   return images.splice(0, amount);
 }
 
-export const photos = shuffle(getPhotosObject(localImages));
+export const photos = shuffle(getPhotosObject(allImages));
 
 export function getShuffledPhotos(): StaticImageData[] {
-  return shuffle(getPhotosObject(localImages));
+  return shuffle(getPhotosObject(carouselImages));
 }
