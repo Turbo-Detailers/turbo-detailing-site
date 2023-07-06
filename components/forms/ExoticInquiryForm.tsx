@@ -106,7 +106,7 @@ export default function ContactForm() {
               type="email"
               id="email"
               className="shadow-sm border border-gray-300 text-sm rounded-lg block w-full p-2.5 bg-gray-700 border-gray-600 placeholder-gray-400 text-white focus:ring-primary-500 focus:border-primary-500 shadow-sm-light"
-              placeholder="contact@turbodetailers.com"
+              placeholder="enzo@ferrari.com"
               value={inputs.email}
               onChange={handleOnChange}
               required
