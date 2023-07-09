@@ -9,6 +9,7 @@ import Image from "next/image";
 import bgimg from "../../public/images/cover-img.jpg";
 import bgimgShort from "../../public/images/cover-img-shortened.jpg";
 import Head from "next/head";
+import Link from "next/link";
 
 // import backgroundVid from "../../public/videos/a4-detail.mp4";
 
@@ -65,9 +66,9 @@ function Top() {
               <Subtitle>Luxury Detailing</Subtitle>
               {/* <LinkButton href="/book" text="Book today" /> */}
             </motion.div>
-            <p className={styles.scrollSign}>
-              SCROLL <a className={styles.scrollSignBar}>━━━</a>
-            </p>
+            <Link className={styles.scrollSign} href="/exotics">
+              EXOTICS <p className={styles.scrollSignBar}>━━━</p>
+            </Link>
           </div>
         </div>
       </main>

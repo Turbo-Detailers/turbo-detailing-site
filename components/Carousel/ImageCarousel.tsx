@@ -18,11 +18,7 @@ const ImageCarousel = ({ children, ...options }: Props) => {
   return (
     // Attach ref to a div
     // 2. The wrapper div must have overflow:hidden
-    <div
-      style={{ overflow: "hidden" }}
-      className="overflow-hidden"
-      ref={emblaRef}
-    >
+    <div style={{ flex: "0 0 80%" }} className="overflow-hidden" ref={emblaRef}>
       {/* 3. The inner div must have a display:flex property */}
       {/* 4. We pass the children as-is so that the outside component can style it accordingly */}
       <div className="flex">{children}</div>
