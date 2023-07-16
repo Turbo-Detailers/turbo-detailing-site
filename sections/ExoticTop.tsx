@@ -16,6 +16,7 @@ function ExoticTop() {
         <Image
           priority
           fetchPriority="high"
+          quality={100}
           src={bgimgShort.src}
           fill
           id="backgroundimage"
