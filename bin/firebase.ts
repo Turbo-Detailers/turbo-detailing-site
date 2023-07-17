@@ -3,6 +3,10 @@ import { firestore } from "../pages/api/auth/[...nextauth]";
 import { BookingData, getBookingData, isBookingError } from "./zoho";
 import { Timestamp } from "firebase-admin/firestore";
 
+interface FirestoreBookingData extends Omit<BookingData, "date"> {
+  date: Timestamp;
+}
+
 export interface ExoticBookingData {
   vehicles: {
     make: string;
@@ -77,7 +81,7 @@ export async function getAllBookingsFromFirestore() {
 export async function getSortedLimitedAmountOfBookingsFromFirestore(
   limit?: number
 ) {
-  var returnArr: BookingData[] = [];
+  var returnArr: FirestoreBookingData[] = [];
 
   if (limit) {
     var snapshot = await firestore
@@ -88,13 +92,13 @@ export async function getSortedLimitedAmountOfBookingsFromFirestore(
     if (snapshot.empty) return [];
 
     snapshot.forEach((doc) =>
-      returnArr.push(doc.data() as unknown as BookingData)
+      returnArr.push(doc.data() as unknown as FirestoreBookingData)
     );
     return returnArr;
   }
 
   (await firestore.collection("details").orderBy("date", "desc").get()).forEach(
-    (doc) => returnArr.push(doc.data() as unknown as BookingData)
+    (doc) => returnArr.push(doc.data() as unknown as FirestoreBookingData)
   );
 
   return returnArr;

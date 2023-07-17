@@ -15,7 +15,6 @@ import { format, parseISO } from "date-fns";
 export default async function AdminPage() {
   const bookingData = await getSortedLimitedAmountOfBookingsFromFirestore();
   const exoticBookingData = await getExoticBookingDataWithCustomerInformation();
-  console.log(exoticBookingData);
   return (
     <div className="">
       <h1>Welcome to the Admin Page</h1>
@@ -48,10 +47,12 @@ export default async function AdminPage() {
           <Card key={document.booking_id} className="mt-6 w-96">
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
-                {document.customer_name} - {document.service_name}
+                {document.customer_name} -{" "}
+                {format(document.date.toDate(), "LLLL d, yyyy")}
               </Typography>
               <Typography>
-                {document.year} {document.make} {document.model}
+                {document.year} {document.make} {document.model} -{" "}
+                {document.service_name}
               </Typography>
               <address>{document.address}</address>
             </CardBody>
