@@ -25,11 +25,10 @@ export default async function AdminPage() {
         <Card key={index} className="mt-6 w-96">
           <CardBody>
             <Typography variant="h5" color="blue-gray" className="mb-2">
-              {document.name | "Unlinked"} -{" "}
-              {format(document.date.toDate(), "LLLL d, yyyy")}
+              {document.name} - {format(document.date.toDate(), "LLLL d, yyyy")}
             </Typography>
-            {document.vehicles.map((vehicle) => (
-              <Typography>
+            {document.vehicles.map((vehicle, index) => (
+              <Typography key={index}>
                 {vehicle.year} {vehicle.make} {vehicle.model} -{" "}
                 {vehicle.service_name}
               </Typography>
