@@ -6,7 +6,6 @@ declare module "next-auth" {
    */
   interface Session {
     user: {
-      /** The user's postal address. */
       id: string;
       role: string;
     } & DefaultSession["user"];
@@ -20,7 +19,7 @@ import "next-auth/jwt";
 declare module "next-auth/jwt" {
   interface JWT {
     /** The user's role. */
-    role: "admin" | "user" | "maintenance";
+    role: "admin" | "user" | "maintenance" | "exotic";
     id: string;
   }
 }

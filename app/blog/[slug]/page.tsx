@@ -12,7 +12,9 @@ export const generateMetadata = ({ params }: { params: { slug: string } }) => {
 };
 
 const PostLayout = ({ params }: { params: { slug: string } }) => {
-  const post = allPosts.find((post) => post._raw.flattenedPath === params.slug);
+  const post: any = allPosts.find(
+    (post) => post._raw.flattenedPath === params.slug
+  );
   if (!post) throw new Error(`Post not found for slug: ${params.slug}`);
 
   return (
