@@ -26,7 +26,10 @@ export default async function AdminPage() {
       <div className="flex flex-row gap-x-3 overflow-scroll flex-nowrap flex-start justify-start">
         <CreateBookingCard />
         {exoticBookingData.map((document, index) => (
-          <Card key={index} className="mt-6 w-96 flex-grow-0 flex-shrink-0">
+          <Card
+            key={index}
+            className="mt-6 w-96 flex-grow-0 flex-shrink-0 place-self-stretch"
+          >
             <CardBody>
               <Typography variant="h5" color="blue-gray" className="mb-2">
                 {document.name} -{" "}
