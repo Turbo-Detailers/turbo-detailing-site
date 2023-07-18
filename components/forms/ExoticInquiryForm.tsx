@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 
-export default function ContactForm() {
+export default function ExoticInquiryForm() {
   var [submitted, setSubmitted] = useState(false);
   // Input Change Handling
   const [inputs, setInputs] = useState({

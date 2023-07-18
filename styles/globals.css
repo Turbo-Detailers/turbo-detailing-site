@@ -38,6 +38,12 @@ body {
   /* // padding-top: calc(100vh - 60px); */
   padding-top: 60px;
 }
+.page-content-main-admin {
+  /* // padding-top: calc(100vh - 60px); */
+  padding-top: 60px;
+  background-color: var(--background-light-color);
+  padding-left: 0.75rem;
+}
 .blog-content-main {
   /* // padding-top: calc(100vh - 60px); */
   padding-left: 1.2rem;

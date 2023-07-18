@@ -11,11 +11,7 @@ export default async function AdminLayout({
 }) {
   const data = await getData();
   if (data?.user.role !== "admin") return redirect("/login");
-  return (
-    <div className="page-content-main main" style={{ backgroundColor: "gray" }}>
-      {children}
-    </div>
-  );
+  return <div className="page-content-main-admin main">{children}</div>;
 }
 
 async function getData() {

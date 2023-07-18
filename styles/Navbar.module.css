@@ -4,7 +4,7 @@
   right: left;
   bottom: 0;
   width: 300px;
-  z-index: 999;
+  z-index: 40;
 }
 
 .background {
@@ -17,7 +17,7 @@
 }
 
 .button {
-  z-index: 1000;
+  z-index: 40;
   outline: none;
   border: none;
   user-select: none;
