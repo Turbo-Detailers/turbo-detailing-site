@@ -48,11 +48,11 @@ export default function Home() {
         <Carousel />
         <Spacer height={2} />
 
-        <div className="withBackgroundDark">
+        {/* <div className="withBackgroundDark">
           <SectionBreak>Service Areas</SectionBreak>
           <ServiceAreas />
           <Spacer height={2} />
-        </div>
+        </div> */}
         <SectionBreak>Brands we use</SectionBreak>
         <Brands />
         <Spacer height={3} />
