@@ -40,7 +40,7 @@ export default function Home() {
         </div>
 
         {/* <WhyUs /> */}
-        <SectionBreak>Our Pricing</SectionBreak>
+        <SectionBreak>Services</SectionBreak>
         <PricingSection />
         <Spacer height={4} />
 
