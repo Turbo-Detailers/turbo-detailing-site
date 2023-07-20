@@ -8,13 +8,15 @@ export default function Carousel() {
       {carouselImages.map((src, i) => {
         return (
           <div className="relative h-64-custom carousel-flex" key={i}>
-            <Image
-              src={src}
-              fill
-              className="object-cover"
-              alt="alt"
-              priority={!(i > 2)}
-            />
+            <div className="overflow-hidden">
+              <Image
+                src={src}
+                fill
+                className="object-contain hover:scale-110 transition duration-400"
+                alt="alt"
+                priority={!(i > 2)}
+              />
+            </div>
           </div>
         );
       })}

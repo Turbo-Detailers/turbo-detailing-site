@@ -35,9 +35,8 @@ export default function Home() {
       <div className="withBackground">
         <div className="withBackgroundDark">
           <AboutSection />
-          <hr style={{ borderTop: "dashed 1px" }} />
+          {/* <hr style={{ borderTop: "dashed 1px" }} /> */}
           <Spacer height={2} />
-          <Brands />
         </div>
 
         {/* <WhyUs /> */}
@@ -54,9 +53,9 @@ export default function Home() {
           <ServiceAreas />
           <Spacer height={2} />
         </div>
-        {/* <SectionBreak>Brands we use</SectionBreak> */}
-        {/* <Brands /> */}
-        {/* <Spacer height={3} /> */}
+        <SectionBreak>Brands we use</SectionBreak>
+        <Brands />
+        <Spacer height={3} />
         <SectionBreak>Turbo FAQs</SectionBreak>
         <FAQ faqList={faqList} />
         <Spacer height={2} />

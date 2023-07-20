@@ -16,7 +16,10 @@ export default function ExoticCarousel({ children, ...options }: Props) {
     <ImageCarousel loop>
       {exoticImages.map((src, i) => {
         return (
-          <div className="relative exotics-custom carousel-flex" key={i}>
+          <div
+            className="relative exotics-custom carousel-flex max-w-64"
+            key={i}
+          >
             <Image
               src={src}
               fill
