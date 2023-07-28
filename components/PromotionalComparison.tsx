@@ -55,9 +55,9 @@ function PromotionalPriceComparisonSection(props: PricingData) {
         <div className={styles.booking}>
           <div>
             ${props.price}
-            <div className={"line-through mb-3 text-2xl decoration-red-800"}>
+            {props.price !== props.ogPrice ? <div className={"line-through mb-3 text-2xl decoration-red-800"}>
               ${props.ogPrice}
-            </div>
+            </div> : null}
           </div>
           <div>
             {props.isSuv ? (

@@ -3,8 +3,8 @@
     "interior": {
       "price": 165,
       "suvPrice": 190,
-      "ogPrice": 175,
-      "ogSuvPrice": 200,
+      "ogPrice": 165,
+      "ogSuvPrice": 190,
       "name": "Interior",
       "description": "Leave your car feeling brand new.",
       "note": "Free Exterior Handwash Included!",
@@ -25,8 +25,8 @@
     "exterior": {
       "price": 125,
       "suvPrice": 150,
-      "ogPrice": 150,
-      "ogSuvPrice": 175,
+      "ogPrice": 125,
+      "ogSuvPrice": 150,
       "name": "Exterior",
       "description": "Stand out with a fresh exterior finish.",
       "note": "Enjoy $25 Off Your Detail",
@@ -47,8 +47,8 @@
     "full": {
       "price": 275,
       "suvPrice": 300,
-      "ogPrice": 300,
-      "ogSuvPrice": 325,
+      "ogPrice": 275,
+      "ogSuvPrice": 300,
       "name": "Turbo",
       "description": "The best of both worlds.",
       "note": "Most Popular, Enjoy $25 Off Your Detail",
