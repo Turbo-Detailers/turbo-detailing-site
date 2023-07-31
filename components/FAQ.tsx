@@ -21,77 +21,79 @@ const FAQ = ({ faqList, limit }: FAQProps) => {
   };
 
   return (
-    <div className={styles.main}>
-      {faqList.map((faq, index) => {
-        if (index <= (limit ? limit - 1 : faqList.length))
-          return (
-            <motion.div
-              key={index}
-              layout
-              onClick={() => toggleQuestion(index)}
-            >
+    <div className="flex items-center w-full">
+      <div className={styles.main}>
+        {faqList.map((faq, index) => {
+          if (index <= (limit ? limit - 1 : faqList.length))
+            return (
               <motion.div
-                initial={false}
-                animate={{
-                  borderBottom:
-                    selectedQuestionIndex === index
-                      ? "0.2rem solid"
-                      : "0.1rem solid",
-
-                  borderColor:
-                    selectedQuestionIndex === index ? "#e93f33" : "white",
-                }}
-                transition={{ duration: 0.2 }}
-                className={`${styles.heading} ${Fonts.body}`}
+                key={index}
+                layout
+                onClick={() => toggleQuestion(index)}
               >
-                <div className="flex-row font-bold">
-                  <h4
-                    className={
+                <motion.div
+                  initial={false}
+                  animate={{
+                    borderBottom:
                       selectedQuestionIndex === index
-                        ? " underline decoration-red-400"
-                        : undefined
-                    }
-                  >
-                    {faq.question}
-                  </h4>
-                  <motion.li
-                    style={{
-                      listStyle: "none",
-                      maxWidth: "1.5rem",
-                      // maxHeight: "1.5rem",
-                      userSelect: "none",
-                      width: "auto",
-                    }}
-                    className="flex-column"
-                    animate={{
-                      rotate:
-                        selectedQuestionIndex === index ? "45deg" : "0deg",
-                    }}
-                  >
-                    <span>+</span>
-                  </motion.li>
-                </div>
-                <AnimatePresence>
-                  {selectedQuestionIndex === index && (
-                    <motion.div
-                      key="answer"
-                      initial={{ opacity: 0, height: 0 }}
-                      animate={{ opacity: 1, height: "auto" }}
-                      exit={{ opacity: 0, height: 0 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <p>{faq.answer}</p>
-                    </motion.div>
-                  )}
+                        ? "0.2rem solid"
+                        : "0.1rem solid",
 
-                  <div style={{ opacity: 0, height: 0, display: "none" }}>
-                    <p>{faq.answer}</p>
+                    borderColor:
+                      selectedQuestionIndex === index ? "#e93f33" : "white",
+                  }}
+                  transition={{ duration: 0.2 }}
+                  className={`${styles.heading} ${Fonts.body}`}
+                >
+                  <div className="flex-row font-bold">
+                    <h4
+                      className={
+                        selectedQuestionIndex === index
+                          ? " underline decoration-red-400"
+                          : undefined
+                      }
+                    >
+                      {faq.question}
+                    </h4>
+                    <motion.li
+                      style={{
+                        listStyle: "none",
+                        maxWidth: "1.5rem",
+                        // maxHeight: "1.5rem",
+                        userSelect: "none",
+                        width: "auto",
+                      }}
+                      className="flex-column"
+                      animate={{
+                        rotate:
+                          selectedQuestionIndex === index ? "45deg" : "0deg",
+                      }}
+                    >
+                      <span>+</span>
+                    </motion.li>
                   </div>
-                </AnimatePresence>
+                  <AnimatePresence>
+                    {selectedQuestionIndex === index && (
+                      <motion.div
+                        key="answer"
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: "auto" }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.2 }}
+                      >
+                        <p>{faq.answer}</p>
+                      </motion.div>
+                    )}
+
+                    <div style={{ opacity: 0, height: 0, display: "none" }}>
+                      <p>{faq.answer}</p>
+                    </div>
+                  </AnimatePresence>
+                </motion.div>
               </motion.div>
-            </motion.div>
-          );
-      })}
+            );
+        })}
+      </div>
     </div>
   );
 };

@@ -5,7 +5,7 @@ import InitialTransition from "./motion/InitialTransition";
 function Layout({ children, isFirstMount }: Props) {
   return (
     <>
-      {isFirstMount && <InitialTransition />}
+      {/* {isFirstMount && <InitialTransition />} */}
 
       <motion.div
         initial={{ x: -0, opacity: 0 }}

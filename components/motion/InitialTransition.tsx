@@ -86,7 +86,6 @@ export default function InitialTransition() {
                     />
                 </pattern>
 
-                {/* <div> */}
                 <text
                     className="text-5xl font-bold"
                     textAnchor="middle"
@@ -110,7 +109,6 @@ export default function InitialTransition() {
                     y="51%"
                     style={{ fill: "url(#pattern-red)" }}
                 >{"]"}</text>
-                {/* </div> */}
 
             </motion.svg>
         </motion.div>
