@@ -15,8 +15,16 @@ import ServiceAreas from "../sections/Home/ServiceAreas";
 
 import Image from "next/image";
 import Brands from "components/Brands";
+import Props from "interfaces/Props";
 
-export default function Home() {
+
+const content = (isFirstMount: boolean) => ({
+  animate: {
+    transition: { staggerChildren: 0.1, delayChildren: isFirstMount ? 2.8 : 0 },
+  },
+});
+
+export default function Home({ isFirstMount }: Props) {
   const SLIDE_COUNT = 5;
   const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
   return (

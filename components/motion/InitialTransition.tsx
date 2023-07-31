@@ -33,7 +33,7 @@ const text = {
         y: 40,
     },
     animate: {
-        y: 80,
+        y: 100,
         transition: {
             duration: 1.5,
             ease: [0.87, 0, 0.13, 1],
@@ -88,10 +88,10 @@ export default function InitialTransition() {
 
                 {/* <div> */}
                 <text
-                    className="text-4xl font-bold"
+                    className="text-5xl font-bold"
                     textAnchor="middle"
                     x="25%"
-                    y="48%"
+                    y="51%"
                     style={{ fill: "url(#pattern-red)" }}
                 >{"["}</text>
                 <text
@@ -104,10 +104,10 @@ export default function InitialTransition() {
                     TURBO
                 </text>
                 <text
-                    className="text-4xl font-bold"
+                    className="text-5xl font-bold"
                     textAnchor="middle"
                     x="75%"
-                    y="48%"
+                    y="51%"
                     style={{ fill: "url(#pattern-red)" }}
                 >{"]"}</text>
                 {/* </div> */}
