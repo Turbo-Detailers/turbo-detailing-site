@@ -82,7 +82,7 @@ export default function InitialTransition() {
                     <rect className="w-full h-full fill-red-700" />
                     <motion.rect
                         variants={text}
-                        className="w-full h-full text-gray-600 fill-current"
+                        className="w-full h-full text-gray-600 fill-black"
                     />
                 </pattern>
 
