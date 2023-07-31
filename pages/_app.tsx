@@ -15,11 +15,29 @@ import { Analytics } from "@vercel/analytics/react";
 import { SessionProvider } from "next-auth/react";
 import { Session } from "next-auth";
 import { Fonts, poppins } from "bin/fonts";
+import { useState, useEffect } from "react";
 
 export default function App(
   { Component, pageProps, router }: AppProps,
   session: Session
 ) {
+
+  const [isFirstMount, setIsFirstMount] = useState(true);
+
+  useEffect(() => {
+    const handleRouteChange = () => {
+      isFirstMount && setIsFirstMount(false);
+    };
+
+    router.events.on("routeChangeStart", handleRouteChange);
+
+    // If the component is unmounted, unsubscribe
+    // from the event with the `off` method:
+    return () => {
+      router.events.off("routeChangeStart", handleRouteChange);
+    };
+  }, []);
+
   return (
     <>
       <main className={`${poppins.variable}`}>
@@ -49,7 +67,7 @@ export default function App(
         <AnimatePresence mode="wait" initial={true}>
           <SessionProvider>
             <Navbar />
-            <Layout key={router.route}>
+            <Layout key={router.route} isFirstMount={isFirstMount}>
               <Component {...pageProps} />
             </Layout>
           </SessionProvider>

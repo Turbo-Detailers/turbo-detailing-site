@@ -1,9 +1,12 @@
 import { motion } from "framer-motion";
 import Props from "../interfaces/Props";
+import InitialTransition from "./motion/InitialTransition";
 
-function Layout({ children }: Props) {
+function Layout({ children, isFirstMount }: Props) {
   return (
     <>
+      {isFirstMount && <InitialTransition />}
+
       <motion.div
         initial={{ x: -0, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
@@ -16,6 +19,7 @@ function Layout({ children }: Props) {
           delayChildren: 1,
         }}
       >
+
         <div className="page-content-main">{children}</div>
       </motion.div>
     </>

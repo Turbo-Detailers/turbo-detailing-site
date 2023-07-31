@@ -7,7 +7,7 @@
       "ogSuvPrice": 190,
       "name": "Interior",
       "description": "Leave your car feeling brand new.",
-      "note": "Free Exterior Handwash Included!",
+      "note": "",
       "link": "https://book.turbodetailers.com/#/customer/interior-sedan",
       "suvLink": "https://book.turbodetailers.com/#/customer/interior-suv",
       "benefits": [
@@ -29,7 +29,7 @@
       "ogSuvPrice": 150,
       "name": "Exterior",
       "description": "Stand out with a fresh exterior finish.",
-      "note": "Enjoy $25 Off Your Detail",
+      "note": "",
       "link": "https://book.turbodetailers.com/#/customer/exterior-sedan",
       "suvLink": "https://book.turbodetailers.com/#/customer/exterior-suv",
       "benefits": [

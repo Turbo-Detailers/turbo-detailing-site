@@ -91,12 +91,12 @@ export default function Footer() {
         </div>
         <hr className="my-6 sm:mx-auto border-gray-700 lg:my-8" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm sm:text-center text-gray-400">
+          <span className="text-sm sm:text-left text-gray-400">
             © 2023{" "}
             <Link href="/" className="hover:underline">
               Turbo Detailers LLC
             </Link>
-            . All Rights Reserved.
+            . All Rights Reserved. Turbo is not directly affiliated with any of the companies or individuals listed herein, including but not limited to Koch Chemie, P&amp;S, CarPro, Gyeon, and Luxury Microfiber.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <Link
@@ -107,7 +107,7 @@ export default function Footer() {
                 className="w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                // ariaHidden="true"
+              // ariaHidden="true"
               >
                 <path
                   fillRule="evenodd"
@@ -125,7 +125,7 @@ export default function Footer() {
                 className="w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-                // ariaHidden="true"
+              // ariaHidden="true"
               >
                 <path
                   fillRule="evenodd"
