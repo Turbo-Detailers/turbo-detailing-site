@@ -16,7 +16,7 @@ export default function Carousel() {
                   fill
                   className="object-contain hover:scale-110 transition duration-400"
                   alt="alt"
-                  priority={!(i > 2)}
+                // priority={!(i > 2)}
                 />
               </Link>
             </div>
