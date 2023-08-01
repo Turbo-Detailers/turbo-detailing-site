@@ -49,7 +49,7 @@ export default function InitialTransition() {
 
     return (
         <motion.div
-            className="absolute z-50 flex items-center justify-center w-full bg-black"
+            className="absolute z-50 flex items-center justify-center w-full bg-black select-none"
             initial="initial"
             animate="animate"
             variants={blackBox}

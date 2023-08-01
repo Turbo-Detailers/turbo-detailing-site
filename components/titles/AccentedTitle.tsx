@@ -18,17 +18,17 @@ function AccentedTitle({ children }: Props) {
   return (
     <FadeIn>
       <h1 className={`${Fonts.title} ${styles.title}`}>
-        <motion.a
+        <motion.text
           key="left"
           variants={listItemLeft}
           className={styles["title-accent"]}
         >
           {"["}
-        </motion.a>
+        </motion.text>
         {children?.toString().toUpperCase()}
-        <motion.a variants={listItemRight} className={styles["title-accent"]}>
+        <motion.text variants={listItemRight} className={styles["title-accent"]}>
           {"]"}
-        </motion.a>
+        </motion.text>
       </h1>
     </FadeIn>
   );

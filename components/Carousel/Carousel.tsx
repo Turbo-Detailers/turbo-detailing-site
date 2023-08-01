@@ -8,13 +8,13 @@ export default function Carousel() {
     <ImageCarousel loop>
       {carouselImages.map((src, i) => {
         return (
-          <div className="relative h-64-custom carousel-flex" key={i}>
+          <div className={`relative h-64-custom carousel-flex ${i == 0 ? "ml-9" : null}`} key={i}>
             <div className="overflow-hidden">
               <Link href={"/gallery"}>
                 <Image
                   src={src}
                   fill
-                  className="object-contain hover:scale-110 transition duration-400"
+                  className="object-contain hover:scale-110 hover:z-50 transition duration-400"
                   alt="alt"
                 // priority={!(i > 2)}
                 />

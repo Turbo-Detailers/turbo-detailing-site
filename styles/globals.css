@@ -40,6 +40,12 @@ body {
   width: 100%;
 }
 
+.page-content-main {
+  /* // padding-top: calc(100vh - 60px); */
+  padding-top: 60px;
+  width: 100%;
+}
+
 
 .page-content-main-admin {
   /* // padding-top: calc(100vh - 60px); */
