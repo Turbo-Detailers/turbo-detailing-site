@@ -68,7 +68,7 @@ export default function App(
           <SessionProvider>
             <Navbar />
             <Layout key={router.route} isFirstMount={isFirstMount}>
-              <Component {...pageProps} />
+              <Component {...pageProps} isFirstMount={isFirstMount} />
             </Layout>
           </SessionProvider>
         </AnimatePresence>
