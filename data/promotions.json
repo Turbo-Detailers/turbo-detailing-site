@@ -25,8 +25,8 @@
     "exterior": {
       "price": 100,
       "suvPrice": 100,
-      "ogPrice": 125,
-      "ogSuvPrice": 150,
+      "ogPrice": 100,
+      "ogSuvPrice": 100,
       "name": "Exterior",
       "description": "Stand out with a fresh exterior finish.",
       "note": "",
@@ -47,8 +47,8 @@
     "full": {
       "price": 250,
       "suvPrice": 250,
-      "ogPrice": 275,
-      "ogSuvPrice": 300,
+      "ogPrice": 250,
+      "ogSuvPrice": 250,
       "name": "Turbo",
       "description": "The best of both worlds.",
       "note": "Most Popular",
