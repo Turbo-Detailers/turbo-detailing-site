@@ -34,16 +34,20 @@ body {
   z-index: -100;
 }
 
-.page-content-main {
+.page-content-wrapper {
   /* // padding-top: calc(100vh - 60px); */
   padding-top: 60px;
+  width: 100%;
 }
+
+
 .page-content-main-admin {
   /* // padding-top: calc(100vh - 60px); */
   padding-top: 60px;
   background-color: var(--background-light-color);
   padding-left: 0.75rem;
 }
+
 .blog-content-main {
   /* // padding-top: calc(100vh - 60px); */
   padding-left: 1.2rem;
@@ -53,6 +57,7 @@ body {
 .bg-img {
   z-index: -100;
 }
+
 .flex {
   display: flex;
 }
@@ -74,6 +79,7 @@ body {
     flex-basis: 66%;
   }
 }
+
 @media (min-width: 878px) {
   .carousel-flex {
     flex-grow: 0;
@@ -81,6 +87,7 @@ body {
     flex-basis: 53%;
   }
 }
+
 @media (min-width: 1024px) {
   .carousel-flex {
     flex-grow: 0;
@@ -115,6 +122,7 @@ a {
 html {
   color-scheme: dark;
 }
+
 body {
   color: white;
   background: black;
@@ -134,6 +142,7 @@ body {
   justify-content: space-around;
   align-items: center;
 }
+
 .flex-row-center {
   display: flex;
   flex-direction: row;
@@ -168,6 +177,7 @@ body {
   align-items: center;
   max-height: 676px;
 }
+
 .alice-carousel__stage-item img {
   max-height: 676px;
   max-width: 100vw;
@@ -182,6 +192,7 @@ body {
 .alice-carousel__dots-item:not(.__custom).__active {
   background-color: var(--text-accent-color) !important;
 }
+
 .alice-carousel__dots-item:not(.__custom),
 .alice-carousel__dots-item:not(.__custom) {
   background-color: var(--main-navbar-elevation-color) !important;
@@ -190,6 +201,7 @@ body {
 .withBackground {
   background-color: var(--background-main-color);
 }
+
 .withBackgroundDark {
   background-color: var(--background-dark-color);
 }
@@ -216,6 +228,7 @@ body {
   overflow: hidden;
   position: relative;
 }
+
 .controls input {
   opacity: 0;
   margin: 0;
@@ -305,10 +318,10 @@ body {
 }
 
 .lmLogo:hover {
-  filter: invert(37%) sepia(50%) saturate(2421%) hue-rotate(337deg)
-    brightness(89%) contrast(105%) !important;
+  filter: invert(37%) sepia(50%) saturate(2421%) hue-rotate(337deg) brightness(89%) contrast(105%) !important;
   transition: 0.7s;
 }
+
 .lmLogo {
   flex-basis: 27.5vw;
 }
@@ -316,6 +329,7 @@ body {
 .brands:last-child {
   margin-bottom: 0;
 }
+
 .psLogo {
   max-width: 150px !important;
   margin-right: 1rem;
@@ -331,9 +345,11 @@ body {
   --slide-height: 19rem;
   padding: 1.6rem;
 }
+
 .embla__viewport {
   overflow: hidden;
 }
+
 .embla__container {
   backface-visibility: hidden;
   display: flex;
@@ -342,18 +358,21 @@ body {
   height: auto;
   margin-left: calc(var(--slide-spacing) * -1);
 }
+
 .embla__slide {
   flex: 0 0 var(--slide-size);
   min-width: 0;
   padding-left: var(--slide-spacing);
   position: relative;
 }
+
 .embla__slide__img {
   display: block;
   height: var(--slide-height);
   width: 100%;
   object-fit: cover;
 }
+
 .embla__slide__number {
   width: 4.6rem;
   height: 4.6rem;
@@ -368,13 +387,12 @@ body {
   text-align: center;
   pointer-events: none;
 }
-.embla__slide__number > span {
+
+.embla__slide__number>span {
   color: var(--brand-primary);
-  background-image: linear-gradient(
-    45deg,
-    var(--brand-primary),
-    var(--brand-secondary)
-  );
+  background-image: linear-gradient(45deg,
+      var(--brand-primary),
+      var(--brand-secondary));
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;

@@ -18,9 +18,10 @@ function Layout({ children, isFirstMount }: Props) {
           duration: 0.5,
           delayChildren: 1,
         }}
+        className="page-content-wrapper"
       >
 
-        <div className="page-content-main">{children}</div>
+        <div className={"page-content-main"}>{children}</div>
       </motion.div>
     </>
   );

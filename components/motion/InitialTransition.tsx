@@ -57,6 +57,7 @@ export default function InitialTransition() {
             onAnimationComplete={() =>
                 document.body.classList.remove("overflow-hidden")
             }
+            layout
         >
             <motion.svg variants={textContainer} className="absolute z-50 flex">
                 <pattern
