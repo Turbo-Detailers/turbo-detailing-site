@@ -20,8 +20,8 @@
     ]
   },
   "exterior": {
-    "price": 150,
-    "suvPrice": 175,
+    "price": 100,
+    "suvPrice": 100,
     "name": "Exterior",
     "description": "Stand out with a fresh exterior finish.",
     "note": "",
@@ -40,8 +40,8 @@
     ]
   },
   "full": {
-    "price": 300,
-    "suvPrice": 325,
+    "price": 250,
+    "suvPrice": 275,
     "name": "Turbo",
     "description": "The best of both worlds.",
     "note": "Most Popular",

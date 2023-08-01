@@ -23,8 +23,8 @@
       ]
     },
     "exterior": {
-      "price": 125,
-      "suvPrice": 150,
+      "price": 100,
+      "suvPrice": 100,
       "ogPrice": 125,
       "ogSuvPrice": 150,
       "name": "Exterior",
@@ -45,8 +45,8 @@
       ]
     },
     "full": {
-      "price": 275,
-      "suvPrice": 300,
+      "price": 250,
+      "suvPrice": 250,
       "ogPrice": 275,
       "ogSuvPrice": 300,
       "name": "Turbo",
