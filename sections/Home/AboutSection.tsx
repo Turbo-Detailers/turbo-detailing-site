@@ -43,20 +43,19 @@ products and techniques to leave your car looking and feeling like
 new. Our team of experts personalize their approach to fit the
 specific make and model of your car, from leather and upholstery
 care to tire shining. Experience the Turbo difference. */}
-              We tailor our interior and exterior detailing services to use the best products for your vehicle. 
-
- <br /> <br />
+              We tailor our interior and exterior detailing services to use the
+              best products for your vehicle.
+              <br /> <br />
               And the <span className={Fonts.body_bold}> best part?</span>{" "}
               We&apos;re{" "}
-              <span className="underline decoration-red-600">mobile.</span> We take excellent care of your car while you relax at home. 
-Simple, convenient, and elegant - that's us.
-              <div>
-                <Link href="/book">
-                  <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded duration-150 mt-6">
-                    Book a detailing today.
-                  </button>
-                </Link>
-              </div>
+              <span className="underline decoration-red-600">mobile.</span> We
+              take excellent care of your car while you relax at home. Simple,
+              convenient, and elegant - that's us. <br />
+              <Link href="/book">
+                <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded duration-150 mt-6">
+                  Book a detailing today.
+                </button>
+              </Link>
             </p>
           </div>
           {/* <div className="h-full w-64">
