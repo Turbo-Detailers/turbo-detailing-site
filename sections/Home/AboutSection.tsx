@@ -17,7 +17,7 @@ function AboutSection() {
       >
         <div
           className={
-            "flex gap-3 justify-between flex-col align-left mx-4 lg:flex-row lg:items-center lg:mx-12"
+            "flex gap-3 justify-between flex-col align-left mx-4 lg:flex-row lg:items-center lg:mx-12 xl:mx-12 2xl:justify-around 2xl:mx-32"
           }
         >
           <div className={""}>
@@ -52,12 +52,12 @@ function AboutSection() {
               Prairie, Prior Lake and more! <br />
               <div className="flex flex-row gap-3 justify-start">
                 <Link href="/book">
-                  <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded duration-150 mt-6 border border-red-600">
+                  <button className="bg-red-500 hover:bg-black text-white py-2 px-4 rounded duration-150 mt-6 border border-red-600">
                     Book a detailing today.
                   </button>
                 </Link>
                 <Link href="/contact">
-                  <button className="bg-black hover:bg-red-600 text-white font-bold py-2 px-4 rounded duration-150 mt-6 border border-red-600">
+                  <button className="bg-black hover:bg-red-600 text-white py-2 px-4 rounded duration-150 mt-6 border border-red-600">
                     Ask us a question.
                   </button>
                 </Link>
