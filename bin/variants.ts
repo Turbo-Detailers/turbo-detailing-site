@@ -1,4 +1,6 @@
-const variants = {
+import { Variants } from "framer-motion";
+
+const variants: { [key: string]: Variants } = {
   fadeInUp: {
     hidden: { opacity: 0, y: "30px" },
     show: {
@@ -18,6 +20,16 @@ const variants = {
       transition: {
         delayChildren: 0.5,
         type: "spring",
+      },
+    },
+  },
+  fadeInRight: {
+    hidden: { opacity: 0, x: "-30px" },
+    show: {
+      opacity: 1,
+      x: "0px",
+      transition: {
+        duration: 0.5,
       },
     },
   },

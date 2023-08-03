@@ -16,7 +16,7 @@ import ServiceAreas from "../sections/Home/ServiceAreas";
 import Image from "next/image";
 import Brands from "components/Brands";
 import Props from "interfaces/Props";
-
+import Link from "next/link";
 
 const content = (isFirstMount: boolean) => ({
   animate: {
@@ -46,7 +46,6 @@ export default function Home({ isFirstMount }: Props) {
           {/* <hr style={{ borderTop: "dashed 1px" }} /> */}
           <Spacer height={2} />
         </div>
-
         {/* <WhyUs /> */}
         <SectionBreak>Services</SectionBreak>
         <PricingSection />

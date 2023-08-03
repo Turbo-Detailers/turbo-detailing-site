@@ -17,7 +17,7 @@ export const poppins = Poppins({
   variable: "--font-body",
 });
 const poppins_bold: NextFont = Poppins({
-  weight: "800",
+  weight: "600",
   subsets: ["latin"],
 });
 const roboto_mono: NextFont = Roboto_Mono({

@@ -7,11 +7,11 @@ function SectionBreak({ children }: Props) {
     return (
       <div className={`${styles.main} ${styles.text} ${Fonts.body}`}>
         <strong>
-          <a className={`${styles.accent} ${Fonts.body_bold}`}>{"[ "}</a>
+          <text className={`${styles.accent} ${Fonts.body_bold}`}>{"[ "}</text>
         </strong>
         {children.toString().toUpperCase()}
         <strong>
-          <a className={`${styles.accent} ${Fonts.body_bold}`}>{" ]"}</a>
+          <text className={`${styles.accent} ${Fonts.body_bold}`}>{" ]"}</text>
         </strong>
       </div>
     );

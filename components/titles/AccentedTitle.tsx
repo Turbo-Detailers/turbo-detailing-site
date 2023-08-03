@@ -6,12 +6,12 @@ import Props from "../../interfaces/Props";
 import FadeIn from "../motion/FadeIn";
 
 const listItemLeft = {
-  hidden: { marginRight: "0.75rem" },
-  show: { marginRight: "0rem" },
+  hidden: { x: "0.75rem" },
+  show: { x: "0rem" },
 };
 const listItemRight = {
-  hidden: { marginLeft: "0.75rem" },
-  show: { marginLeft: "0rem" },
+  hidden: { x: "0.75rem" },
+  show: { x: "0rem" },
 };
 
 function AccentedTitle({ children }: Props) {
@@ -26,7 +26,10 @@ function AccentedTitle({ children }: Props) {
           {"["}
         </motion.text>
         {children?.toString().toUpperCase()}
-        <motion.text variants={listItemRight} className={styles["title-accent"]}>
+        <motion.text
+          variants={listItemRight}
+          className={styles["title-accent"]}
+        >
           {"]"}
         </motion.text>
       </h1>
