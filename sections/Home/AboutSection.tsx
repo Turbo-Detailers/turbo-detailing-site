@@ -50,7 +50,6 @@ care to tire shining. Experience the Turbo difference. */}
               We&apos;re{" "}
               <span className="underline decoration-red-600">mobile.</span> We take excellent care of your car while you relax at home. 
 Simple, convenient, and elegant - that's us.
-              It&apos;s just that simple.
               <div>
                 <Link href="/book">
                   <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded duration-150 mt-6">
