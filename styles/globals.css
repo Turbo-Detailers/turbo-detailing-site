@@ -16,6 +16,10 @@
   --title-text-color: white;
 }
 
+/* *::-webkit-scrollbar {
+  display: none;
+} */
+
 footer p {
   font-size: 0.2rem;
 }

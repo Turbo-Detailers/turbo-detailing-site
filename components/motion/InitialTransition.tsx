@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useEffect } from "react";
 
 const blackBox = {
     initial: {
@@ -43,10 +43,13 @@ const text = {
 
 export default function InitialTransition() {
     // Scroll user to top to avoid showing the footer
-    React.useState(() => {
-        typeof window !== "undefined" && window.scrollTo(0, 0);
-    });
+    // React.useState(() => {
+    //     typeof window !== "undefined" && window.scrollTo(0, 0);
+    // });
 
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    })
     return (
         <motion.div
             className="absolute z-50 flex items-center justify-center w-full bg-black select-none"
