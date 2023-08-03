@@ -10,7 +10,7 @@ function AboutSection() {
   return (
     <div className="pt-12">
       <motion.div
-        variants={variants.fadeInRight}
+        // variants={variants.fadeInRight}
         initial={"hidden"}
         whileInView={"show"}
         viewport={{ once: true }}
@@ -20,7 +20,12 @@ function AboutSection() {
             "flex gap-3 justify-between flex-col align-left mx-4 lg:flex-row lg:items-center lg:mx-12 xl:mx-12 2xl:justify-around 2xl:mx-32"
           }
         >
-          <div className={""}>
+          <motion.div
+            variants={variants.fadeInRight}
+            initial={"hidden"}
+            whileInView={"show"}
+            viewport={{ once: true }}
+          >
             {/* <SectionBreak>About Us</SectionBreak> */}
             <h3 className={`text-4xl ${Fonts.body}`}>Detailing.</h3>
 
@@ -63,15 +68,23 @@ function AboutSection() {
                 </Link>
               </span>
             </p>
-          </div>
-          <div className="h-full w-auto align-self-end rounded">
-            <Image
-              src={serviceMap}
-              quality={100}
-              className="rounded"
-              alt="Service Areas"
-            />
-          </div>
+          </motion.div>
+          <motion.div
+            variants={variants.fadeInLeft}
+            initial={"hidden"}
+            whileInView={"show"}
+            viewport={{ once: true }}
+            className="h-full w-auto align-self-end rounded"
+          >
+            <Link href={"/gallery/images/service-area-map.jpg"}>
+              <Image
+                src={serviceMap}
+                quality={100}
+                className="rounded"
+                alt="Service Areas"
+              />
+            </Link>
+          </motion.div>
         </div>
       </motion.div>
     </div>

@@ -33,6 +33,16 @@ const variants: { [key: string]: Variants } = {
       },
     },
   },
+  fadeInLeft: {
+    hidden: { opacity: 0, x: "30px" },
+    show: {
+      opacity: 1,
+      x: "0px",
+      transition: {
+        duration: 0.5,
+      },
+    },
+  },
 };
 
 export default variants;
