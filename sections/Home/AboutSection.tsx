@@ -43,13 +43,13 @@ products and techniques to leave your car looking and feeling like
 new. Our team of experts personalize their approach to fit the
 specific make and model of your car, from leather and upholstery
 care to tire shining. Experience the Turbo difference. */}
-              Get luxury detailing without ever leaving your home. We tailor our
-              interior and exterior detailing services to use the best products
-              for your vehicle. <br /> <br />
+              We tailor our interior and exterior detailing services to use the best products for your vehicle. 
+
+ <br /> <br />
               And the <span className={Fonts.body_bold}> best part?</span>{" "}
               We&apos;re{" "}
-              <span className="underline decoration-red-600">mobile.</span> That
-              means we come to your home and detail your car while you chill.
+              <span className="underline decoration-red-600">mobile.</span> We take excellent care of your car while you relax at home. 
+Simple, convenient, and elegant - that's us.
               It&apos;s just that simple.
               <div>
                 <Link href="/book">
