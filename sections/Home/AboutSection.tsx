@@ -14,10 +14,13 @@ function AboutSection() {
         initial={"hidden"}
         whileInView={"show"}
         viewport={{ once: true }}
-        className={styles.wrapper}
       >
-        <div className={"flex-row align-left mx-4 lg:mx-12"}>
-          <div className={styles.textDiv}>
+        <div
+          className={
+            "flex gap-3 justify-between flex-col align-left mx-4 lg:flex-row lg:items-center lg:mx-12"
+          }
+        >
+          <div className={""}>
             {/* <SectionBreak>About Us</SectionBreak> */}
             <h3 className={`text-4xl ${Fonts.body}`}>Detailing.</h3>
 
@@ -36,13 +39,6 @@ function AboutSection() {
               }}
             />
             <p className={`${Fonts.body} mt-2 whitepsace-pre-wrap`}>
-              {/* Welcome to Turbo Luxury Auto Detailing, where we tailor our
-services to meet the unique needs of your vehicle. Our full
-interior and exterior detailing services use only the best
-products and techniques to leave your car looking and feeling like
-new. Our team of experts personalize their approach to fit the
-specific make and model of your car, from leather and upholstery
-care to tire shining. Experience the Turbo difference. */}
               We tailor our interior and exterior detailing services to use the
               best products for your vehicle.
               <br /> <br />
@@ -50,17 +46,27 @@ care to tire shining. Experience the Turbo difference. */}
               We&apos;re{" "}
               <span className="underline decoration-red-600">mobile.</span> We
               take excellent care of your car while you relax at home. Simple,
-              convenient, and elegant - that's us. <br />
-              <Link href="/book">
-                <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded duration-150 mt-6 border border-red-600">
-                  Book a detailing today.
-                </button>
-              </Link>
+              convenient, and elegant - that's us. <br /> <br />
+              We proudly serve the West-Metro area of the Twin Cities, including
+              Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, Eden
+              Prairie, Prior Lake and more! <br />
+              <div className="flex flex-row gap-3 justify-start">
+                <Link href="/book">
+                  <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded duration-150 mt-6 border border-red-600">
+                    Book a detailing today.
+                  </button>
+                </Link>
+                <Link href="/contact">
+                  <button className="bg-black hover:bg-red-600 text-white font-bold py-2 px-4 rounded duration-150 mt-6 border border-red-600">
+                    Ask us a question.
+                  </button>
+                </Link>
+              </div>
             </p>
           </div>
-          {/* <div className="h-full w-64">
-            <Image src={serviceMap} alt="Service Areas"></Image>
-          </div> */}
+          <div className="h-full w-auto align-self-end rounded">
+            <Image src={serviceMap} className="rounded" alt="Service Areas" />
+          </div>
         </div>
       </motion.div>
     </div>
