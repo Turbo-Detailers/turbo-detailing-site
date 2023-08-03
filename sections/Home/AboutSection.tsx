@@ -50,22 +50,27 @@ function AboutSection() {
               We proudly serve the West-Metro area of the Twin Cities, including
               Chanhassen, Maple Grove, Wayzata, Minnetonka, Shakopee, Eden
               Prairie, Prior Lake and more! <br />
-              <div className="flex flex-row gap-3 justify-start">
+              <span className="flex flex-row gap-3 justify-start">
                 <Link href="/book">
-                  <button className="bg-red-500 hover:bg-black text-white py-2 px-4 rounded duration-150 mt-6 border border-red-600">
+                  <button className="bg-red-500 hover:bg-black text-white py-2 px-4 text-sm md:text-lg rounded duration-150 mt-6 border border-red-600">
                     Book a detailing today.
                   </button>
                 </Link>
                 <Link href="/contact">
-                  <button className="bg-black hover:bg-red-600 text-white py-2 px-4 rounded duration-150 mt-6 border border-red-600">
+                  <button className="bg-black hover:bg-red-600 text-white py-2 px-4 text-sm md:text-lg rounded duration-150 mt-6 border border-red-600">
                     Ask us a question.
                   </button>
                 </Link>
-              </div>
+              </span>
             </p>
           </div>
           <div className="h-full w-auto align-self-end rounded">
-            <Image src={serviceMap} className="rounded" alt="Service Areas" />
+            <Image
+              src={serviceMap}
+              quality={100}
+              className="rounded"
+              alt="Service Areas"
+            />
           </div>
         </div>
       </motion.div>
