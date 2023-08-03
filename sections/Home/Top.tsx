@@ -42,8 +42,7 @@ function Top() {
         ></img> */}
 
         <Image
-          priority
-          fetchPriority="high"
+          className="hidden lg:block"
           src={bgimgShort.src}
           fill
           id="backgroundimage"
