@@ -9,7 +9,6 @@ import Footer from "../components/Footer";
 import Layout from "../components/Layout";
 
 import Router from "next/router";
-import Script from "next/script";
 
 import { Analytics } from "@vercel/analytics/react";
 
@@ -22,7 +21,6 @@ export default function App(
   { Component, pageProps, router }: AppProps,
   session: Session
 ) {
-
   const [isFirstMount, setIsFirstMount] = useState(true);
 
   useEffect(() => {
@@ -57,23 +55,7 @@ export default function App(
             property="og:image"
             content="/images/og/social-sharing-with-text.jpg"
           />
-<Script type="application/ld+json">
-    {
-      "@context" : "https://schema.org",
-      "@type" : "WebSite",
-      "name" : "Turbo Detailers",
-      "alternateName" : ["Turbo", "Turbo Mobile Detailing", "Turbo Luxury Detailing"],
-      "url" : "https://turbodetailers.com"
-    }
-  </Script>
         </Head>
-        {/* <ResponsiveAppBar /> */}
-        <div itemScope itemType="https://schema.org/WebSite">
-          <meta itemProp="url" content="https://turbodetailers.com/" />
-          <meta itemProp="name" content="Turbo Detailers" />
-          <meta itemProp="alternateName" content="Turbo" />
-        </div>
-
         <AnimatePresence mode="wait" initial={true}>
           <SessionProvider>
             <Navbar />

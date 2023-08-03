@@ -17,6 +17,7 @@ import Image from "next/image";
 import Brands from "components/Brands";
 import Props from "interfaces/Props";
 import Link from "next/link";
+import Script from "next/script";
 
 const content = (isFirstMount: boolean) => ({
   animate: {
@@ -36,8 +37,19 @@ export default function Home({ isFirstMount }: Props) {
           content="Get high quality luxury detailing directly in the comfort of your own home. Located in the West Metro of the Twin Cities Area, we come to you! Book a detailing appointment today."
         />
         <link rel="icon" href="/favicon.ico" />
+        <Script type="application/ld+json">
+          {`{"@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "Turbo Detailers",
+      "alternateName" : ["Turbo", "Turbo Mobile Detailing", "Turbo Luxury Detailing"],
+      "url" : "https://turbodetailers.com"}`}
+        </Script>
       </Head>
-
+      <div itemScope itemType="https://schema.org/WebSite">
+        <meta itemProp="url" content="https://turbodetailers.com/" />
+        <meta itemProp="name" content="Turbo Detailers" />
+        <meta itemProp="alternateName" content="Turbo" />
+      </div>
       <Top />
 
       <div className="withBackgroun">
