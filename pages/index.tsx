@@ -25,9 +25,7 @@ const content = (isFirstMount: boolean) => ({
   },
 });
 
-export default function Home({ isFirstMount }: Props) {
-  const SLIDE_COUNT = 5;
-  const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
