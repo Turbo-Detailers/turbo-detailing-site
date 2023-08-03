@@ -24,8 +24,8 @@ function AboutSection() {
             <Typewriter
               options={{
                 strings: [
-                  `On <span style="text-decoration: underline var(--text-accent-color)">your</span> terms.`,
-                  `At <span style="text-decoration: underline var(--text-accent-color)">your</span> home.`,
+                  `On <span class="underline decoration-red-600">your</span> terms.`,
+                  `At <span class="underline decoration-red-600">your</span> home.`,
                 ],
                 autoStart: true,
                 loop: true,
@@ -52,7 +52,7 @@ care to tire shining. Experience the Turbo difference. */}
               take excellent care of your car while you relax at home. Simple,
               convenient, and elegant - that's us. <br />
               <Link href="/book">
-                <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded duration-150 mt-6">
+                <button className="bg-red-500 hover:bg-black text-white font-bold py-2 px-4 rounded duration-150 mt-6 border border-red-600">
                   Book a detailing today.
                 </button>
               </Link>

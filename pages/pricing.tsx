@@ -34,7 +34,6 @@ const pagecontents = {
   },
 };
 
-
 export default function Pricing() {
   return (
     <>
