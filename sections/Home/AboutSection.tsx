@@ -58,7 +58,7 @@ function AboutSection() {
               <span className="flex flex-row gap-3 justify-start">
                 <Link href="/book">
                   <button className="bg-red-500 hover:bg-black text-white py-2 px-4 text-sm md:text-lg rounded duration-150 mt-6 border border-red-600">
-                    Book a detailing today.
+                    Book a detail today.
                   </button>
                 </Link>
                 <Link href="/contact">
