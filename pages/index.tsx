@@ -40,8 +40,8 @@ export default function Home({ isFirstMount }: Props) {
 
       <Top />
 
-      <div className="withBackground">
-        <div className="withBackgroundDark">
+      <div className="withBackgroun">
+        <div className="withBackgroundDar">
           <AboutSection />
           {/* <hr style={{ borderTop: "dashed 1px" }} /> */}
           <Spacer height={2} />
