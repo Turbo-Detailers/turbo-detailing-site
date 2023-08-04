@@ -36,7 +36,7 @@ export default function Home() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Script type="application/ld+json">
+      <Script type="application/ld+json" id="application/ld+json">
         {`{"@context" : "https://schema.org",
       "@type" : "WebSite",
       "name" : "Turbo Detailers",
