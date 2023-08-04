@@ -17,7 +17,7 @@ function AboutSection() {
       >
         <div
           className={
-            "flex gap-3 justify-between flex-col align-left mx-4 lg:flex-row lg:items-center lg:mx-12 xl:mx-12 2xl:justify-around 2xl:mx-32"
+            "flex gap-3 justify-between flex-col align-left mx-4 lg:flex-row lg:items-center lg:mx-12 xl:mx-12 2xl:justify-around 2xl:mx-32 overflow-hidden"
           }
         >
           <motion.div
