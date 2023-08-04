@@ -35,14 +35,14 @@ export default function Home() {
           content="Get high quality luxury detailing directly in the comfort of your own home. Located in the West Metro of the Twin Cities Area, we come to you! Book a detailing appointment today."
         />
         <link rel="icon" href="/favicon.ico" />
-        <Script type="application/ld+json">
-          {`{"@context" : "https://schema.org",
+      </Head>
+      <Script type="application/ld+json">
+        {`{"@context" : "https://schema.org",
       "@type" : "WebSite",
       "name" : "Turbo Detailers",
       "alternateName" : ["Turbo", "Turbo Mobile Detailing", "Turbo Luxury Detailing"],
       "url" : "https://turbodetailers.com"}`}
-        </Script>
-      </Head>
+      </Script>
       <div itemScope itemType="https://schema.org/WebSite">
         <meta itemProp="url" content="https://turbodetailers.com/" />
         <meta itemProp="name" content="Turbo Detailers" />
