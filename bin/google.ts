@@ -29,7 +29,11 @@ export async function getAvailability(dateMin: Date, dateMax: Date) {
       // request body parameters
       calendarExpansionMax: 0,
       groupExpansionMax: 0,
-      items: [],
+      items: [
+        {
+          id: "primary",
+        },
+      ],
       timeMax: new Date(Date.now() + 2592000000).toISOString(),
       timeMin: new Date().toISOString(),
       timeZone: "GMT-5",
