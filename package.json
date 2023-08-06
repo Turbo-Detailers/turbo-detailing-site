@@ -39,6 +39,7 @@
     "firebase": "^9.21.0",
     "firebase-admin": "^11.8.0",
     "framer-motion": "^7.6.18",
+    "googleapis": "^123.0.0",
     "handlebars": "^4.7.7",
     "next": "^13.4.3",
     "next-auth": "^4.22.1",

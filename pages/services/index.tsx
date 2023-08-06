@@ -1,3 +1,3 @@
 export default function ServicesPage() {
-  return <div>hi</div>;
+  return <div>404 - Return to homepage</div>;
 }

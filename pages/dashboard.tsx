@@ -5,11 +5,11 @@ import { decode } from "next-auth/jwt";
 import { authOptions } from "./api/auth/[...nextauth]";
 import { redirect } from "next/navigation";
 import Head from "next/head";
+import { getAvailability } from "bin/google";
 
 export default function Dashboard({
   user,
 }: InferGetServerSidePropsType<typeof getServerSideProps>) {
-  console.log(user);
   return (
     <>
       <Head>
@@ -36,11 +36,12 @@ export async function getServerSideProps({
     token: sessionToken,
     secret: process.env.NEXTAUTH_SECRET || "",
   });
-  console.log(decoded);
+
   if (!decoded)
     return {
       redirect: { permanent: false, destination: "/login?redirect=/dashboard" },
     };
+
   return {
     props: {
       user: decoded,

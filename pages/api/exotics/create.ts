@@ -20,7 +20,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== "POST") return res.status(404).end();
 
   const session = await getServerSession(req, res, authOptions);
-  if (session?.user.role == "admin" || true) {
+  if (session?.user.role == "admin" || session?.user.role == "exotic") {
     // Signed in as Admin
     const data = req.body.data as unknown as CreateExoticData;
     data.date = new Date(data.date);
