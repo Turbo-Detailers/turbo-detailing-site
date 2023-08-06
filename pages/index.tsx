@@ -9,14 +9,8 @@ import FAQ from "../components/FAQ";
 import faqList from "../data/faq.json";
 import Spacer from "../components/Spacer";
 import Carousel from "../components/Carousel/Carousel";
-import ServiceAreas from "../sections/Home/ServiceAreas";
-// import ImageCarousel from "components/Carousel/ImageCarousel";
-// import WhyUs from "../sections/Home/WhyUs";
 
-import Image from "next/image";
 import Brands from "components/Brands";
-import Props from "interfaces/Props";
-import Link from "next/link";
 import Script from "next/script";
 
 const content = (isFirstMount: boolean) => ({
@@ -53,23 +47,14 @@ export default function Home() {
       <div className="withBackgroun">
         <div className="withBackgroundDar">
           <AboutSection />
-          {/* <hr style={{ borderTop: "dashed 1px" }} /> */}
           <Spacer height={2} />
         </div>
-        {/* <WhyUs /> */}
         <SectionBreak>Services</SectionBreak>
         <PricingSection />
         <Spacer height={4} />
-
         <SectionBreak>Gallery</SectionBreak>
         <Carousel />
         <Spacer height={2} />
-
-        {/* <div className="withBackgroundDark">
-          <SectionBreak>Service Areas</SectionBreak>
-          <ServiceAreas />
-          <Spacer height={2} />
-        </div> */}
         <SectionBreak>Brands we use</SectionBreak>
         <Brands />
         <Spacer height={3} />
