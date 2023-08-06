@@ -131,11 +131,7 @@ function Navbar() {
           <Link href="/contact" className={linkStyles["hover-animation"]}>
             Contact
           </Link>
-          <Link
-            href=""
-
-            // style={{ marginRight: "2.5rem" }}
-          >
+          <span style={{ marginLeft: "2rem" }} className="hover:cursor-pointer">
             <Tooltip title="More options">
               <p
                 className={linkStyles["hover-animation"]}
@@ -187,7 +183,7 @@ function Navbar() {
                 );
               })}
             </Menu>
-          </Link>
+          </span>
         </div>
       </div>
 
@@ -243,64 +239,18 @@ function Navbar() {
               Contact
             </Link>
             <Link
-              href=""
-
+              href="/FAQ"
+              className={linkStyles["hover-animation"]}
               // style={{ marginRight: "2.5rem" }}
             >
-              <Tooltip title="More options">
-                <p
-                  className={linkStyles["hover-animation"]}
-                  onClick={handleOpenNavMenu}
-                >
-                  More
-                </p>
-              </Tooltip>
-              <Menu
-                sx={{ mt: "45px" }}
-                id="menu-appbar"
-                anchorEl={anchorElNav}
-                anchorOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                keepMounted
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "right",
-                }}
-                open={Boolean(anchorElNav)}
-                onClose={handleCloseNavMenu}
-              >
-                {moreMenu.map((menuItem) => {
-                  return !menuItem.conditional(session) ? null : (
-                    <MenuItem
-                      key={menuItem.label}
-                      onClick={handleCloseUserMenu}
-                    >
-                      <button
-                        style={{
-                          background: "none",
-                          color: "inherit",
-                          border: "none",
-                          padding: 0,
-                          font: "inherit",
-                          cursor: "pointer",
-                          outline: "inherit",
-                        }}
-                        onClick={menuItem.onClick}
-                      >
-                        <Typography
-                          textAlign="center"
-                          component={Link}
-                          href={menuItem.href}
-                        >
-                          {menuItem.label}
-                        </Typography>
-                      </button>
-                    </MenuItem>
-                  );
-                })}
-              </Menu>
+              FAQ
+            </Link>
+            <Link
+              href="/blog"
+              className={linkStyles["hover-animation"]}
+              // style={{ marginRight: "2.5rem" }}
+            >
+              Blog
             </Link>
           </motion.ul>
         </div>

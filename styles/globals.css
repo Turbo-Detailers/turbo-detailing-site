@@ -345,10 +345,6 @@ body {
   margin-right: 1rem;
 }
 
-.padding-4-rem {
-  /* padding: 0 4rem; */
-}
-
 .embla {
   --slide-spacing: 1rem;
   --slide-size: 80%;
