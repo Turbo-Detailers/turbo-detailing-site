@@ -131,7 +131,7 @@ function Navbar() {
           <Link href="/contact" className={linkStyles["hover-animation"]}>
             Contact
           </Link>
-          <span style={{ marginLeft: "2rem" }} className="hover:cursor-pointer">
+          <span style={{ marginLeft: "2rem" }} className="cursor-pointer">
             <Tooltip title="More options">
               <p
                 className={linkStyles["hover-animation"]}
