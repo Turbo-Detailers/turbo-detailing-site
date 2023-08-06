@@ -50,7 +50,6 @@ body {
   width: 100%;
 }
 
-
 .page-content-main-admin {
   /* // padding-top: calc(100vh - 60px); */
   padding-top: 60px;
@@ -328,7 +327,8 @@ body {
 }
 
 .lmLogo:hover {
-  filter: invert(37%) sepia(50%) saturate(2421%) hue-rotate(337deg) brightness(89%) contrast(105%) !important;
+  filter: invert(37%) sepia(50%) saturate(2421%) hue-rotate(337deg)
+    brightness(89%) contrast(105%) !important;
   transition: 0.7s;
 }
 
@@ -398,11 +398,13 @@ body {
   pointer-events: none;
 }
 
-.embla__slide__number>span {
+.embla__slide__number > span {
   color: var(--brand-primary);
-  background-image: linear-gradient(45deg,
-      var(--brand-primary),
-      var(--brand-secondary));
+  background-image: linear-gradient(
+    45deg,
+    var(--brand-primary),
+    var(--brand-secondary)
+  );
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -413,4 +415,23 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
+}
+.hideMenuNav {
+  display: none;
+  opacity: 0;
+}
+.showMenuNav {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background: black;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  opacity: 1;
 }
