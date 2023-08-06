@@ -5,20 +5,14 @@ import styles from "../styles/components/Navbar.module.scss";
 import linkStyles from "../styles/components/Text/Link.module.css";
 import { useState, MouseEvent, MouseEventHandler, useEffect } from "react";
 
-import Box from "@mui/material/Box";
-
-import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
-
-import Avatar from "@mui/material/Avatar";
 
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { signOut, useSession } from "next-auth/react";
 import { Session } from "next-auth";
-import { useRouter } from "next/router";
-import { useRouter as mockRouter } from "next-router-mock";
+import { usePathname } from "next/navigation";
 
 const settings: {
   label: string;
@@ -76,13 +70,7 @@ const moreMenu: {
 
 function Navbar() {
   const { data: session } = useSession();
-  var router;
-  try {
-    router = useRouter();
-  } catch (e) {
-    router = mockRouter();
-  }
-
+  const pathname = usePathname();
   const [anchorElNav, setAnchorElNav] = useState<null | HTMLElement>(null);
   const [anchorElUser, setAnchorElUser] = useState<null | HTMLElement>(null);
 
@@ -92,7 +80,7 @@ function Navbar() {
     if (isNavOpen) {
       setIsNavOpen(!isNavOpen);
     }
-  }, [router.asPath]);
+  }, [pathname]);
 
   const handleOpenNavMenu = (event: MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
