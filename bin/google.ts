@@ -1,4 +1,11 @@
 import { google } from "googleapis";
+import { formatRFC3339 } from "date-fns";
+
+interface CalendarBusyData {
+  primary: {
+    busy?: Date[];
+  };
+}
 
 const SCOPES = [
   "https://www.googleapis.com/auth/calendar.readonly",
@@ -27,18 +34,21 @@ export async function getAvailability(dateMin: Date, dateMax: Date) {
   const request = await calendar.freebusy.query({
     requestBody: {
       // request body parameters
-      calendarExpansionMax: 0,
-      groupExpansionMax: 0,
       items: [
         {
-          id: "primary",
+          id: "turboautodetailers@gmail.com",
         },
       ],
-      timeMax: new Date(Date.now() + 2592000000).toISOString(),
-      timeMin: new Date().toISOString(),
+      calendarExpansionMax: 3,
+      timeMax: formatRFC3339(new Date(Date.now() + 1000 * 60 * 60 * 24 * 30)),
+      timeMin: formatRFC3339(new Date()),
       timeZone: "GMT-5",
     },
   });
 
-  console.log(request.data);
+  return request.data;
+}
+
+export async function isFree(dateTime: Date) {
+  return getAvailability(new Date(), new Date());
 }

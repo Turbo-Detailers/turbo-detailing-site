@@ -41,7 +41,7 @@
     "framer-motion": "^7.6.18",
     "googleapis": "^123.0.0",
     "handlebars": "^4.7.7",
-    "next": "^13.4.3",
+    "next": "^13.4.13",
     "next-auth": "^4.22.1",
     "next-contentlayer": "^0.3.2",
     "next-images": "^1.8.4",
