@@ -10,7 +10,7 @@ export default function Footer() {
     //   </Link>
     // </footer>
 
-    <footer className="bg-gray-900">
+    <footer className="bg-neutral-900">
       <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div className="md:flex md:justify-between">
           <div className="mb-6 md:mb-0">
@@ -96,7 +96,10 @@ export default function Footer() {
             <Link href="/" className="hover:underline">
               Turbo Detailers LLC
             </Link>
-            . All Rights Reserved. Turbo is not directly affiliated with any of the companies or individuals listed herein, including but not limited to Koch Chemie, P&amp;S, CarPro, Gyeon, and Luxury Microfiber.
+            . All Rights Reserved. Turbo is not directly affiliated with any of
+            the companies or individuals listed herein, including but not
+            limited to Koch Chemie, P&amp;S, CarPro, Gyeon, and Luxury
+            Microfiber.
           </span>
           <div className="flex mt-4 space-x-6 sm:justify-center sm:mt-0">
             <Link
@@ -107,7 +110,7 @@ export default function Footer() {
                 className="w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-              // ariaHidden="true"
+                // ariaHidden="true"
               >
                 <path
                   fillRule="evenodd"
@@ -125,7 +128,7 @@ export default function Footer() {
                 className="w-5 h-5"
                 fill="currentColor"
                 viewBox="0 0 24 24"
-              // ariaHidden="true"
+                // ariaHidden="true"
               >
                 <path
                   fillRule="evenodd"

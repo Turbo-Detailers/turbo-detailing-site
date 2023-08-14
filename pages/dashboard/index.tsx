@@ -4,6 +4,9 @@ import { decode } from "next-auth/jwt";
 import Head from "next/head";
 import { getAvailability } from "bin/google";
 import { format } from "date-fns";
+import { Fragment, useState } from "react";
+import { Calendar } from "@/components/ui/calendar";
+import Balancer from "react-wrap-balancer";
 
 export default function Dashboard({
   user,
@@ -14,10 +17,41 @@ export default function Dashboard({
         <title>Account Dashboard - Turbo Detailers</title>
       </Head>
       <div className="w-full px-3 lg:px-5">
-        <h1 className="text-4xl">Hi, {user.name?.split(" ")[0]}!</h1>
-        <h3 className="text-gray-400">{format(new Date(), "eeee, MMMM do")}</h3>
+        <h1 className="text-4xl font-bold text-center text-center md:text-left">
+          Hi, {user.name?.split(" ")[0]}!
+        </h1>
+        <h3 className="text-gray-400 text-center md:text-left">
+          {format(new Date(), "eeee, MMMM do")}
+        </h3>
+        <hr className="my-6 border-neutral-600" />
+        <ExoticCustomer />
       </div>
     </>
+  );
+}
+
+function ExoticCustomer() {
+  const [date, setDate] = useState<Date | undefined>(new Date());
+  const [availability, setAvailability] = useState(undefined);
+  const [loading, setLoading] = useState<boolean>(false);
+  return (
+    <Fragment>
+      <h2 className="text-center md:text-left font-medium">
+        <Balancer>
+          Since you&apos;re a maintenance customer, you can plan your next
+          service directly from here:
+        </Balancer>
+      </h2>
+      <section className="flex flex-col lg:flex-row items-center gap-3">
+        <Calendar
+          mode="single"
+          selected={date}
+          onSelect={setDate}
+          className="rounded-md"
+        />
+        <p className="text-red-200">Select a date to see available times.</p>
+      </section>
+    </Fragment>
   );
 }
 

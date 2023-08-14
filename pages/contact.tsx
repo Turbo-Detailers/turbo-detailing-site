@@ -50,11 +50,14 @@ function ContactPage({ isFirstMount }: Props) {
           />
           <link rel="icon" href="/favicon.ico" />
         </Head>
-        <motion.main className={styles.main} initial="initial"
+        <motion.main
+          className={styles.main}
+          initial="initial"
           animate="animate"
-          variants={content(isFirstMount)}>
+          variants={content(isFirstMount)}
+        >
           <Spacer height={1.75} />
-          <motion.div variants={title} >
+          <motion.div variants={title}>
             <AccentedTitle>Contact</AccentedTitle>
           </motion.div>
           <Spacer height={3} />
@@ -63,7 +66,7 @@ function ContactPage({ isFirstMount }: Props) {
             <Spacer height={2} />
 
             <section className="mb-32">
-              <div className="block rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-gray-900">
+              <div className="block rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.07),0_10px_20px_-2px_rgba(0,0,0,0.04)] bg-neutral-900">
                 <p className="pt-6 px-3">
                   Having trouble reaching us or have a specific request? You can
                   also use the contact details below.
@@ -143,7 +146,6 @@ function ContactPage({ isFirstMount }: Props) {
               </div>
             </section>
           </motion.div>
-
         </motion.main>
       </motion.section>
     </>

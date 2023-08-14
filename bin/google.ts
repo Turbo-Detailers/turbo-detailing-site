@@ -2,8 +2,8 @@ import { google } from "googleapis";
 import { formatRFC3339 } from "date-fns";
 
 interface CalendarBusyData {
-  primary: {
-    busy?: Date[];
+  "turboautodetailers@gmail.com": {
+    busy?: { start: string; end: string }[];
   };
 }
 
@@ -40,17 +40,21 @@ export async function getAvailability(dateMin: Date, dateMax: Date) {
         },
       ],
       calendarExpansionMax: 3,
-      timeMax: formatRFC3339(
-        new Date(Date.now() + 1000 * 60 * 60 * 24 * 30 * 3)
-      ),
-      timeMin: formatRFC3339(new Date()),
+      timeMin: formatRFC3339(dateMin),
+      timeMax: formatRFC3339(dateMax),
       timeZone: "GMT-5",
     },
   });
 
-  return request.data;
+  return request.data.calendars as unknown as CalendarBusyData;
 }
 
-export async function isFree(dateTime: Date) {
-  return getAvailability(new Date(), new Date());
+export async function isFree(dateTime: Date, sessionLength: number) {
+  console.log(formatRFC3339(dateTime));
+  const busyData = await getAvailability(
+    dateTime,
+    new Date(dateTime.getTime() + 1000 * 60 * 60 * 24 * 30 * 3)
+  );
+
+  return busyData["turboautodetailers@gmail.com"];
 }
