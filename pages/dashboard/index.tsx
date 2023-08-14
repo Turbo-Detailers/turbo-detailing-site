@@ -1,11 +1,9 @@
-import { linkUserToBooking } from "bin/firebase";
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
 import { getServerSession } from "next-auth";
 import { decode } from "next-auth/jwt";
-import { authOptions } from "./api/auth/[...nextauth]";
-import { redirect } from "next/navigation";
 import Head from "next/head";
 import { getAvailability } from "bin/google";
+import { format } from "date-fns";
 
 export default function Dashboard({
   user,
@@ -15,10 +13,9 @@ export default function Dashboard({
       <Head>
         <title>Account Dashboard - Turbo Detailers</title>
       </Head>
-      <div>
-        <h1 className="text-4xl">
-          Hi, {user.name}! {new Date("2023-08-13T00:30:00Z").toDateString()}
-        </h1>
+      <div className="w-full px-3 lg:px-5">
+        <h1 className="text-4xl">Hi, {user.name?.split(" ")[0]}!</h1>
+        <h3 className="text-gray-400">{format(new Date(), "eeee, MMMM do")}</h3>
       </div>
     </>
   );

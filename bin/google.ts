@@ -40,7 +40,9 @@ export async function getAvailability(dateMin: Date, dateMax: Date) {
         },
       ],
       calendarExpansionMax: 3,
-      timeMax: formatRFC3339(new Date(Date.now() + 1000 * 60 * 60 * 24 * 30)),
+      timeMax: formatRFC3339(
+        new Date(Date.now() + 1000 * 60 * 60 * 24 * 30 * 3)
+      ),
       timeMin: formatRFC3339(new Date()),
       timeZone: "GMT-5",
     },
