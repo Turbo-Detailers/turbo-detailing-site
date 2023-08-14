@@ -14,7 +14,7 @@ interface ExoticVehicle {
 
 interface CreateExoticData {
   vehicles: ExoticVehicle[];
-  date: number | Date;
+  date: number | Date | string;
   user?: string;
   tempCode?: string;
 }
@@ -32,7 +32,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       data.date = new Date(data.date);
 
-      return res.status(200).json(await isFree(new Date()));
+      return res.status(200).json(await isFree(data.date, 10));
 
       if (!data.date) throw new Error("Missing a valid date.");
       if (!data.vehicles) throw new Error("Missing vehicles.");

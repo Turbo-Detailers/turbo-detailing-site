@@ -21,7 +21,7 @@ const ImageCarousel = ({ children, ...options }: Props) => {
     <div style={{ flex: "0 0 80%" }} className="overflow-hidden" ref={emblaRef}>
       {/* 3. The inner div must have a display:flex property */}
       {/* 4. We pass the children as-is so that the outside component can style it accordingly */}
-      <div className="flex gap-x-8">{children}</div>
+      <div className="flex gap-x-3">{children}</div>
     </div>
   );
 };
