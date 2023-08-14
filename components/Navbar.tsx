@@ -277,10 +277,7 @@ function Navbar() {
             </div>
           </SheetTrigger>
           <SheetContent>
-            <motion.ul
-              layout
-              className="my-6 flex flex-col items-center justify-between min-h-[250px]"
-            >
+            <ul className="my-6 flex flex-col items-center justify-between min-h-[250px]">
               <Link
                 href="/pricing"
                 className={linkStyles["hover-animation"]}
@@ -313,7 +310,7 @@ function Navbar() {
               >
                 Blog
               </Link>
-            </motion.ul>
+            </ul>
           </SheetContent>
         </Sheet>
       </section>
