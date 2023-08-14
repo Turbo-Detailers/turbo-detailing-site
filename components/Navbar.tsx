@@ -14,6 +14,20 @@ import { signOut, useSession } from "next-auth/react";
 import { Session } from "next-auth";
 import { usePathname } from "next/navigation";
 
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  Sheet,
+  SheetClose,
+  SheetContent,
+  SheetDescription,
+  SheetFooter,
+  SheetHeader,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
+
 const settings: {
   label: string;
   href: string;
@@ -188,7 +202,7 @@ function Navbar() {
       </div>
 
       <section className="MOBILE-MENU flex lg:hidden">
-        <div
+        {/* <div
           className="HAMBURGER-ICON space-y-2"
           onClick={() => setIsNavOpen((prev) => !prev)} // toggle isNavOpen state on click
         >
@@ -253,7 +267,55 @@ function Navbar() {
               Blog
             </Link>
           </motion.ul>
-        </div>
+        </div> */}
+
+        <Sheet>
+          <SheetTrigger asChild>
+            <div className="space-y-2 lg:hidden">
+              <span className="block w-8 h-0.5 bg-gray-600"></span>
+              <span className="block w-5 h-0.5 bg-gray-600"></span>
+            </div>
+          </SheetTrigger>
+          <SheetContent>
+            <motion.ul
+              layout
+              className="my-6 flex flex-col items-center justify-between min-h-[250px]"
+            >
+              <Link
+                href="/pricing"
+                className={linkStyles["hover-animation"]}
+                // style={{ marginRight: "2.5rem" }}
+              >
+                Pricing
+              </Link>
+
+              <Link
+                href="/gallery"
+                className={linkStyles["hover-animation"]}
+                // style={{ marginRight: "2.5rem" }}
+              >
+                Gallery
+              </Link>
+              <Link href="/contact" className={linkStyles["hover-animation"]}>
+                Contact
+              </Link>
+              <Link
+                href="/faq"
+                className={linkStyles["hover-animation"]}
+                // style={{ marginRight: "2.5rem" }}
+              >
+                FAQ
+              </Link>
+              <Link
+                href="/blog"
+                className={linkStyles["hover-animation"]}
+                // style={{ marginRight: "2.5rem" }}
+              >
+                Blog
+              </Link>
+            </motion.ul>
+          </SheetContent>
+        </Sheet>
       </section>
     </motion.nav>
   );

@@ -24,7 +24,11 @@ export default function Dashboard({
           {format(new Date(), "eeee, MMMM do")}
         </h3>
         <hr className="my-6 border-neutral-600" />
-        <ExoticCustomer />
+        {user.role == "admin" ||
+        user.role == "maintenance" ||
+        user.role == "exotic" ? (
+          <ExoticCustomer />
+        ) : null}
       </div>
     </>
   );
@@ -46,10 +50,17 @@ function ExoticCustomer() {
         <Calendar
           mode="single"
           selected={date}
-          onSelect={setDate}
+          onSelect={(date) => {
+            setLoading(true);
+            setDate(date);
+          }}
           className="rounded-md"
         />
-        <p className="text-red-200">Select a date to see available times.</p>
+        {loading ? (
+          <p>Loading availability...</p>
+        ) : (
+          <p className="text-red-200">Select a date to see available times.</p>
+        )}
       </section>
     </Fragment>
   );
