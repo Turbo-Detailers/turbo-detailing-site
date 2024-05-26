@@ -55,15 +55,25 @@ function PromotionalPriceComparisonSection(props: PricingData) {
         <div className={styles.booking}>
           <div>
             ${props.price}
-            {props.price !== props.ogPrice ? <div className={"line-through mb-3 text-2xl decoration-red-800"}>
-              ${props.ogPrice}
-            </div> : null}
+            {props.price !== props.ogPrice ? (
+              <div className={"line-through mb-3 text-2xl decoration-red-800"}>
+                ${props.ogPrice}
+              </div>
+            ) : null}
           </div>
           <div>
             {props.isSuv ? (
-              <DiagonalFadeButton text="Book SUV" href={props.link} />
+              <DiagonalFadeButton
+                text="Contact to Book SUV"
+                // href={props.link}
+                href={"/contact"}
+              />
             ) : (
-              <DiagonalFadeButton text="Book Sedan" href={props.link} />
+              <DiagonalFadeButton
+                text="Contact to Book Sedan"
+                // href={props.link}
+                href={"/contact"}
+              />
             )}
           </div>
         </div>

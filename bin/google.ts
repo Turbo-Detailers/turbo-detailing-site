@@ -58,3 +58,19 @@ export async function isFree(dateTime: Date, sessionLength: number) {
 
   return busyData["turboautodetailers@gmail.com"];
 }
+
+export async function getAvailableBlocksForDay(
+  date: Date,
+  busyData: CalendarBusyData
+) {
+  const availability = {};
+  var prevAvailableTime = Date.now();
+
+  if (busyData["turboautodetailers@gmail.com"].busy != undefined) {
+    for (
+      var i = 0;
+      i < busyData["turboautodetailers@gmail.com"].busy.length;
+      i++
+    ) {}
+  }
+}

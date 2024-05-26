@@ -4,19 +4,10 @@ import { NextApiRequest, NextApiResponse } from "next";
 import { Timestamp } from "firebase-admin/firestore";
 import { isFree } from "bin/google";
 
-interface ExoticVehicle {
-  make: string;
-  model: string;
-  year: number;
-  service_name: string;
-  completed: boolean;
-}
-
-interface CreateExoticData {
-  vehicles: ExoticVehicle[];
-  date: number | Date | string;
+interface TimeRequest {
+  dateStart: number | Date | string;
+  dateEnd: number | Date | string;
   user?: string;
-  tempCode?: string;
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
@@ -26,21 +17,16 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (session?.user.role == "admin" || session?.user.role == "exotic") {
     try {
       // Signed in as Admin
-      const data = req.body.data as unknown as CreateExoticData;
+
+      const data = req.body.data as unknown as TimeRequest;
 
       if (session.user.role == "exotic") data.user = session.user.id;
 
-      data.date = new Date(data.date);
+      data.dateStart = new Date(data.dateStart);
 
-      if (data.date.getTime() < Date.now())
-        return res.status(400).json({ error: "Date cannot be in the past" });
+      return res.status(200).json(await isFree(data.dateStart, 10));
 
-      return res.status(200).json(await isFree(data.date, 10));
-
-      if (!data.date) throw new Error("Missing a valid date.");
-      if (!data.vehicles) throw new Error("Missing vehicles.");
-      if (!data.tempCode && !data.user)
-        throw new Error("Missing required user fields.");
+      if (!data.dateStart) throw new Error("Missing a valid date.");
 
       await firestore.collection("exotics").add(data);
       res.status(200).json({ result: "completed" });
