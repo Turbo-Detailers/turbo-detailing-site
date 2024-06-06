@@ -100,12 +100,12 @@ function AvailableTimes(props: { date: Date | undefined }) {
   return <AvailableTimeSelector data={data.timesAvailable} />;
 }
 
-function AvailableTimeSelector(props: { data: Date[] }) {
+function AvailableTimeSelector(props: { data: string[] }) {
   if (props.data.length > 0) {
     return (
       <div>
         {props.data.map((date) => (
-          <div>{format(new Date(date), "p")}</div>
+          <div key={date}>{format(new Date(date), "p")}</div>
         ))}
       </div>
     );
