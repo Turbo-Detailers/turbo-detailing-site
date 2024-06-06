@@ -136,7 +136,9 @@ export async function getAvailableBlocksForDay(
       }
     } else {
       if (currentTime.getTime() > rightNow.getTime())
-        availability.push(new Date(currentTime));
+        availability.push(
+          new Date(currentTime).toLocaleString("America/Chicago")
+        );
     }
     currentTime = new Date(currentTime.getTime() + 1000 * 60 * apptInterval);
   }
