@@ -55,13 +55,6 @@ export default function Dashboard({
 
 function ExoticCustomer() {
   const [date, setDate] = useState<Date | undefined>(new Date());
-  const [availability, setAvailability] = useState(undefined);
-  const [loading, setLoading] = useState<boolean>(false);
-  async function updateDate(date: Date | undefined) {
-    setDate(date);
-    console.log("running");
-    if (date) useDate(date);
-  }
 
   return (
     <Fragment>
@@ -76,7 +69,6 @@ function ExoticCustomer() {
           mode="single"
           selected={date}
           onSelect={(date) => {
-            setLoading(true);
             setDate(date);
             // useDate(date || new Date());
           }}
