@@ -49,28 +49,110 @@ export async function getAvailability(dateMin: Date, dateMax: Date) {
   return request.data.calendars as unknown as CalendarBusyData;
 }
 
-export async function isFree(dateTime: Date, sessionLength: number) {
-  console.log(formatRFC3339(dateTime));
+export async function getBusyData(
+  dateTime: Date,
+  sessionLength: number
+): Promise<CalendarBusyData> {
   const busyData = await getAvailability(
     dateTime,
-    new Date(dateTime.getTime() + 1000 * 60 * 60 * 24 * 30 * 3)
+    new Date(dateTime.getTime() + 1000 * 60 * 60 * 24 * sessionLength)
   );
 
-  return busyData["turboautodetailers@gmail.com"];
+  return busyData;
 }
 
 export async function getAvailableBlocksForDay(
   date: Date,
-  busyData: CalendarBusyData
+  busyData: CalendarBusyData,
+  startHour: number,
+  startMin: number,
+  endHour: number,
+  endMin: number,
+  apptInterval: number,
+  apptLength: number
 ) {
-  const availability = {};
-  var prevAvailableTime = Date.now();
+  const rightNow = new Date();
 
-  if (busyData["turboautodetailers@gmail.com"].busy != undefined) {
-    for (
-      var i = 0;
-      i < busyData["turboautodetailers@gmail.com"].busy.length;
-      i++
-    ) {}
+  const availability = [];
+  var currentTime = date;
+
+  currentTime.setHours(startHour, startMin, 0, 0);
+
+  const maxTime = new Date(currentTime.getTime());
+  maxTime.setHours(endHour, endMin, 0, 0);
+
+  while (currentTime.getTime() <= maxTime.getTime()) {
+    var appointmentEndDate = new Date(
+      currentTime.getTime() + 1000 * 60 * apptLength
+    );
+
+    if (
+      busyData["turboautodetailers@gmail.com"].busy != undefined &&
+      busyData["turboautodetailers@gmail.com"].busy.length
+    ) {
+      for (
+        var i = 0;
+        i < busyData["turboautodetailers@gmail.com"].busy.length;
+        i++
+      ) {
+        if (
+          dateRangeOverlaps(
+            currentTime.getTime(),
+            appointmentEndDate.getTime(),
+            new Date(
+              busyData["turboautodetailers@gmail.com"].busy[i].start
+            ).getTime(),
+            new Date(
+              busyData["turboautodetailers@gmail.com"].busy[i].end
+            ).getTime()
+          ) ||
+          currentTime.getTime() <= rightNow.getTime()
+        ) {
+          console.log(
+            "Busy",
+            currentTime.toLocaleDateString() +
+              " " +
+              currentTime.toLocaleTimeString(),
+            "to",
+            appointmentEndDate.toLocaleDateString() +
+              " " +
+              appointmentEndDate.toLocaleTimeString()
+          );
+          break;
+        } else {
+          console.log(
+            "Free",
+            currentTime.toLocaleDateString() +
+              " " +
+              currentTime.toLocaleTimeString(),
+            "to",
+            appointmentEndDate.toLocaleDateString() +
+              " " +
+              appointmentEndDate.toLocaleTimeString()
+          );
+
+          availability.push(new Date(currentTime));
+        }
+      }
+    } else {
+      if (currentTime.getTime() > rightNow.getTime())
+        availability.push(new Date(currentTime));
+    }
+    currentTime = new Date(currentTime.getTime() + 1000 * 60 * apptInterval);
   }
+
+  return availability;
+}
+
+// Taken from https://stackoverflow.com/questions/22784883/check-if-more-than-two-date-ranges-overlap on Jun 4, 2024
+function dateRangeOverlaps(
+  a_start: number,
+  a_end: number,
+  b_start: number,
+  b_end: number
+) {
+  if (a_start < b_start && b_start < a_end) return true; // b starts in a
+  if (a_start < b_end && b_end < a_end) return true; // b ends in a
+  if (b_start < a_start && a_end < b_end) return true; // a in b
+  return false;
 }

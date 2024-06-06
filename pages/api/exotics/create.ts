@@ -2,7 +2,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions, firestore } from "../auth/[...nextauth]";
 import { NextApiRequest, NextApiResponse } from "next";
 import { Timestamp } from "firebase-admin/firestore";
-import { isFree } from "bin/google";
+import { getBusyData } from "bin/google";
 
 interface ExoticVehicle {
   make: string;
@@ -35,7 +35,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
       if (data.date.getTime() < Date.now())
         return res.status(400).json({ error: "Date cannot be in the past" });
 
-      return res.status(200).json(await isFree(data.date, 10));
+      return res.status(200).json(await getBusyData(data.date, 10));
 
       if (!data.date) throw new Error("Missing a valid date.");
       if (!data.vehicles) throw new Error("Missing vehicles.");

@@ -2,7 +2,7 @@ import { getServerSession } from "next-auth/next";
 import { authOptions, firestore } from "../auth/[...nextauth]";
 import { NextApiRequest, NextApiResponse } from "next";
 import { Timestamp } from "firebase-admin/firestore";
-import { isFree } from "bin/google";
+import { getBusyData } from "bin/google";
 
 interface TimeRequest {
   dateStart: number | Date | string;
@@ -24,7 +24,7 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
 
       data.dateStart = new Date(data.dateStart);
 
-      return res.status(200).json(await isFree(data.dateStart, 10));
+      return res.status(200).json(await getBusyData(data.dateStart, 10));
 
       if (!data.dateStart) throw new Error("Missing a valid date.");
 

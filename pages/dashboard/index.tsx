@@ -1,12 +1,31 @@
 import { GetServerSidePropsContext, InferGetServerSidePropsType } from "next";
-import { getServerSession } from "next-auth";
 import { decode } from "next-auth/jwt";
 import Head from "next/head";
-import { getAvailability } from "bin/google";
 import { format } from "date-fns";
 import { Fragment, useState } from "react";
 import { Calendar } from "@/components/ui/calendar";
 import Balancer from "react-wrap-balancer";
+import useSWR from "swr";
+import Link from "next/link";
+
+const fetcher = async (url: string, date: Date) => {
+  return fetch(url, { body: JSON.stringify({ date }), method: "POST" }).then(
+    (res) => res.json()
+  );
+};
+
+function useDate(date: Date) {
+  const { data, error, isLoading } = useSWR(
+    `/api/bookings/refresh?date=${date}`,
+    (url) => fetcher(url, date)
+  );
+
+  return {
+    data: data,
+    isLoading,
+    isError: error,
+  };
+}
 
 export default function Dashboard({
   user,
@@ -17,7 +36,7 @@ export default function Dashboard({
         <title>Account Dashboard - Turbo Detailers</title>
       </Head>
       <div className="w-full px-3 lg:px-5">
-        <h1 className="text-4xl font-bold text-center text-center md:text-left">
+        <h1 className="text-4xl font-bold text-center md:text-left">
           Hi, {user.name?.split(" ")[0]}!
         </h1>
         <h3 className="text-gray-400 text-center md:text-left">
@@ -38,6 +57,12 @@ function ExoticCustomer() {
   const [date, setDate] = useState<Date | undefined>(new Date());
   const [availability, setAvailability] = useState(undefined);
   const [loading, setLoading] = useState<boolean>(false);
+  async function updateDate(date: Date | undefined) {
+    setDate(date);
+    console.log("running");
+    if (date) useDate(date);
+  }
+
   return (
     <Fragment>
       <h2 className="text-center md:text-left font-medium">
@@ -53,11 +78,12 @@ function ExoticCustomer() {
           onSelect={(date) => {
             setLoading(true);
             setDate(date);
+            // useDate(date || new Date());
           }}
           className="rounded-md"
         />
-        {loading ? (
-          <p>Loading availability...</p>
+        {date ? (
+          <AvailableTimes date={date} />
         ) : (
           <p className="text-red-200">Select a date to see available times.</p>
         )}
@@ -66,6 +92,35 @@ function ExoticCustomer() {
   );
 }
 
+function AvailableTimes(props: { date: Date | undefined }) {
+  const { data, isLoading, isError } = useDate(props.date || new Date());
+
+  if (isLoading) return <p>Loading availability...</p>;
+  else if (isError)
+    return (
+      <p>
+        Error occured while refreshing data. Try again, and if issue persists,
+        reach out directly to book: <Link href="/contact">contact us</Link>
+      </p>
+    );
+
+  console.log(data);
+  return <AvailableTimeSelector data={data.timesAvailable} />;
+}
+
+function AvailableTimeSelector(props: { data: Date[] }) {
+  if (props.data.length > 0) {
+    return (
+      <div>
+        {props.data.map((date) => (
+          <div>{format(new Date(date), "p")}</div>
+        ))}
+      </div>
+    );
+  } else {
+    return <p>No available times for that day, please try a different date.</p>;
+  }
+}
 export async function getServerSideProps({
   req,
   query,

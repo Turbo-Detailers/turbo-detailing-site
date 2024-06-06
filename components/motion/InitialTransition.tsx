@@ -119,6 +119,6 @@ export default function InitialTransition() {
     //     </text>
     //   </motion.svg>
     // </motion.div>
-    <></>
+    <> </>
   );
 }
