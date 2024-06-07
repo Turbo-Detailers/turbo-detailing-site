@@ -75,28 +75,28 @@ export async function getAvailableBlocksForDay(
 ) {
   var temp = new Date();
 
-  // const rightNow = changeTimezone(temp, "America/Chicago");
-  const rightNow = new Date(
-    Date.UTC(
-      date.getUTCFullYear(),
-      date.getUTCMonth(),
-      date.getUTCDate(),
-      startHour - 5,
-      startMin
-    )
-  );
+  const rightNow = changeTimezone(temp, "America/Chicago");
+  // const rightNow = new Date(
+  //   Date.UTC(
+  //     date.getUTCFullYear(),
+  //     date.getUTCMonth(),
+  //     date.getUTCDate(),
+  //     startHour - 5,
+  //     startMin
+  //   )
+  // );
 
   const availability = [];
-  var currentTime = date;
+  var iteratingTime = date;
 
-  currentTime.setHours(startHour, startMin, 0, 0);
+  iteratingTime.setUTCHours(startHour - 5, startMin, 0, 0);
 
-  const maxTime = new Date(currentTime.getTime());
-  maxTime.setHours(endHour, endMin, 0, 0);
+  const maxTime = new Date(iteratingTime.getTime());
+  maxTime.setUTCHours(endHour - 5, endMin, 0, 0);
 
-  while (currentTime.getTime() <= maxTime.getTime()) {
+  while (iteratingTime.getTime() <= maxTime.getTime()) {
     var appointmentEndDate = new Date(
-      currentTime.getTime() + 1000 * 60 * apptLength
+      iteratingTime.getTime() + 1000 * 60 * apptLength
     );
 
     if (
@@ -110,7 +110,7 @@ export async function getAvailableBlocksForDay(
       ) {
         if (
           dateRangeOverlaps(
-            currentTime.getTime(),
+            iteratingTime.getTime(),
             appointmentEndDate.getTime(),
             new Date(
               busyData["turboautodetailers@gmail.com"].busy[i].start
@@ -119,13 +119,13 @@ export async function getAvailableBlocksForDay(
               busyData["turboautodetailers@gmail.com"].busy[i].end
             ).getTime()
           ) ||
-          currentTime.getTime() <= rightNow.getTime()
+          iteratingTime.getTime() <= rightNow.getTime()
         ) {
           console.log(
             "Busy",
-            currentTime.toLocaleDateString() +
+            iteratingTime.toLocaleDateString() +
               " " +
-              currentTime.toLocaleTimeString(),
+              iteratingTime.toLocaleTimeString(),
             "to",
             appointmentEndDate.toLocaleDateString() +
               " " +
@@ -135,27 +135,29 @@ export async function getAvailableBlocksForDay(
         } else {
           console.log(
             "Free",
-            currentTime.toLocaleDateString() +
+            iteratingTime.toLocaleDateString() +
               " " +
-              currentTime.toLocaleTimeString(),
+              iteratingTime.toLocaleTimeString(),
             "to",
             appointmentEndDate.toLocaleDateString() +
               " " +
               appointmentEndDate.toLocaleTimeString()
           );
 
-          availability.push(new Date(currentTime));
+          availability.push(new Date(iteratingTime));
         }
       }
     } else {
-      if (currentTime.getTime() > rightNow.getTime())
+      if (iteratingTime.getTime() > rightNow.getTime())
         availability.push(
-          new Date(currentTime).toLocaleString("en-US", {
+          new Date(iteratingTime).toLocaleString("en-US", {
             timeZone: "America/Chicago",
           })
         );
     }
-    currentTime = new Date(currentTime.getTime() + 1000 * 60 * apptInterval);
+    iteratingTime = new Date(
+      iteratingTime.getTime() + 1000 * 60 * apptInterval
+    );
   }
 
   return availability;
