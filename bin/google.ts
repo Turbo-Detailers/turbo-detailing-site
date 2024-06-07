@@ -58,6 +58,8 @@ export async function getBusyData(
     new Date(dateTime.getTime() + 1000 * 60 * 60 * 24 * sessionLength)
   );
 
+  console.log(busyData);
+
   return busyData;
 }
 
@@ -71,7 +73,9 @@ export async function getAvailableBlocksForDay(
   apptInterval: number,
   apptLength: number
 ) {
-  const rightNow = new Date();
+  var temp = new Date();
+
+  const rightNow = changeTimezone(temp, "America/Chicago");
 
   const availability = [];
   var currentTime = date;
@@ -159,4 +163,20 @@ function dateRangeOverlaps(
   if (a_start < b_end && b_end < a_end) return true; // b ends in a
   if (b_start < a_start && a_end < b_end) return true; // a in b
   return false;
+}
+
+function changeTimezone(date: Date, timezone: string) {
+  // suppose the date is 12:00 UTC
+  var invdate = new Date(
+    date.toLocaleString("en-US", {
+      timeZone: timezone,
+    })
+  );
+
+  // then invdate will be 07:00 in Toronto
+  // and the diff is 5 hours
+  var diff = date.getTime() - invdate.getTime();
+
+  // so 12:00 in Toronto is 17:00 UTC
+  return new Date(date.getTime() - diff); // needs to substract
 }
