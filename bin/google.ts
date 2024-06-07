@@ -89,10 +89,10 @@ export async function getAvailableBlocksForDay(
   const availability = [];
   var iteratingTime = date;
 
-  iteratingTime.setUTCHours(startHour - 5, startMin, 0, 0);
+  iteratingTime.setUTCHours(startHour + 5, startMin, 0, 0);
 
   const maxTime = new Date(iteratingTime.getTime());
-  maxTime.setUTCHours(endHour - 5, endMin, 0, 0);
+  maxTime.setUTCHours(endHour + 5, endMin, 0, 0);
 
   while (iteratingTime.getTime() <= maxTime.getTime()) {
     var appointmentEndDate = new Date(
