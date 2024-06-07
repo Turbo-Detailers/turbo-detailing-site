@@ -76,15 +76,6 @@ export async function getAvailableBlocksForDay(
   var temp = new Date();
 
   const rightNow = changeTimezone(temp, "America/Chicago");
-  // const rightNow = new Date(
-  //   Date.UTC(
-  //     date.getUTCFullYear(),
-  //     date.getUTCMonth(),
-  //     date.getUTCDate(),
-  //     startHour - 5,
-  //     startMin
-  //   )
-  // );
 
   const availability = [];
   var iteratingTime = date;
