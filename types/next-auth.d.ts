@@ -7,6 +7,11 @@ declare module "next-auth" {
   interface Session {
     user: BaseCustomer & DefaultSession["user"];
   }
+
+  interface User {
+    role: CUSTOMER_ROLE;
+    customer_id: string;
+  }
 }
 
 import "next-auth/jwt";
@@ -19,5 +24,12 @@ declare module "next-auth/jwt" {
     /** The user's role. */
     role: CUSTOMER_ROLE;
     id: string;
+  }
+}
+
+declare module "@auth/core/adapters" {
+  interface AdapterUser {
+    role: CUSTOMER_ROLE;
+    customer_id: string;
   }
 }

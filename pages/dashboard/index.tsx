@@ -44,11 +44,11 @@ export default function Dashboard({
           {format(new Date(), "eeee, MMMM do")}
         </h3>
         <hr className="my-6 border-neutral-600" />
-        {user.role == CUSTOMER_ROLE.ADMIN ||
+        {/* {user.role == CUSTOMER_ROLE.ADMIN ||
         user.role == CUSTOMER_ROLE.MAINTENANCE ||
-        user.role == CUSTOMER_ROLE.EXOTIC ? (
-          <ExoticCustomer />
-        ) : null}
+        user.role == CUSTOMER_ROLE.EXOTIC ? ( */}
+        <ExoticCustomer />
+        {/* ) : null} */}
       </div>
     </>
   );
@@ -60,10 +60,10 @@ function ExoticCustomer() {
   return (
     <Fragment>
       <h2 className="text-center md:text-left font-medium">
-        <Balancer>
+        {/* <Balancer>
           Since you&apos;re a maintenance customer, you can plan your next
           service directly from here:
-        </Balancer>
+        </Balancer> */}
       </h2>
       <section className="flex flex-col lg:flex-row items-center gap-3">
         <Calendar

@@ -1,5 +1,7 @@
 import { google } from "googleapis";
 import { formatRFC3339 } from "date-fns";
+import { newBooking } from "./bookings";
+import { DETAILING_TYPE } from "types/bookings/BaseBooking";
 
 interface CalendarBusyData {
   "turboautodetailers@gmail.com": {
@@ -8,8 +10,8 @@ interface CalendarBusyData {
 }
 
 const SCOPES = [
-  "https://www.googleapis.com/auth/calendar.readonly",
   "https://www.googleapis.com/auth/calendar",
+  "https://www.googleapis.com/auth/calendar.events",
 ];
 
 const GOOGLE_CLIENT_EMAIL = process.env.FIREBASE_CLIENT_EMAIL;
@@ -25,7 +27,7 @@ const jwtClient = new google.auth.JWT(
   SCOPES
 );
 
-const calendar = google.calendar({
+export const calendar = google.calendar({
   version: "v3",
   auth: jwtClient,
 });
@@ -55,7 +57,7 @@ export async function getBusyData(
 ): Promise<CalendarBusyData> {
   const busyData = await getAvailability(
     dateTime,
-    new Date(dateTime.getTime() + 1000 * 60 * 60 * 24 * sessionLength)
+    new Date(dateTime.getTime() + 1000 * 60 * sessionLength)
   );
 
   console.log(busyData);
@@ -111,32 +113,9 @@ export async function getAvailableBlocksForDay(
             ).getTime()
           ) ||
           iteratingTime.getTime() <= rightNow
-        ) {
-          console.log(
-            "Busy",
-            iteratingTime.toLocaleDateString() +
-              " " +
-              iteratingTime.toLocaleTimeString(),
-            "to",
-            appointmentEndDate.toLocaleDateString() +
-              " " +
-              appointmentEndDate.toLocaleTimeString()
-          );
+        )
           break;
-        } else {
-          console.log(
-            "Free",
-            iteratingTime.toLocaleDateString() +
-              " " +
-              iteratingTime.toLocaleTimeString(),
-            "to",
-            appointmentEndDate.toLocaleDateString() +
-              " " +
-              appointmentEndDate.toLocaleTimeString()
-          );
-
-          availability.push(new Date(iteratingTime));
-        }
+        availability.push(new Date(iteratingTime));
       }
     } else {
       if (iteratingTime.getTime() > rightNow)
@@ -155,7 +134,7 @@ export async function getAvailableBlocksForDay(
 }
 
 // Taken from https://stackoverflow.com/questions/22784883/check-if-more-than-two-date-ranges-overlap on Jun 4, 2024
-function dateRangeOverlaps(
+export function dateRangeOverlaps(
   a_start: number,
   a_end: number,
   b_start: number,
@@ -165,20 +144,4 @@ function dateRangeOverlaps(
   if (a_start <= b_end && b_end <= a_end) return true; // b ends in a
   if (b_start < a_start && a_end < b_end) return true; // a in b
   return false;
-}
-
-function changeTimezone(date: Date, timezone: string) {
-  // suppose the date is 12:00 UTC
-  var invdate = new Date(
-    date.toLocaleString("en-US", {
-      timeZone: timezone,
-    })
-  );
-
-  // then invdate will be 07:00 in Toronto
-  // and the diff is 5 hours
-  var diff = date.getTime() - invdate.getTime();
-
-  // so 12:00 in Toronto is 17:00 UTC
-  return new Date(date.getTime() - diff); // needs to substract
 }

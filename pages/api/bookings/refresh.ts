@@ -17,7 +17,7 @@ export default async function handler(
   console.log("The date is", date);
   const timesAvailable = await getAvailableBlocksForDay(
     new Date(date),
-    await getBusyData(new Date(date), 1),
+    await getBusyData(new Date(date), 60 * 24),
     8,
     0,
     17,
