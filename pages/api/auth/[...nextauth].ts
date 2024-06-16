@@ -3,6 +3,7 @@ import GoogleProvider from "next-auth/providers/google";
 import { FirestoreAdapter, initFirestore } from "@next-auth/firebase-adapter";
 import { cert } from "firebase-admin/app";
 import { getUserRole } from "../../../bin/firebase";
+import { CUSTOMER_ROLE } from "types/customers/BaseCustomer";
 
 export const authOptions: AuthOptions = {
   // Configure one or more authentication providers
@@ -26,8 +27,8 @@ export const authOptions: AuthOptions = {
   }),
   callbacks: {
     session: async ({ session, token }) => {
-      session.user.id = token.id;
-      session.user.role = token.role || "user";
+      session.user.customer_id = token.id;
+      session.user.role = token.role || CUSTOMER_ROLE.REGULAR;
       return session;
     },
     jwt: async ({ token, user, account }) => {

@@ -5,21 +5,19 @@ declare module "next-auth" {
    * Returned by `useSession`, `getSession` and received as a prop on the `SessionProvider` React Context
    */
   interface Session {
-    user: {
-      id: string;
-      role: string;
-    } & DefaultSession["user"];
+    user: BaseCustomer & DefaultSession["user"];
   }
 }
 
 import "next-auth/jwt";
+import { BaseCustomer, CUSTOMER_ROLE } from "./customers/BaseCustomer";
 
 // Read more at: https://next-auth.js.org/getting-started/typescript#module-augmentation
 
 declare module "next-auth/jwt" {
   interface JWT {
     /** The user's role. */
-    role: "admin" | "user" | "maintenance" | "exotic";
+    role: CUSTOMER_ROLE;
     id: string;
   }
 }

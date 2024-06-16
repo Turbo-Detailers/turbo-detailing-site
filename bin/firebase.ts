@@ -2,6 +2,7 @@ import { User } from "next-auth";
 import { firestore } from "../pages/api/auth/[...nextauth]";
 import { BookingData, getBookingData, isBookingError } from "./zoho";
 import { Timestamp } from "firebase-admin/firestore";
+import { CUSTOMER_ROLE } from "types/customers/BaseCustomer";
 
 interface FirestoreBookingData extends Omit<BookingData, "date"> {
   date: Timestamp;
@@ -32,16 +33,14 @@ export interface ExoticBookingWithCustomerData {
   email: string | undefined | null;
 }
 
-export async function getUserRole(
-  userId: string
-): Promise<"user" | "admin" | "maintenance" | "exotic"> {
-  if (!userId) return "user";
+export async function getUserRole(userId: string): Promise<CUSTOMER_ROLE> {
+  if (!userId) return CUSTOMER_ROLE.REGULAR;
 
   const req = await (
     await firestore.collection("users").doc(userId).get()
   ).data();
 
-  return req?.role || "user";
+  return req?.role || CUSTOMER_ROLE.REGULAR;
 }
 
 export async function addBookingToFirestore(bookingId: string) {

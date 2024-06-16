@@ -3,6 +3,7 @@ import { authOptions, firestore } from "../auth/[...nextauth]";
 import { NextApiRequest, NextApiResponse } from "next";
 import { Timestamp } from "firebase-admin/firestore";
 import { getBusyData } from "bin/google";
+import { CUSTOMER_ROLE } from "types/customers/BaseCustomer";
 
 interface TimeRequest {
   dateStart: number | Date | string;
@@ -14,13 +15,17 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
   if (req.method !== "POST") return res.status(404).end();
 
   const session = await getServerSession(req, res, authOptions);
-  if (session?.user.role == "admin" || session?.user.role == "exotic") {
+  if (
+    session?.user.role == CUSTOMER_ROLE.ADMIN ||
+    session?.user.role == CUSTOMER_ROLE.EXOTIC
+  ) {
     try {
       // Signed in as Admin
 
       const data = req.body.data as unknown as TimeRequest;
 
-      if (session.user.role == "exotic") data.user = session.user.id;
+      if (session.user.role == CUSTOMER_ROLE.EXOTIC)
+        data.user = session.user.customer_id;
 
       data.dateStart = new Date(data.dateStart);
 

@@ -7,6 +7,7 @@ import { Calendar } from "@/components/ui/calendar";
 import Balancer from "react-wrap-balancer";
 import useSWR from "swr";
 import Link from "next/link";
+import { CUSTOMER_ROLE } from "types/customers/BaseCustomer";
 
 const fetcher = async (url: string, date: Date) => {
   return fetch(url, { body: JSON.stringify({ date }), method: "POST" }).then(
@@ -43,9 +44,9 @@ export default function Dashboard({
           {format(new Date(), "eeee, MMMM do")}
         </h3>
         <hr className="my-6 border-neutral-600" />
-        {user.role == "admin" ||
-        user.role == "maintenance" ||
-        user.role == "exotic" ? (
+        {user.role == CUSTOMER_ROLE.ADMIN ||
+        user.role == CUSTOMER_ROLE.MAINTENANCE ||
+        user.role == CUSTOMER_ROLE.EXOTIC ? (
           <ExoticCustomer />
         ) : null}
       </div>
@@ -70,7 +71,6 @@ function ExoticCustomer() {
           selected={date}
           onSelect={(date) => {
             setDate(date);
-            // useDate(date || new Date());
           }}
           className="rounded-md"
         />
